@@ -48,23 +48,32 @@ export function signIcon(glyph) {
 /* ---------- Area mini-maps ---------- */
 // Each map centres on the area itself. She drives to her students, so the lesson car drives in
 // and parks by the area's pin; there is no "home base" and no distance from one.
+// Points match the home page map (scripts/build-map.mjs), except Glanbrook, which uses the centre of the
+// City's boundary for the former township.
 export const PLACES = {
   'mount-hope': { name: 'Mount Hope', lat: 43.1561412, lon: -79.9161804 },
-  hamilton: { name: 'Downtown Hamilton', short: 'Downtown', lat: 43.25608, lon: -79.87286 },
+  hamilton: { name: 'Hamilton', lat: 43.25608, lon: -79.87286 },
+  'downtown-hamilton': { name: 'Downtown Hamilton', short: 'Downtown', lat: 43.25608, lon: -79.87286 },
+  'hamilton-mountain': { name: 'Hamilton Mountain', short: 'The Mountain', lat: 43.2185, lon: -79.8795 },
+  'east-hamilton': { name: 'East Hamilton', short: 'East end', label: 'East Hamilton', lat: 43.2315, lon: -79.788 },
+  'west-hamilton': { name: 'West Hamilton', short: 'West end', label: 'West Hamilton', lat: 43.2545, lon: -79.893 },
+  westdale: { name: 'Westdale', lat: 43.26188, lon: -79.90592 },
   ancaster: { name: 'Ancaster', lat: 43.22569, lon: -79.97669 },
   dundas: { name: 'Dundas', lat: 43.26619, lon: -79.95463 },
   'stoney-creek': { name: 'Stoney Creek', lat: 43.21675, lon: -79.75676 },
   binbrook: { name: 'Binbrook', lat: 43.12087, lon: -79.80441 },
+  glanbrook: { name: 'Glanbrook', lat: 43.13302, lon: -79.83412 },
   caledonia: { name: 'Caledonia', lat: 43.07379, lon: -79.95191 },
   mcmaster: { name: 'McMaster University', short: 'McMaster', lat: 43.2617, lon: -79.9189 },
 };
 
-export function miniMap(key, { label } = {}) {
+export function miniMap(key, { label, km } = {}) {
   const target = PLACES[key];
   const [tx, ty] = project(target.lat, target.lon);
-  // About 19 km across, at the arch's 7:6 shape, nudged down because the arch's round top has less room
+  // About 19 km across (wider for the whole-city page), at the arch's 7:6 shape, nudged down because the
+  // arch's round top has less room
   const ratio = 560 / 480;
-  const w = 380, h = w / ratio;
+  const w = km ? km * UNITS_PER_KM : 380, h = w / ratio;
   // centred on the area, but never past the edge of the map data
   const vx = Math.min(Math.max(tx - w / 2, 0), WIDTH - w), vy = Math.min(Math.max(ty + h * 0.06 - h / 2, 0), HEIGHT - h);
   const cx = vx + w / 2;
@@ -97,9 +106,9 @@ export function miniMap(key, { label } = {}) {
   const C = [(S[0] + E[0]) / 2 + u[1] * L0 * 0.2, (S[1] + E[1]) / 2 - u[0] * L0 * 0.2];
   const route = `M${r1(S[0])} ${r1(S[1])}Q${r1(C[0])} ${r1(C[1])} ${r1(E[0])} ${r1(E[1])}`;
   const endAngle = r1((Math.atan2(E[1] - C[1], E[0] - C[0]) * 180) / Math.PI);
-  // nearby areas, faint, for orientation
-  const others = Object.entries(PLACES)
-    .filter(([k]) => k !== key && k !== 'mount-hope')
+  // nearby areas, faint, for orientation ('hamilton' shares downtown's point, so downtown is labelled instead)
+  const candidates = Object.entries(PLACES)
+    .filter(([k]) => k !== key && k !== 'mount-hope' && k !== 'hamilton')
     .map(([, p]) => { const [x, y] = project(p.lat, p.lon); return { x, y, name: p.short || p.name }; })
     .filter((p) => p.y > vy + h * 0.2 && p.y < vy + h - 16 * s)
     .filter((p) => { const half = archHalf(p.y - fs) - 10 * s; return p.x - 6 * s > cx - half && p.x + 9 * s + textW(p.name, fs * 0.78) < cx + half; })
@@ -108,9 +117,25 @@ export function miniMap(key, { label } = {}) {
     .filter((p) => !Array.from({ length: 41 }, (_, i) => i / 40).some((t) => {
       const x = (1 - t) ** 2 * S[0] + 2 * (1 - t) * t * C[0] + t * t * E[0], y = (1 - t) ** 2 * S[1] + 2 * (1 - t) * t * C[1] + t * t * E[1];
       return x > p.x - 10 * s && x < p.x + 12 * s + textW(p.name, fs * 0.78) && y > p.y - 14 * s && y < p.y + 12 * s;
-    }));
-  const name = target.short || target.name;
+    }))
+    .sort((a, b) => Math.hypot(a.x - tx, a.y - ty) - Math.hypot(b.x - tx, b.y - ty));
+  const name = target.label || target.short || target.name;
   const tl = place(tx, ty, name.toUpperCase(), fs * 1.25, 30 * s);
+  // nearest first, at most six, and never on top of the target or of each other
+  const pad = 5 * s;
+  const boxes = [
+    [tl.x - pad, tl.y - fs * 1.25 - pad, textW(name.toUpperCase(), fs * 1.25) + 2 * pad, fs * 1.25 + 2 * pad],
+    [tx - 26 * s, ty - 26 * s, 52 * s, 52 * s],
+  ];
+  const hits = (b) => boxes.some((o) => b[0] < o[0] + o[2] && b[0] + b[2] > o[0] && b[1] < o[1] + o[3] && b[1] + b[3] > o[1]);
+  const others = [];
+  for (const p of candidates) {
+    if (others.length >= 6) break;
+    const box = [p.x - 6 * s - pad, p.y - fs * 0.78 - pad, 15 * s + textW(p.name, fs * 0.78) + 2 * pad, fs * 0.78 + 11 * s + 2 * pad];
+    if (hits(box)) continue;
+    boxes.push(box);
+    others.push(p);
+  }
   const id = `mm-${key}`;
   const rs = r1(s * 100) / 100;
   return `<svg class="mmap" viewBox="${r1(vx)} ${r1(vy)} ${r1(w)} ${r1(h)}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${label}" focusable="false">

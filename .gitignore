@@ -17,6 +17,7 @@ dist
 /src/partials/site-drawer.html
 /src/partials/site-floating.html
 /src/partials/site-sprite.svg
+/src/partials/area-bento.html
 
 # Original student photos (the web versions in public/img are what the site uses).
 # Kept off the public repository for the students' privacy.

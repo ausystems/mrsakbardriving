@@ -6,6 +6,7 @@ import { bizRef } from './layout.mjs';
 import { pageHero, sec, facts, lead, prose, spots, quote, quotes, faq, chips, guideCards, ctaBand, ctaCard, ctaRow, withCta, sources } from './ui.mjs';
 import { miniMap, PLACES } from './art.mjs';
 import { AREA_CONTENT } from './areas-content.mjs';
+import { areaTiles } from './area-bento.mjs';
 
 const LESSON_LINKS = {
   beginner: ['/beginner-driving-lessons/', 'Beginner lessons'],
@@ -34,7 +35,7 @@ function areaPage(a, all) {
   const main = [
     pageHero({
       trail, script: a.script, h1: a.h1, lede: a.lede,
-      art: miniMap(a.mapKey, { label: a.mapLabel }), artLabel: true, variant: 'map',
+      art: miniMap(a.mapKey, { label: a.mapLabel, km: a.mapKm }), artLabel: true, variant: 'map',
     }),
     sec({
       id: 'why', tone: 'white', script: a.whyScript, title: a.whyTitle,
@@ -44,23 +45,24 @@ function areaPage(a, all) {
         { num: '7', count: 7, label: 'days a week, and she comes to you' },
       ]),
     }),
+    a.hoods ? sec({ id: 'neighbourhoods', tone: 'sand', script: 'all over the city', title: 'Lessons in every part of Hamilton', meta: 'Pick your part of the city to see the roads lessons there can use.', body: areaTiles(a.hoods) }) : '',
     withCta(sec({ id: 'roads', tone: 'paper', script: 'where you&rsquo;ll practise', title: a.roadsTitle, meta: a.roadsMeta, body: spots(a.spots) + (a.sources ? sources(a.sources) : '') }),
-      ctaCard({ where: 'area-card', script: 'she comes to you', title: `Book lessons in ${a.short}`, text: 'She drives to you, so your lesson starts where you are. Call or text to book, 7 days a week.' })),
+      ctaCard({ where: 'area-card', script: 'she comes to you', title: `Book lessons ${a.where || `in ${a.short}`}`, text: 'She drives to you, so your lesson starts where you are. Call or text to book, 7 days a week.' })),
     sec({
       id: 'lessons', tone: 'white', script: 'what people book', title: a.lessonsTitle,
       body: prose(a.lessonsHtml) + `<div class="more-lessons" data-reveal>${chips(a.lessons.map((k) => ({ href: LESSON_LINKS[k][0], label: LESSON_LINKS[k][1] })))}</div>`,
     }),
     sec({ id: 'reviews', tone: 'sand', script: 'from her google reviews', title: a.reviewsTitle, body: quotes(a.quotes.map(([r, note]) => quote(r, note))) + ctaRow({ where: 'area-reviews', text: 'Ready to be next?', stars: true }) }),
-    sec({ id: 'questions', tone: 'paper', script: 'good questions', title: `Lessons in ${a.short}: questions`, center: true, body: faq(a.faqs, a.slug) + ctaRow({ where: 'area-faq', text: 'Still have a question?' }) }),
+    sec({ id: 'questions', tone: 'paper', script: 'good questions', title: `Lessons ${a.where || `in ${a.short}`}: questions`, center: true, body: faq(a.faqs, a.slug) + ctaRow({ where: 'area-faq', text: 'Still have a question?' }) }),
     sec({
       id: 'more', tone: 'white', script: 'nearby', title: 'Other areas and guides',
       body: `<div class="more-lessons" data-reveal><p class="more-lessons__title">Other areas she covers</p>${chips(nearby)}</div><div class="more-lessons">${guideCards(a.guides)}</div>`,
     }),
     ctaBand({ title: a.cta[0], text: a.cta[1] }),
-  ].join('\n');
+  ].filter(Boolean).join('\n');
   const place = PLACES[a.mapKey];
   return {
-    type: 'area', path, trail, name: `Driving lessons in ${a.short}`, h1: a.h1, title: a.title, description: a.description, faqs: a.faqs, main,
+    type: 'area', path, trail, name: `Driving lessons ${a.where || `in ${a.short}`}`, h1: a.h1, title: a.title, description: a.description, faqs: a.faqs, main,
     ogScript: a.script,
     about: { '@id': `${abs(path)}#service` },
     ld: [{

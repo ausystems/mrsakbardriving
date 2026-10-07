@@ -156,7 +156,7 @@ export function ruleGuides() {
           'Read the signs chapter of the Driver&rsquo;s Handbook.',
           'Test yourself with the <a href="/guides/g1-practice-test/">G1 practice test</a>, which has 20 questions on signs and signals.',
           'Name the signs out loud the next time you&rsquo;re a passenger.',
-        ]) + quote(review('salami eniola', 'She gives relatable tips to understand the signs and rules of driving.')) },
+        ]) + quote(review('salami eniola', 'She gives relatable tips to understand the signs and rules of driving.', 'rules of driving.')) },
       ],
       sources: [S.hbSigns, S.hbLights, S.hbPedSignals, S.hbMarkings, S.hbShare, S.pxo, S.hamPxo, S.hta],
       faqs: [
@@ -343,7 +343,7 @@ export function ruleGuides() {
           'Look for a new limit sign after every turn onto a different road.',
           'Slow down before you enter a school zone or community safety zone, not once you&rsquo;re in it.',
           'On a highway, keep pace with the right lane rather than the fastest car around you.',
-        ]) + quote(review('Mila Alieva', 'With your guidance and patience you taught me the skills to become a safe driver.')) },
+        ]) + quote(review('Mila Alieva', 'With your guidance and patience you taught me the skills to become a safe driver.', 'safe driver.')) },
       ],
       sources: [S.drivingAlong, S.hta, S.limits110, S.reg619, S.setFines, S.speeding, S.reg339, S.stuntReg, S.hamSafety, S.hamSchool, S.hamTickets, S.tickets],
       faqs: [

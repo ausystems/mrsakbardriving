@@ -16,7 +16,7 @@
 
 ## At a glance
 
-- **49 pages:** the home page, 5 lesson pages, 8 area pages, 30 guides and a guides index, contact,
+- **55 pages:** the home page, 5 lesson pages, 14 area pages, 30 guides and a guides index, contact,
   a Privacy Policy, Terms and Conditions, and a custom 404.
 - **Fast:** Lighthouse performance 98 to 100 on phones and 100 on desktop, with no layout shift.
   Each page inlines only the CSS it uses.
@@ -80,7 +80,7 @@ structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it.
 | --- | --- | --- |
 | Home | `/` | `index.html` (hand-written) |
 | Lessons (5) | beginner, nervous drivers, G2, G and highway, parallel parking | `scripts/site/pages-services.mjs` |
-| Areas (8) | Hamilton, Mount Hope, Ancaster, Dundas, Stoney Creek, Binbrook, Caledonia, near McMaster | `scripts/site/pages-areas.mjs`, `areas-content.mjs` |
+| Areas (14) | Hamilton, Downtown Hamilton, Hamilton Mountain, East Hamilton, West Hamilton, Westdale, near McMaster, Mount Hope, Binbrook, Glanbrook, Ancaster, Dundas, Stoney Creek, Caledonia | `scripts/site/pages-areas.mjs`, `areas-content.mjs` |
 | Guides (30 + index) | `/guides/...` | `scripts/site/guide-list.mjs` (order and section), `pages-guides.mjs`, `guides-start.mjs`, `guides-rules.mjs`, `guides-skills.mjs`, `guides-tests.mjs`, `guide-mountain.mjs` |
 | Contact, Privacy Policy, Terms and Conditions | `/contact/`, `/privacy-policy/`, `/terms-and-conditions/` | `pages-contact.mjs`, `pages-legal.mjs` |
 | 404 | `404.html` (never indexed) | `pages-404.mjs` |
@@ -95,6 +95,11 @@ and FAQ; the phone menu has the same links, with Lessons as an expandable list. 
 groups the guides into Getting started, Rules of the road, Skills, Road tests and Hamilton roads,
 following each guide's `cat` in `scripts/site/guide-list.mjs`. Guide tables, practice quizzes and
 road sign drawings come from `scripts/site/guide-kit.mjs` and `scripts/site/road-signs.mjs`.
+
+The home page's area grid comes from `scripts/site/area-bento.mjs`: the build writes it to
+`src/partials/area-bento.html` and warns if a tile points at an area page that doesn't exist. Every
+lesson, area, guide, contact and legal page has call and text buttons in the content as well as in the
+header (`ctaCard`, `ctaRow` and `ctaBand` in `scripts/site/ui.mjs`).
 
 ## Keeping it current
 

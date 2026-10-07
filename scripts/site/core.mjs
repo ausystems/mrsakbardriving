@@ -84,11 +84,17 @@ export const SERVICES = [
 ];
 export const AREAS = [
   { slug: 'driving-lessons-hamilton', label: 'Hamilton' },
+  { slug: 'driving-lessons-downtown-hamilton', label: 'Downtown Hamilton' },
+  { slug: 'driving-lessons-hamilton-mountain', label: 'Hamilton Mountain' },
+  { slug: 'driving-lessons-east-hamilton', label: 'East Hamilton' },
+  { slug: 'driving-lessons-west-hamilton', label: 'West Hamilton' },
+  { slug: 'driving-lessons-westdale', label: 'Westdale' },
+  { slug: 'driving-lessons-near-mcmaster-university', label: 'Near McMaster' },
   { slug: 'driving-lessons-mount-hope', label: 'Mount Hope' },
+  { slug: 'driving-lessons-binbrook', label: 'Binbrook' },
+  { slug: 'driving-lessons-glanbrook', label: 'Glanbrook' },
   { slug: 'driving-lessons-ancaster', label: 'Ancaster' },
   { slug: 'driving-lessons-dundas', label: 'Dundas' },
   { slug: 'driving-lessons-stoney-creek', label: 'Stoney Creek' },
-  { slug: 'driving-lessons-binbrook', label: 'Binbrook' },
   { slug: 'driving-lessons-caledonia', label: 'Caledonia' },
-  { slug: 'driving-lessons-near-mcmaster-university', label: 'Near McMaster' },
 ];

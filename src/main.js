@@ -218,7 +218,7 @@ $$('[data-carousel]').forEach((carousel) => {
 
 /* ---------- Service-area map: hovering a region lights up its places ---------- */
 const map = $('[data-map]');
-const groups = $$('.area-group[data-areas]');
+const groups = $$('#areas [data-areas]');
 if (map && groups.length && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   const places = $$('.m-place', map);
   const light = (ids) => {
@@ -231,10 +231,24 @@ if (map && groups.length && window.matchMedia('(hover: hover) and (pointer: fine
     g.addEventListener('mouseleave', () => light(null));
   });
   places.forEach((p) => {
-    const group = groups.find((g) => g.dataset.areas.split(' ').includes(p.dataset.area));
+    // the tile for exactly this place, or failing that the first tile that covers it
+    const group = groups.find((g) => g.dataset.areas === p.dataset.area) || groups.find((g) => g.dataset.areas.split(' ').includes(p.dataset.area));
     p.addEventListener('mouseenter', () => { light([p.dataset.area]); group?.classList.add('is-hot'); });
     p.addEventListener('mouseleave', () => { light(null); group?.classList.remove('is-hot'); });
   });
+}
+
+/* ---------- Area tiles: their small maps load only when the grid gets close ---------- */
+const lazyMaps = $$('image[data-href]');
+if (lazyMaps.length) {
+  const loadMaps = () => lazyMaps.forEach((im) => { im.setAttribute('href', im.dataset.href); im.removeAttribute('data-href'); });
+  const grid = lazyMaps[0].closest('ul, section') || document.body;
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { io.disconnect(); loadMaps(); }
+    }, { rootMargin: '700px 0px' });
+    io.observe(grid);
+  } else loadMaps();
 }
 
 /* ---------- Mobile call bar: whenever the hero's call button is off screen, until the final call section ---------- */

@@ -11,6 +11,7 @@ import { guidePages, guidesHub } from './pages-guides.mjs';
 import { contactPage } from './pages-contact.mjs';
 import { privacyPage, termsPage } from './pages-legal.mjs';
 import { notFoundPage } from './pages-404.mjs';
+import { areaBento, BENTO_SLUGS } from './area-bento.mjs';
 
 const pagesDir = path.join(root, 'src/pages');
 fs.rmSync(pagesDir, { recursive: true, force: true });
@@ -67,6 +68,10 @@ fs.writeFileSync(path.join(partials, 'site-header.html'), header({ home: true })
 fs.writeFileSync(path.join(partials, 'site-drawer.html'), drawer());
 fs.writeFileSync(path.join(partials, 'site-footer.html'), footer({ home: true }));
 fs.writeFileSync(path.join(partials, 'site-floating.html'), floating());
+// Home page area grid: every tile must point at a page that exists
+const missing = BENTO_SLUGS.filter((slug) => !all.some((p) => p.path === `/${slug}/`));
+if (missing.length) console.warn(`site: area grid links to pages not built yet: ${missing.join(', ')}`);
+fs.writeFileSync(path.join(partials, 'area-bento.html'), areaBento());
 
 fs.writeFileSync(path.join(root, 'data/pages.json'), JSON.stringify(manifest, null, 1));
 console.log(`site: ${all.length} pages generated (+ home), ${SITE ? 'ok' : ''}`);
