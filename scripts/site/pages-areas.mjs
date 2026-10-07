@@ -1,9 +1,9 @@
 // Area pages. Each one is built from verified local detail (OpenStreetMap, City of Hamilton,
 // DriveTest), real review quotes and its own mini-map, so no two pages say the same thing.
 // She drives to her students, so pages talk about the area itself, never a distance from her.
-import { review, AREAS, REVIEWS_COUNT, abs, plain } from './core.mjs';
+import { review, REVIEWS_COUNT, abs, plain } from './core.mjs';
 import { bizRef } from './layout.mjs';
-import { pageHero, sec, facts, lead, prose, spots, quote, quotes, faq, chips, guideCards, ctaBand, sources } from './ui.mjs';
+import { pageHero, sec, facts, lead, prose, spots, quote, quotes, faq, chips, guideCards, ctaBand, ctaCard, ctaRow, withCta, sources } from './ui.mjs';
 import { miniMap, PLACES } from './art.mjs';
 import { AREA_CONTENT } from './areas-content.mjs';
 
@@ -15,10 +15,22 @@ const LESSON_LINKS = {
   parking: ['/parallel-parking-lessons/', 'Parallel parking'],
 };
 
-function areaPage(a) {
+// Straight-line distance between two areas' map points, only used to list the nearest ones
+const km = (p, q) => {
+  const r = Math.PI / 180, dLat = (q.lat - p.lat) * r, dLon = (q.lon - p.lon) * r;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(p.lat * r) * Math.cos(q.lat * r) * Math.sin(dLon / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(h));
+};
+
+function areaPage(a, all) {
   const path = `/${a.slug}/`;
   const trail = [['Home', '/'], ['Areas', '/#areas'], [a.crumb, path]];
-  const nearby = AREAS.filter((x) => x.slug !== a.slug).map((x) => ({ href: `/${x.slug}/`, label: x.label }));
+  const here = PLACES[a.mapKey];
+  const nearby = all.filter((x) => x.slug !== a.slug)
+    .sort((x, y) => km(here, PLACES[x.mapKey]) - km(here, PLACES[y.mapKey]))
+    .slice(0, 6)
+    .map((x) => ({ href: `/${x.slug}/`, label: x.crumb }))
+    .concat({ href: '/#areas', label: 'All areas' });
   const main = [
     pageHero({
       trail, script: a.script, h1: a.h1, lede: a.lede,
@@ -32,13 +44,14 @@ function areaPage(a) {
         { num: '7', count: 7, label: 'days a week, and she comes to you' },
       ]),
     }),
-    sec({ id: 'roads', tone: 'paper', script: 'where you&rsquo;ll practise', title: a.roadsTitle, meta: a.roadsMeta, body: spots(a.spots) + (a.sources ? sources(a.sources) : '') }),
+    withCta(sec({ id: 'roads', tone: 'paper', script: 'where you&rsquo;ll practise', title: a.roadsTitle, meta: a.roadsMeta, body: spots(a.spots) + (a.sources ? sources(a.sources) : '') }),
+      ctaCard({ where: 'area-card', script: 'she comes to you', title: `Book lessons in ${a.short}`, text: 'She drives to you, so your lesson starts where you are. Call or text to book, 7 days a week.' })),
     sec({
       id: 'lessons', tone: 'white', script: 'what people book', title: a.lessonsTitle,
       body: prose(a.lessonsHtml) + `<div class="more-lessons" data-reveal>${chips(a.lessons.map((k) => ({ href: LESSON_LINKS[k][0], label: LESSON_LINKS[k][1] })))}</div>`,
     }),
-    sec({ id: 'reviews', tone: 'sand', script: 'from her google reviews', title: a.reviewsTitle, body: quotes(a.quotes.map(([r, note]) => quote(r, note))) }),
-    sec({ id: 'questions', tone: 'paper', script: 'good questions', title: `Lessons in ${a.short}: questions`, center: true, body: faq(a.faqs, a.slug) }),
+    sec({ id: 'reviews', tone: 'sand', script: 'from her google reviews', title: a.reviewsTitle, body: quotes(a.quotes.map(([r, note]) => quote(r, note))) + ctaRow({ where: 'area-reviews', text: 'Ready to be next?', stars: true }) }),
+    sec({ id: 'questions', tone: 'paper', script: 'good questions', title: `Lessons in ${a.short}: questions`, center: true, body: faq(a.faqs, a.slug) + ctaRow({ where: 'area-faq', text: 'Still have a question?' }) }),
     sec({
       id: 'more', tone: 'white', script: 'nearby', title: 'Other areas and guides',
       body: `<div class="more-lessons" data-reveal><p class="more-lessons__title">Other areas she covers</p>${chips(nearby)}</div><div class="more-lessons">${guideCards(a.guides)}</div>`,
@@ -69,5 +82,6 @@ function areaPage(a) {
 }
 
 export function areaPages() {
-  return AREA_CONTENT(review).map(areaPage);
+  const all = AREA_CONTENT(review);
+  return all.map((a) => areaPage(a, all));
 }

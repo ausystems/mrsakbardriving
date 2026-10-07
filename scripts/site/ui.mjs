@@ -143,6 +143,40 @@ export function guideCards(slugs, desc = {}) {
     .join('')}</ul>`;
 }
 
+/* ---------- Calls to action inside the page ---------- */
+// The asphalt card: words on one side of an amber lane line, call and text on the other.
+export function ctaCard({ where, script, title, text, sign = '', proof = false }) {
+  return `<div class="ccard${sign ? ' ccard--sign' : ''}" data-reveal>
+  ${sign ? `<span class="ccard-sign">${signIcon(sign)}</span>` : ''}
+  <div class="ccard-copy">
+    <p class="script ccard-script">${script}</p>
+    <p class="ccard-title">${title}</p>
+    ${text ? `<p class="ccard-text">${text}</p>` : ''}
+    ${proof ? `<p class="ccard-proof">${STARS}<span><strong>5.0</strong> from ${REVIEWS_COUNT} Google reviews</span><span class="ccard-proof__dot" aria-hidden="true"></span><span>She comes to you</span></p>` : ''}
+  </div>
+  <div class="ccard-actions">
+    <a class="btn btn--amber btn--call" href="${BIZ.tel}" data-call="${where}">${icon('phone')}<span class="btn-call__text"><span class="btn-call__label">Call Mrs. Akbar</span> <span class="btn-call__num">${BIZ.phone}</span></span></a>
+    <a class="btn btn--ghost-light btn--text" href="${BIZ.sms}" data-text="${where}">${icon('chat')}<span>Text her</span></a>
+  </div>
+</div>`;
+}
+
+// A quieter row: one line, then call and text (optionally the Google rating above it).
+export function ctaRow({ where, text, stars = false }) {
+  return `<div class="crow" data-reveal>
+  ${stars ? `<p class="crow-proof">${STARS}<span><strong>5.0</strong> from ${REVIEWS_COUNT} Google reviews</span></p>` : ''}
+  <p class="crow-text">${text}</p>
+  <div class="crow-actions">${callBtn(where)}${textBtn(where)}</div>
+</div>`;
+}
+
+// Adds content (usually a call to action) to the end of a section built by sec()
+export function withCta(section, extra) {
+  const end = '\n  </div>\n</section>';
+  if (!section.endsWith(end)) throw new Error('withCta: not a sec() section');
+  return `${section.slice(0, -end.length)}\n    ${extra}${end}`;
+}
+
 /* Closing call band: the number, big and quiet. No road, no car: the footer area stays still. */
 export function ctaBand({ id = 'book', script = 'ready when you are', title, text }) {
   return `<section class="cta band band--dark" id="${id}" data-callbar-end aria-labelledby="${id}-title">

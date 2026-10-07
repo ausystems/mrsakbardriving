@@ -1,7 +1,7 @@
 // Artwork for the generated pages: area mini-maps (drawn from the same OpenStreetMap data and
 // projection as the home page map) and one small animated illustration per kind of lesson.
 // Motion is SMIL or CSS; fx.js starts it when the art is on screen and never for reduced motion.
-import { project, WIDTH, HEIGHT } from '../geo-common.mjs';
+import { project, WIDTH, HEIGHT, UNITS_PER_KM } from '../geo-common.mjs';
 
 const r1 = (n) => Math.round(n * 10) / 10;
 const CAR = (w = 76, cls = '') => `<use class="art-car${cls ? ` ${cls}` : ''}" href="#i-car" x="${-w / 2}" y="${-w / 4}" width="${w}" height="${w / 2}"/>`;
@@ -129,6 +129,22 @@ ${others.map((p) => `<g class="mm-other"><circle cx="${r1(p.x)}" cy="${r1(p.y)}"
 </svg>`;
 }
 
+/* ---------- Home page area tiles: a still crop of the same map with a pin ---------- */
+// The images get their href from main.js when the grid is near the screen, so they never slow the first paint.
+export function tileMap(key, { km = 12, ratio = 16 / 9 } = {}) {
+  const p = PLACES[key];
+  const [tx, ty] = project(p.lat, p.lon);
+  const w = km * UNITS_PER_KM, h = w / ratio;
+  const vx = Math.min(Math.max(tx - w / 2, 0), WIDTH - w), vy = Math.min(Math.max(ty - h / 2, 0), HEIGHT - h);
+  const s = w / 560;
+  return `<svg class="mmap abento-svg" viewBox="${r1(vx)} ${r1(vy)} ${r1(w)} ${r1(h)}" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+<rect x="-500" y="-500" width="2000" height="1815" class="abento-ground"/>
+<image data-href="/img/hamilton-area-relief-map-2000.webp" x="0" y="0" width="1000" height="815" preserveAspectRatio="none"/>
+<image data-href="/img/hamilton-area-map-base.svg" x="0" y="0" width="1000" height="815" preserveAspectRatio="none"/>
+<g class="mm-target"><circle class="mm-halo" cx="${r1(tx)}" cy="${r1(ty)}" r="${r1(26 * s)}"/><circle class="mm-target-ring" cx="${r1(tx)}" cy="${r1(ty)}" r="${r1(14 * s)}" style="stroke-width:${r1(3 * s)}px"/><circle class="mm-target-dot" cx="${r1(tx)}" cy="${r1(ty)}" r="${r1(6.5 * s)}"/></g>
+</svg>`;
+}
+
 /* ---------- Lesson illustrations (560 x 480, framed in the arch) ---------- */
 const SKY = '<rect width="560" height="480" class="art-sky"/>';
 
@@ -149,18 +165,27 @@ ${rows.map((t, i) => `<g transform="translate(186 ${196 + i * 40})"><rect width=
 }
 
 export function artHighway() {
+  // Three lanes. The lesson car signals left, the gap it checked lights up, then it changes lanes;
+  // later it does exactly the same to the right. The three words light up in step with it.
+  // Still frame (reduced motion): centre lane, left signal on, the gap to the left marked.
+  const lamp = (x, y) => `<circle class="art-lamp-glow" cx="${x}" cy="${y}" r="13"/><circle class="art-lamp" cx="${x}" cy="${y}" r="4.6"/>`;
   return `<svg class="art art-highway" viewBox="0 0 560 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs><radialGradient id="hw-glow"><stop offset="0" stop-color="#ffc247" stop-opacity=".9"/><stop offset="1" stop-color="#ffc247" stop-opacity="0"/></radialGradient></defs>
 ${SKY}
 <rect x="150" y="-10" width="260" height="500" class="art-asphalt"/>
 <path d="M162-10v500M398-10v500" class="art-edge"/>
 <path d="M236.7-40v560M323.3-40v560" class="art-lanes"/>
-<g class="art-traffic"><g transform="translate(366 0) rotate(-90)">${CAR(70, 'art-car--dark')}</g></g>
-<g class="art-merge">
+<rect class="art-gap art-gap--l" x="174.4" y="282" width="50" height="96" rx="14"/>
+<rect class="art-gap art-gap--r" x="255" y="282" width="50" height="96" rx="14"/>
+<g class="art-traffic"><g transform="translate(360.7 0) rotate(-90)">${CAR(70, 'art-car--dark')}</g></g>
+<g class="art-merge"><g class="art-yaw">
 <g transform="translate(280 330) rotate(-90)">${CAR(78)}</g>
-<circle class="art-signal" cx="262" cy="300" r="5"/><circle class="art-signal" cx="262" cy="362" r="5"/>
-</g>
-<text x="40" y="430" class="art-script" style="font-size:30px">signal, check, then move</text>
-<path d="M150 418c40-6 70-30 96-66" class="art-pen"/><path d="M236 360l10-9 2 13" class="art-pen"/>
+<g class="art-blinker art-blinker--l">${lamp(262, 300)}${lamp(262, 361)}</g>
+<g class="art-blinker art-blinker--r">${lamp(298, 300)}${lamp(298, 361)}</g>
+</g></g>
+<text x="30" y="316" class="art-script art-step art-step--1">signal,</text>
+<text x="30" y="352" class="art-script art-step art-step--2">check,</text>
+<text x="30" y="388" class="art-script art-step art-step--3">then move</text>
 </svg>`;
 }
 

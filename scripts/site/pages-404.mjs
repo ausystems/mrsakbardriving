@@ -2,7 +2,7 @@
 // routes back into the site. Served by the host for any missing page; never indexed.
 import { SERVICES, AREAS } from './core.mjs';
 import { GUIDE_LIST } from './guide-list.mjs';
-import { callBtn, sec, chips } from './ui.mjs';
+import { callBtn, textBtn, sec, chips } from './ui.mjs';
 import { art404 } from './art.mjs';
 
 export function notFoundPage() {
@@ -14,8 +14,9 @@ export function notFoundPage() {
       <h1 class="phero-title" id="page-title" data-letters>This road doesn&rsquo;t go anywhere</h1>
       <p class="phero-lede">The page you were looking for isn&rsquo;t here. The link may be old, or the address may have a typo. Happens to the best drivers. Time for a three-point turn.</p>
       <div class="phero-actions" data-callbar-hide>
-        <a class="btn btn--dark" href="/">Back to the home page</a>
         ${callBtn('404')}
+        ${textBtn('404')}
+        <a class="btn btn--ghost" href="/">Back to the home page</a>
       </div>
     </div>
     <div class="phero-art" aria-hidden="true" data-play>${art404()}</div>

@@ -1466,12 +1466,45 @@ html.motion .phero-art { animation: archIn 1.4s var(--ease-out) 0.15s both; }
 /* highway */
 .is-playing .art-lanes:not(.art-lanes--h) { animation: laneRun 1.1s linear infinite; }
 @keyframes laneRun { to { stroke-dashoffset: -52; } }
-.art-signal { fill: #f5a623; opacity: 0; }
-.is-playing .art-merge { animation: merge 7s cubic-bezier(0.45, 0, 0.3, 1) infinite; }
-.is-playing .art-signal { animation: signal 7s steps(1) infinite; }
-@keyframes merge { 0%, 30% { transform: none; } 44%, 70% { transform: translateX(-86px); } 84%, 100% { transform: none; } }
-@keyframes signal { 0%, 10% { opacity: 0; } 12% { opacity: 1; } 16% { opacity: 0; } 20% { opacity: 1; } 24% { opacity: 0; } 28% { opacity: 1; } 32%, 100% { opacity: 0; } }
-.is-playing .art-traffic { animation: traffic 4.6s linear infinite; }
+/* Lane changes, both ways the same: signal (10%), the gap lights up (14%), move (20 to 36%), signal off.
+   The move to the right repeats it 46% later. Everything shares one 10s clock so it never drifts. */
+.art-lamp { fill: #ffb21f; }
+.art-lamp-glow { fill: url(#hw-glow); }
+.art-gap { fill: rgba(242, 181, 58, 0.13); stroke: #f2b53a; stroke-width: 2.5; stroke-dasharray: 9 7; opacity: 0; }
+.art-blinker--r { opacity: 0; }
+.art-gap--l { opacity: 0.8; }
+.art-yaw { transform-origin: 280px 330px; }
+.art-step { font-size: 30px; }
+.is-playing .art-merge { animation: laneShift 10s infinite; }
+.is-playing .art-yaw { animation: laneYaw 10s infinite; }
+.is-playing .art-blinker--l { animation: blinkL 10s steps(1, end) infinite; }
+.is-playing .art-blinker--r { animation: blinkR 10s steps(1, end) infinite; }
+.is-playing .art-gap--l { animation: gapL 10s linear infinite, gapMarch 1.2s linear infinite; }
+.is-playing .art-gap--r { animation: gapR 10s linear infinite, gapMarch 1.2s linear infinite; }
+.is-playing .art-step--1 { animation: step1 10s linear infinite; }
+.is-playing .art-step--2 { animation: step2 10s linear infinite; }
+.is-playing .art-step--3 { animation: step3 10s linear infinite; }
+@keyframes laneShift {
+  0%, 20% { transform: none; animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
+  36%, 66% { transform: translateX(-80.65px); animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
+  82%, 100% { transform: none; }
+}
+@keyframes laneYaw {
+  0%, 20% { transform: none; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  28% { transform: rotate(-7deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  36%, 66% { transform: none; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  74% { transform: rotate(7deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  82%, 100% { transform: none; }
+}
+@keyframes blinkL { 0% { opacity: 0; } 10% { opacity: 1; } 13% { opacity: 0; } 16% { opacity: 1; } 19% { opacity: 0; } 22% { opacity: 1; } 25% { opacity: 0; } 28% { opacity: 1; } 31% { opacity: 0; } 34% { opacity: 1; } 37%, 100% { opacity: 0; } }
+@keyframes blinkR { 0% { opacity: 0; } 56% { opacity: 1; } 59% { opacity: 0; } 62% { opacity: 1; } 65% { opacity: 0; } 68% { opacity: 1; } 71% { opacity: 0; } 74% { opacity: 1; } 77% { opacity: 0; } 80% { opacity: 1; } 83%, 100% { opacity: 0; } }
+@keyframes gapL { 0%, 14% { opacity: 0; } 17%, 26% { opacity: 1; } 32%, 100% { opacity: 0; } }
+@keyframes gapR { 0%, 60% { opacity: 0; } 63%, 72% { opacity: 1; } 78%, 100% { opacity: 0; } }
+@keyframes gapMarch { to { stroke-dashoffset: -32; } }
+@keyframes step1 { 0%, 9.5% { fill-opacity: 0.36; } 10%, 38% { fill-opacity: 1; } 40%, 55.5% { fill-opacity: 0.36; } 56%, 84% { fill-opacity: 1; } 86%, 100% { fill-opacity: 0.36; } }
+@keyframes step2 { 0%, 13.5% { fill-opacity: 0.36; } 14%, 38% { fill-opacity: 1; } 40%, 59.5% { fill-opacity: 0.36; } 60%, 84% { fill-opacity: 1; } 86%, 100% { fill-opacity: 0.36; } }
+@keyframes step3 { 0%, 19.5% { fill-opacity: 0.36; } 20%, 38% { fill-opacity: 1; } 40%, 65.5% { fill-opacity: 0.36; } 66%, 84% { fill-opacity: 1; } 86%, 100% { fill-opacity: 0.36; } }
+.is-playing .art-traffic { animation: traffic 5s linear infinite; }
 @keyframes traffic { from { transform: translateY(560px); } to { transform: translateY(-120px); } }
 .art-traffic { transform: translateY(150px); }
 /* parking and stop sign */
@@ -1745,6 +1778,59 @@ main:has(> .cta:last-child) + .site-footer::before { content: none; }
 .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 14px; margin-top: clamp(24px, 3vw, 34px); }
 .btn--ghost-light { --btn-bg: transparent; --btn-fg: var(--on-dark); box-shadow: inset 0 0 0 1.5px rgba(244, 236, 223, 0.55); }
 @media (hover: hover) { .btn--ghost-light:hover { --btn-bg: var(--on-dark); --btn-fg: var(--ink); } }
+
+/* ---------- In-page calls to action (ui.mjs: ctaCard, ctaRow) ---------- */
+/* Asphalt card with amber lane dashes along both edges; the dashes drive past on hover */
+.ccard {
+  position: relative; isolation: isolate;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 26px clamp(36px, 6vw, 96px);
+  margin-top: clamp(48px, 6vw, 84px);
+  padding: clamp(34px, 4.4vw, 54px) clamp(24px, 4.6vw, 60px);
+  border-radius: var(--radius-lg);
+  background-color: var(--asphalt);
+  background-image: linear-gradient(90deg, var(--amber) 50%, transparent 0), linear-gradient(90deg, var(--amber) 50%, transparent 0), url('/img/grain-light.png');
+  background-size: 34px 4px, 34px 4px, 200px;
+  background-repeat: repeat-x, repeat-x, repeat;
+  background-position: 0 14px, 0 calc(100% - 14px), 0 0;
+  box-shadow: var(--shadow-lg);
+  transition: background-position 1.6s linear;
+}
+@media (hover: hover) { .ccard:hover { background-position: 68px 14px, -68px calc(100% - 14px), 0 0; } }
+.ccard--sign { grid-template-columns: auto minmax(0, 1fr) auto; }
+.ccard-sign { width: clamp(68px, 7vw, 92px); height: clamp(68px, 7vw, 92px); align-self: start; }
+@media (hover: hover) { .ccard:hover .sign-board { animation: swing 0.95s var(--ease-out); } }
+.ccard .ccard-script { margin: 0 0 6px; font-size: clamp(1.45rem, 1.2rem + 0.8vw, 1.9rem); color: var(--amber); transform: rotate(-2deg); transform-origin: left; }
+.ccard .ccard-title { max-width: 20ch; font: 900 clamp(2rem, 1.35rem + 2.2vw, 3.3rem)/0.95 var(--font-display); text-transform: uppercase; color: var(--on-dark); text-wrap: balance; }
+.ccard .ccard-text { max-width: 34rem; margin-top: 14px; font-size: clamp(1.02rem, 0.96rem + 0.2vw, 1.12rem); line-height: 1.55; color: var(--on-dark-muted); }
+.ccard .ccard-proof { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 18px; font-size: 0.95rem; font-weight: 650; color: var(--on-dark); }
+.ccard-proof .stars { font-size: 0.95rem; }
+.ccard-proof__dot { width: 5px; height: 5px; border-radius: 50%; background: var(--amber); }
+.ccard .ccard-proof strong { color: var(--amber); }
+.ccard-actions { display: flex; flex-direction: column; gap: 12px; min-width: min(100%, 17.5rem); }
+.ccard-actions .btn { width: 100%; }
+.ccard-actions .btn--text { min-height: 3.5rem; }
+/* In a guide or legal page the column is narrow: sign and words side by side, buttons in a row below */
+.article-body .ccard { grid-template-columns: minmax(0, 1fr); gap: 22px 28px; }
+.article-body .ccard--sign { grid-template-columns: auto minmax(0, 1fr); }
+.article-body .ccard-actions { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; min-width: 0; }
+.article-body .ccard-actions .btn { width: auto; flex: 1 1 15rem; }
+.article-body .ccard .ccard-title { font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.7rem); }
+
+/* A quieter centred row: the rating, one line, then call and text */
+.crow { display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: 48rem; margin: clamp(44px, 5.5vw, 72px) auto 0; text-align: center; }
+.crow-proof { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 10px; font-size: 0.95rem; font-weight: 650; color: var(--ink-2); }
+.crow-proof .stars { font-size: 1.05rem; }
+.crow .crow-text { font: 900 clamp(1.7rem, 1.2rem + 1.5vw, 2.5rem)/1 var(--font-display); text-transform: uppercase; color: var(--ink); text-wrap: balance; }
+.crow-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 14px; margin-top: 8px; }
+@media (max-width: 720px) {
+  .ccard, .ccard--sign, .article-body .ccard--sign { grid-template-columns: minmax(0, 1fr); }
+  .ccard-actions, .article-body .ccard-actions { min-width: 0; flex-direction: column; }
+  .article-body .ccard-actions .btn { width: 100%; flex: none; }
+  .ccard-proof__dot { display: none; }
+  .ccard-sign { width: 64px; height: 64px; }
+  .crow-actions { width: 100%; flex-direction: column; }
+  .crow-actions .btn { width: 100%; }
+}
 
 /* =========================================================
    GUIDES

@@ -2,7 +2,7 @@
 // no cookies, no analytics, no third-party scripts) and what the rest of the site says. Business-specific
 // details that aren't known here (prices, cancellation terms) are left to what's agreed at booking.
 import { BIZ, abs, plain } from './core.mjs';
-import { crumbs, toc } from './ui.mjs';
+import { crumbs, toc, ctaCard, ctaBand } from './ui.mjs';
 import { signIcon } from './art.mjs';
 
 export const LEGAL_UPDATED = '2026-10-06';
@@ -40,10 +40,12 @@ function legalPage({ slug, name, h1, script, sign, title, description, intro, se
     ${toc(sections.map((s) => [s.id, s.toc || plain(s.h)]), 'On this page')}
     <div class="article-body">
       ${body}
+      ${ctaCard({ where: 'legal-end', script: 'questions about lessons?', title: 'Call or text Mrs. Akbar', text: 'Lessons run 7 days a week, by appointment, and she comes to you.', sign: 'wheel', proof: true })}
     </div>
   </div>
 </div>
-</article>`;
+</article>
+${ctaBand({ title: 'Book a lesson with Mrs. Akbar', text: 'Call or text 7 days a week. She comes to you, so your lesson starts where you are.' })}`;
   return {
     type: 'legal', path, trail, name, h1, title, description, main, ogScript: script, updated: LEGAL_UPDATED,
     webPageType: 'WebPage',

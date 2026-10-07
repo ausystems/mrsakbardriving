@@ -3,7 +3,7 @@
 import { review, abs, plain, UPDATED, BIZ } from './core.mjs';
 import { bizRef } from './layout.mjs';
 import { GUIDE_LIST, GUIDE_CATS } from './guide-list.mjs';
-import { crumbs, sec, toc, callout, inlineCta, sources, faq, guideCards, ctaBand, quote, quotes, chips } from './ui.mjs';
+import { crumbs, sec, toc, callout, inlineCta, sources, faq, guideCards, ctaBand, ctaCard, quote, quotes, chips } from './ui.mjs';
 import { signIcon, artGuides } from './art.mjs';
 import { mountainGuide } from './guide-mountain.mjs';
 import { startGuides } from './guides-start.mjs';
@@ -62,12 +62,13 @@ export function guidePage(g) {
       ${body}
       ${sources(g.sources)}
       ${g.faqs?.length ? `<section class="article-faq" id="questions" aria-labelledby="questions-h"><h2 id="questions-h" data-reveal>Quick answers</h2>${faq(g.faqs, g.slug)}</section>` : ''}
+      ${ctaCard({ where: 'guide-end', script: 'put it into practice', title: g.cta[0], text: g.cta[1], sign: 'wheel', proof: true })}
     </div>
   </div>
 </div>
 </article>
 ${sec({ id: 'next', tone: 'paper', script: 'keep reading', title: 'More guides', body: guideCards(g.related) + (g.lessons ? `<div class="more-lessons" data-reveal><p class="more-lessons__title">Related lessons</p>${chips(g.lessons)}</div>` : '') })}
-${ctaBand({ title: g.cta[0], text: g.cta[1] })}`;
+${ctaBand({ title: 'Book a lesson with Mrs. Akbar', text: 'Call or text 7 days a week. She comes to you, so your lesson starts where you are.' })}`;
   return {
     type: 'guide', path, trail, name: meta.short, h1: meta.title, title: g.title, description: g.description, faqs: g.faqs, main,
     ogScript: g.script, published: g.published || UPDATED, updated: g.updated || UPDATED,

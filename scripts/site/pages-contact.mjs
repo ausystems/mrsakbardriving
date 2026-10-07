@@ -2,7 +2,7 @@
 // as everywhere else on the site). She drives to her students, so there is no address to visit.
 import { BIZ, AREAS, abs } from './core.mjs';
 import { bizRef, icon } from './layout.mjs';
-import { pageHero, sec, steps, faq, chips } from './ui.mjs';
+import { pageHero, sec, steps, faq, chips, ctaRow } from './ui.mjs';
 import { artContact } from './art.mjs';
 
 export function contactPage() {
@@ -55,7 +55,7 @@ export function contactPage() {
         { title: 'Where you live', text: 'She drives to you, so she&rsquo;ll need to know where your lesson starts.' },
         { title: 'Your road test date', text: 'If you&rsquo;ve booked one, and at which DriveTest centre.' },
         { title: 'What you want to work on', text: 'Parking, highways, nerves, or everything from the start. All fine.' },
-      ]),
+      ]) + ctaRow({ where: 'contact-mention', text: 'Got all that? Call or text her.' }),
     }),
     sec({
       id: 'details', tone: 'white', script: 'the details', title: 'She comes to you',
@@ -71,7 +71,7 @@ export function contactPage() {
 </div>
 <div class="more-lessons" data-reveal><p class="more-lessons__title">Areas she covers</p>${chips(AREAS.map((a) => ({ href: `/${a.slug}/`, label: a.label })))}</div>`,
     }),
-    sec({ id: 'questions', tone: 'paper', script: 'good questions', title: 'Before you call', center: true, body: faq(faqs, 'contact') }),
+    sec({ id: 'questions', tone: 'paper', script: 'good questions', title: 'Before you call', center: true, body: faq(faqs, 'contact') + ctaRow({ where: 'contact-faq', text: 'Ready when you are.', stars: true }) }),
   ].join('\n');
   return {
     type: 'contact', path, trail, name: 'Contact', h1: 'Book a driving lesson',

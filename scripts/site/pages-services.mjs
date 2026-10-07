@@ -2,7 +2,7 @@
 // every quote comes from her Google reviews through review(), which rejects anything not word for word.
 import { review, REVIEWS_COUNT, SERVICES, abs, plain } from './core.mjs';
 import { bizRef } from './layout.mjs';
-import { pageHero, sec, facts, lead, prose, checks, steps, quote, quotes, notes, faq, chips, guideCards, ctaBand, sources } from './ui.mjs';
+import { pageHero, sec, facts, lead, prose, checks, steps, quote, quotes, notes, faq, chips, guideCards, ctaBand, ctaCard, ctaRow, withCta, sources } from './ui.mjs';
 import { artBeginner, artNervous, artG2, artHighway, artParking } from './art.mjs';
 
 const ONTARIO_G = ['Get a G driver&rsquo;s licence: new drivers (ontario.ca)', 'https://www.ontario.ca/page/get-g-drivers-licence-new-drivers'];
@@ -18,13 +18,28 @@ const ratingFacts = [
   { num: '7', count: 7, label: 'days a week, by appointment' },
 ];
 
+// The call-to-action card after each lesson page's first section
+const CARD = {
+  'beginner-driving-lessons': ['no experience needed', 'Your first drive starts here', 'Call or text to book. She comes to you, and lessons go at your pace from the very first drive.'],
+  'driving-lessons-for-nervous-drivers': ['no pressure, ever', 'One calm lesson at a time', 'Call or text and tell her what worries you about driving. That&rsquo;s where the first lesson starts.'],
+  'g2-road-test-preparation': ['test coming up?', 'Get ready for your G2', 'Call or text with your test date. She comes to you, 7 days a week, by appointment.'],
+  'g-road-test-preparation': ['ready for the highway?', 'Get ready for the G test', 'Call or text to book highway lessons. She comes to you, so you start from your own street.'],
+  'parallel-parking-lessons': ['parking stress?', 'Park without the panic', 'Call or text to book a parking lesson. She comes to you, 7 days a week, by appointment.'],
+};
+
 function servicePage(p) {
   const path = `/${p.slug}/`;
   const trail = [['Home', '/'], [p.crumb, path]];
+  const [cs, ct, cx] = CARD[p.slug];
+  const sections = p.sections.map((s, i) => {
+    if (i === 0) return withCta(s, ctaCard({ where: 'lesson-card', script: cs, title: ct, text: cx }));
+    if (s.includes('id="reviews"')) return withCta(s, ctaRow({ where: 'lesson-reviews', text: 'Ready to be next?', stars: true }));
+    return s;
+  });
   const main = [
     pageHero({ trail, script: p.script, h1: p.h1, lede: p.lede, art: p.art }),
-    ...p.sections,
-    sec({ id: 'questions', tone: 'paper', script: 'good questions', title: p.faqTitle || 'Questions people ask', center: true, body: faq(p.faqs, p.slug) }),
+    ...sections,
+    sec({ id: 'questions', tone: 'paper', script: 'good questions', title: p.faqTitle || 'Questions people ask', center: true, body: faq(p.faqs, p.slug) + ctaRow({ where: 'lesson-faq', text: 'Still have a question?' }) }),
     sec({
       id: 'more', tone: 'white', script: 'keep reading', title: 'Guides and other lessons',
       body: `${guideCards(p.guides)}<div class="more-lessons" data-reveal><p class="more-lessons__title">Other lessons</p>${otherLessons(p.slug)}</div>`,
