@@ -46,14 +46,15 @@ npm run indexnow     # after a deploy: tell Bing and other IndexNow engines abou
 
 The site is hosted on **Vercel**, connected to this repository. Every push to `main` builds and
 publishes it automatically at **https://www.mrsakbardriving.ca/**; other branches get preview
-links. Build settings, caching, security headers and the redirect from the old
-`mrsakbardriving.vercel.app` address live in `vercel.json`.
+links. Build settings, caching and security headers live in `vercel.json`. The old
+`mrsakbardriving.vercel.app` address still answers, but every page there names
+`www.mrsakbardriving.ca` as its canonical address, so search engines index the real domain.
 
 The address lives in one place, `VITE_SITE_URL` in `.env`. Canonical tags, Open Graph URLs,
 structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it.
 
 **Changing the domain:** add the new one in Vercel under **Settings > Domains**, change
-`VITE_SITE_URL` in `.env`, and update the redirect in `vercel.json`.
+`VITE_SITE_URL` in `.env`, and push.
 
 ## Search engines
 
