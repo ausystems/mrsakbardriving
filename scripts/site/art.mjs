@@ -203,26 +203,6 @@ ${SKY}
 </svg>`;
 }
 
-export function artAdult() {
-  const ticks = [];
-  for (let v = 0; v <= 120; v += 10) {
-    const a = ((-210 + (v / 120) * 240) * Math.PI) / 180;
-    const major = v % 20 === 0;
-    const r0 = major ? 150 : 158, r2 = 170;
-    ticks.push(`<path d="M${r1(280 + Math.cos(a) * r0)} ${r1(260 + Math.sin(a) * r0)}L${r1(280 + Math.cos(a) * r2)} ${r1(260 + Math.sin(a) * r2)}" class="art-tick-mark${major ? ' is-major' : ''}"/>`);
-    if (major) ticks.push(`<text x="${r1(280 + Math.cos(a) * 124)}" y="${r1(260 + Math.sin(a) * 124 + 7)}" text-anchor="middle" class="art-gauge-num">${v}</text>`);
-  }
-  return `<svg class="art art-adult" viewBox="0 0 560 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
-${SKY}
-<circle cx="280" cy="260" r="190" class="art-gauge-face"/>
-<path d="M${r1(280 + Math.cos((-210 * Math.PI) / 180) * 178)} ${r1(260 + Math.sin((-210 * Math.PI) / 180) * 178)}A178 178 0 1 1 ${r1(280 + Math.cos((30 * Math.PI) / 180) * 178)} ${r1(260 + Math.sin((30 * Math.PI) / 180) * 178)}" class="art-gauge-arc" pathLength="1"/>
-${ticks.join('')}
-<g class="art-needle"><path d="M280 260 L280 112" class="art-needle-line"/><circle cx="280" cy="260" r="14" class="art-needle-hub"/></g>
-<text x="280" y="330" text-anchor="middle" class="art-small">km/h</text>
-<text x="280" y="392" text-anchor="middle" class="art-script" style="font-size:34px">at your own pace</text>
-</svg>`;
-}
-
 export function artGuides() {
   const post = (x, y, glyph, d) => `<g class="art-sign" style="--d:${d}s" transform="translate(${x} ${y})"><path d="M0 0v190" class="art-post"/><g class="art-sign-board" transform="translate(-48 -96)">${signIcon(glyph).replace('<svg class="sign" viewBox="0 0 64 64" aria-hidden="true" focusable="false">', '<svg width="96" height="96" viewBox="0 0 64 64">')}</g></g>`;
   return `<svg class="art art-guides" viewBox="0 0 560 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">

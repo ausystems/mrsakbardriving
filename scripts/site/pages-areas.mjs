@@ -13,7 +13,6 @@ const LESSON_LINKS = {
   g2: ['/g2-road-test-preparation/', 'G2 road test prep'],
   g: ['/g-road-test-preparation/', 'G test and highway'],
   parking: ['/parallel-parking-lessons/', 'Parallel parking'],
-  adult: ['/adult-driving-lessons/', 'Adult lessons'],
 };
 
 function areaPage(a) {

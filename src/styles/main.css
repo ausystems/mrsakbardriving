@@ -854,25 +854,6 @@ html.motion .meet-lede:not(.is-in) em { background-size: 0% 100%; }
 .stop-for { margin-bottom: 10px; font-weight: 700; color: var(--ink-2); }
 .stop-body > p:not(.stop-for) { max-width: 38rem; color: var(--muted); }
 
-.adults {
-  position: relative;
-  display: flex; align-items: center; justify-content: space-between; gap: 24px 48px;
-  margin-top: clamp(64px, 8vw, 110px);
-  padding: clamp(30px, 4vw, 48px) clamp(26px, 4.5vw, 60px);
-  border-radius: var(--radius-lg);
-  background: var(--white);
-  box-shadow: var(--shadow-sm);
-}
-
-.adults-title {
-  margin-bottom: 10px;
-  font-family: var(--font-display); font-weight: 900;
-  font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.8rem); line-height: 0.95;
-  text-transform: uppercase; color: var(--ink);
-}
-.adults-copy p { max-width: 40rem; color: var(--muted); }
-.adults .btn { position: relative; z-index: 1; flex: none; }
-
 /* =========================================================
    AREAS
    ========================================================= */
@@ -972,7 +953,7 @@ html.motion .meet-lede:not(.is-in) em { background-size: 0% 100%; }
 .area-list { display: flex; flex-wrap: wrap; row-gap: 4px; }
 .area-list li { font-weight: 750; font-size: 0.97rem; color: var(--ink-2); }
 .area-list li:not(:last-child)::after { content: '\00B7'; margin: 0 9px; color: var(--soft); }
-.areas-note { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 24px; margin-top: clamp(48px, 6vw, 80px); text-align: center; font-size: 1.12rem; font-weight: 650; color: var(--ink-2); }
+.section-note { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 24px; margin-top: clamp(48px, 6vw, 80px); text-align: center; font-size: 1.12rem; font-weight: 650; color: var(--ink-2); }
 
 
 /* =========================================================
@@ -1307,7 +1288,6 @@ html.motion .msg { animation: fabIn 0.9s var(--ease-out) 1.6s both; }
 }
 .stop-more .icon { width: 1.1em; height: 1.1em; transition: transform 0.4s var(--ease-out); }
 @media (hover: hover) { .stop-more:hover { text-decoration-color: currentColor; } .stop-more:hover .icon { transform: translateX(4px); } }
-.adults .stop-more { margin-top: 6px; }
 .area-list a { color: inherit; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; text-decoration-color: rgba(33, 30, 26, 0.3); transition: text-decoration-color 0.3s var(--ease), color 0.3s var(--ease); }
 @media (hover: hover) { .area-list a:hover { color: var(--pen); text-decoration-color: currentColor; } }
 
@@ -1447,17 +1427,6 @@ html.motion .phero-art { animation: archIn 1.4s var(--ease-out) 0.15s both; }
 @keyframes breathe8 { 0%, 100% { transform: scale(0.84); } 50% { transform: scale(1.12); } }
 @keyframes breatheIn { 0%, 44% { opacity: 1; } 50%, 94% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes breatheOut { 0%, 44% { opacity: 0; } 50%, 94% { opacity: 1; } 100% { opacity: 0; } }
-/* adults: speedometer */
-.art-gauge-face { fill: #fffcf7; stroke: rgba(33, 30, 26, 0.12); stroke-width: 2; }
-.art-gauge-arc { fill: none; stroke: var(--amber); stroke-width: 8; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
-.art-tick-mark { stroke: var(--ink-2); stroke-width: 2; stroke-linecap: round; }
-.art-tick-mark.is-major { stroke-width: 3.4; }
-.art-gauge-num { font: 750 17px var(--font-body); fill: var(--ink-2); }
-.art-needle { transform-box: view-box; transform-origin: 280px 260px; transform: rotate(-30deg); }
-.art-needle-line { stroke: var(--pen); stroke-width: 6; stroke-linecap: round; }
-.art-needle-hub { fill: var(--ink); }
-.is-playing .art-needle { animation: needle 9s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-@keyframes needle { 0% { transform: rotate(-120deg); } 40% { transform: rotate(-24deg); } 48% { transform: rotate(-33deg); } 56% { transform: rotate(-28deg); } 85% { transform: rotate(-30deg); } 100% { transform: rotate(-120deg); } }
 /* guides: swaying signs */
 .art-sign .art-sign-board { transform-box: fill-box; transform-origin: 50% 100%; }
 .is-playing .art-sign .art-sign-board { animation: sway 5s ease-in-out infinite; animation-delay: var(--d); }
@@ -1952,7 +1921,6 @@ html.motion .call-seal { animation: sealIn 1.2s var(--ease-out) 0.85s both; }
   .btn--header { transition: opacity 0.35s var(--ease), transform 0.45s var(--ease-out), visibility 0.35s; }
   .callbar-on .btn--header { opacity: 0; visibility: hidden; transform: scale(0.85); }
   .footer-col a { padding: 10px 0; }
-  .adults { flex-direction: column; align-items: flex-start; }
 }
 
 @media (min-width: 701px) and (max-width: 1060px) {
@@ -2020,7 +1988,7 @@ html.motion .call-seal { animation: sealIn 1.2s var(--ease-out) 0.85s both; }
   .stop-marker { font-size: 1.25rem; top: -2px; }
   .stop--finish .stop-marker { font-size: 1.5rem; }
   .stop-title { font-size: clamp(1.8rem, 1.2rem + 3vw, 2.3rem); }
-  .adults .btn, .areas-note .btn { width: 100%; min-height: 60px; }
+  .section-note .btn { width: 100%; min-height: 60px; }
   .area-groups { grid-template-columns: 1fr; }
   .area-map { border-radius: 20px; margin-inline: calc(var(--gutter) * -0.5); }
   .area-map__caption { padding: 14px 18px; font-size: 0.9rem; }

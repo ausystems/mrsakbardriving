@@ -75,7 +75,7 @@ export const AREA_CONTENT = (review) => [
     sources: [SRC.osm],
     lessonsTitle: 'A calm place to begin',
     lessonsHtml: '<p>Mount Hope&rsquo;s quiet streets suit <a href="/beginner-driving-lessons/">beginner lessons</a> and anyone who feels <a href="/driving-lessons-for-nervous-drivers/">nervous behind the wheel</a>. When you&rsquo;re ready for more, the rest of Hamilton is close: the Linc is just to the north, and Highway 6 connects to the 403.</p><p>There aren&rsquo;t any roundabouts right in Mount Hope. The nearest are a short drive away in Binbrook, Ancaster and Caledonia.</p>',
-    lessons: ['beginner', 'nervous', 'adult', 'parking'],
+    lessons: ['beginner', 'nervous', 'g2', 'parking'],
     reviewsTitle: 'What a first lesson can feel like',
     quotes: [
       [review('Cole Balton', 'She made me feel completely comfortable behind the wheel from day one', 'throughout every lesson.'), 'from day one'],
@@ -230,7 +230,7 @@ export const AREA_CONTENT = (review) => [
     sources: [SRC.osm],
     lessonsTitle: 'What Binbrook is good for',
     lessonsHtml: '<p>Roundabouts trip up plenty of new drivers, and Binbrook has lots of them close together. That makes it a natural next step after <a href="/beginner-driving-lessons/">beginner lessons</a>, and good practice for the <a href="/g2-road-test-preparation/">G2 road test</a>. The quiet streets suit <a href="/driving-lessons-for-nervous-drivers/">nervous drivers</a> too.</p>',
-    lessons: ['beginner', 'g2', 'nervous', 'adult'],
+    lessons: ['beginner', 'g2', 'nervous', 'parking'],
     reviewsTitle: 'Confidence, one lesson at a time',
     quotes: [
       [review('anamm iftikhar', 'I got my G2 in my first attempt as I was beginner.'), 'beginner, passed the G2'],
@@ -269,7 +269,7 @@ export const AREA_CONTENT = (review) => [
     sources: [SRC.osm],
     lessonsTitle: 'What Caledonia is good for',
     lessonsHtml: '<p>The quiet streets suit <a href="/beginner-driving-lessons/">beginner lessons</a>, and the country highways help with steady speed and following distance before the 400-series. When your road test comes up, the nearest DriveTest centre is Hamilton&rsquo;s, on Kenora Avenue, so <a href="/g2-road-test-preparation/">G2 test prep</a> can include some city driving too.</p>',
-    lessons: ['beginner', 'g2', 'g', 'adult'],
+    lessons: ['beginner', 'g2', 'g', 'parking'],
     reviewsTitle: 'Practical lessons, real roads',
     quotes: [
       [review('Ben', 'Highly recommend for anyone looking for quick, on demand lessons.')],
@@ -308,7 +308,7 @@ export const AREA_CONTENT = (review) => [
     sources: [SRC.lrt, SRC.osm],
     lessonsTitle: 'Lessons around a student schedule',
     lessonsHtml: '<p>Lessons run seven days a week by appointment, so they can fit between classes, and she drives to you, so there&rsquo;s no trip across the city first. One reviewer, Heremela, mentioned her flexible schedule for students and working professionals.</p><p>New drivers usually start with <a href="/beginner-driving-lessons/">beginner lessons</a>. If you already drove somewhere else, the <a href="/guides/new-to-ontario-drivers-licence/">newcomer&rsquo;s licence guide</a> explains how licences from other countries work in Ontario.</p>',
-    lessons: ['beginner', 'g2', 'adult', 'nervous'],
+    lessons: ['beginner', 'g2', 'g', 'nervous'],
     reviewsTitle: 'Fits around a busy week',
     quotes: [
       [review('Heremela Molla', 'She has very flexible schedule for students and working professionals.')],

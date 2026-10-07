@@ -16,6 +16,11 @@
       ],
       "destination": "https://www.mrsakbardriving.ca/:path",
       "permanent": true
+    },
+    {
+      "source": "/adult-driving-lessons/",
+      "destination": "/beginner-driving-lessons/",
+      "permanent": true
     }
   ],
   "headers": [

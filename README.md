@@ -16,7 +16,7 @@
 
 ## At a glance
 
-- **30 pages:** the home page, 6 lesson pages, 8 area pages, 10 guides and a guides index, contact,
+- **29 pages:** the home page, 5 lesson pages, 8 area pages, 10 guides and a guides index, contact,
   a Privacy Policy, Terms and Conditions, and a custom 404.
 - **Fast:** Lighthouse performance 98 to 100 on phones and 100 on desktop, with no layout shift.
   Each page inlines only the CSS it uses.
@@ -79,7 +79,7 @@ structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it.
 | Type | Pages | Where the content lives |
 | --- | --- | --- |
 | Home | `/` | `index.html` (hand-written) |
-| Lessons (6) | beginner, nervous drivers, G2, G and highway, parallel parking, adults | `scripts/site/pages-services.mjs` |
+| Lessons (5) | beginner, nervous drivers, G2, G and highway, parallel parking | `scripts/site/pages-services.mjs` |
 | Areas (8) | Hamilton, Mount Hope, Ancaster, Dundas, Stoney Creek, Binbrook, Caledonia, near McMaster | `scripts/site/pages-areas.mjs`, `areas-content.mjs` |
 | Guides (10 + index) | `/guides/...` | `scripts/site/pages-guides.mjs`, `guide-mountain.mjs` |
 | Contact, Privacy Policy, Terms and Conditions | `/contact/`, `/privacy-policy/`, `/terms-and-conditions/` | `pages-contact.mjs`, `pages-legal.mjs` |

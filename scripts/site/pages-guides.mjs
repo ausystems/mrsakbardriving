@@ -273,7 +273,7 @@ export function guidePages() {
         { id: 'examples', h: 'Real examples from her reviews', html: p('These are from her Google reviews, so they&rsquo;re real, but they&rsquo;re not a promise. Everyone&rsquo;s starting point is different.') +
           quotes([
             quote(review('Karen Zhang', 'Very clear, patient, and considerate.', 'Learned a lot within two lessons.'), 'two lessons'),
-            quote(review('Durga Ram', 'I\'ve had close to 8 driving lessons with Mrs. Akbar.'), 'about eight lessons'),
+            quote(review('Durga Ram', 'I\'ve had close to 8 driving lessons with Mrs. Akbar.', 'less or no driving experience.'), 'about eight lessons'),
           ]) +
           p('And at the far end: one student, Prasad, booked a single one-hour lesson two hours before their test, and passed. That works when the basics are already there and the test is the only thing left to polish.') },
         inlineCta('Want an honest estimate for you? Call or text Mrs. Akbar.'),
@@ -291,7 +291,7 @@ export function guidePages() {
         ['Can one lesson before my road test help?', 'It can, if the basics are already solid. One student booked a single lesson two hours before their test and passed.'],
       ],
       related: ['ontario-g1-g2-g-licence-explained', 'nervous-driver-tips', 'how-to-pass-the-g2-road-test'],
-      lessons: lessonsChips(['/beginner-driving-lessons/', 'Beginner lessons'], ['/adult-driving-lessons/', 'Adult lessons']),
+      lessons: lessonsChips(['/beginner-driving-lessons/', 'Beginner lessons'], ['/g2-road-test-preparation/', 'G2 road test prep']),
       cta: ['Ask for an honest estimate', 'Tell her where you&rsquo;re starting and when your test is. She&rsquo;ll tell you what she thinks it&rsquo;ll take.'],
     }),
 
@@ -376,7 +376,7 @@ export function guidePages() {
         ['How much foreign experience can count if my country has no exchange agreement?', 'Since July 1, 2026, up to 12 months of experience from the past three years can be credited.'],
       ],
       related: ['ontario-g1-g2-g-licence-explained', 'hamilton-drivetest-centre', 'winter-driving-in-hamilton'],
-      lessons: lessonsChips(['/adult-driving-lessons/', 'Adult lessons'], ['/g2-road-test-preparation/', 'G2 road test prep']),
+      lessons: lessonsChips(['/g2-road-test-preparation/', 'G2 road test prep'], ['/g-road-test-preparation/', 'G test and highway']),
       cta: ['New to Hamilton&rsquo;s roads?', 'Tell her where you learned to drive and what you need next. Lessons start from there.'],
     }),
 

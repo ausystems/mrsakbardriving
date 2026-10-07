@@ -3,7 +3,7 @@
 import { review, REVIEWS_COUNT, SERVICES, abs, plain } from './core.mjs';
 import { bizRef } from './layout.mjs';
 import { pageHero, sec, facts, lead, prose, checks, steps, quote, quotes, notes, faq, chips, guideCards, ctaBand, sources } from './ui.mjs';
-import { artBeginner, artNervous, artG2, artHighway, artParking, artAdult } from './art.mjs';
+import { artBeginner, artNervous, artG2, artHighway, artParking } from './art.mjs';
 
 const ONTARIO_G = ['Get a G driver&rsquo;s licence: new drivers (ontario.ca)', 'https://www.ontario.ca/page/get-g-drivers-licence-new-drivers'];
 const DT_ROAD = ['Road tests for cars (drivetest.ca)', 'https://drivetest.ca/tests/road-tests-cars/'];
@@ -338,59 +338,6 @@ export function servicePages() {
       ],
       guides: ['how-to-parallel-park', 'how-to-pass-the-g2-road-test', 'hamilton-drivetest-centre'],
       cta: ['Make parking the easy part', 'Tell her which kind of parking scares you most, and that&rsquo;s where the lesson starts.'],
-    }),
-
-    /* ---------------- Adults ---------------- */
-    servicePage({
-      slug: 'adult-driving-lessons', crumb: 'Adult lessons', name: 'Adult driving lessons',
-      title: 'Adult Driving Lessons in Hamilton | Mrs. Akbar',
-      description: 'Learning to drive as an adult, new to Canada, or back after years off the road? Patient one-on-one lessons in Hamilton, 7 days a week. Call 416-457-5778.',
-      script: 'never too late',
-      h1: 'Driving lessons for adults',
-      lede: 'Learning later is more common than people think. Some of her students are new to Canada. Others just never needed a car until now.',
-      art: artAdult(), serviceType: 'Adult driving lessons', audience: 'Adults, newcomers to Canada and returning drivers',
-      sections: [
-        sec({
-          id: 'who', tone: 'white', script: 'who comes to her', title: 'Who these lessons are for',
-          body: `<ol class="spots">
-<li class="spot" data-reveal><h3 class="spot-name"><span>New to Canada</span></h3><p>The rules, the signs and the habits here may be different from home. Manasa wrote about being nervous driving in a new country, and passed the G2 on the first try.</p></li>
-<li class="spot" data-reveal style="--d:80ms"><h3 class="spot-name"><span>Starting later</span></h3><p>Some adults never needed to drive until a new job, a move or a new baby changed that. Lessons start from wherever you are.</p></li>
-<li class="spot" data-reveal><h3 class="spot-name"><span>Coming back to it</span></h3><p>Years away from driving can make even a familiar road feel new. A few refresher lessons can bring the confidence back.</p></li>
-<li class="spot" data-reveal style="--d:80ms"><h3 class="spot-name"><span>Fitting it around work</span></h3><p>Lessons run seven days a week, by appointment, so weekends are worth asking about.</p></li>
-</ol>`,
-        }),
-        sec({
-          id: 'schedule', tone: 'paper', script: 'busy weeks', title: 'Lessons that fit your week',
-          body: notes([
-            { claim: 'A flexible schedule.', r: review('Heremela Molla', 'She has very flexible schedule for students and working professionals.') },
-            { claim: 'Confidence comes quickly.', r: review('Katherine Yashchenko', 'After just a few lessons, I already feel much more confident behind the wheel.') },
-          ]),
-        }),
-        sec({
-          id: 'licence', tone: 'white', script: 'licensed somewhere else?', title: 'If you drove in another country',
-          body: prose(`<p>New Ontario residents can drive on a valid licence from another province, state or country for 60 days. After that you need an Ontario licence, and how you get one depends on where yours is from.</p>
-<ul>
-<li><strong>From a place with an exchange agreement</strong> (every Canadian province, U.S. states, and countries such as Great Britain, France, Germany, Japan, South Korea and Australia): with at least two years of experience you can exchange for a full G without a road test. With less, you get a G2 and take the G test later.</li>
-<li><strong>From anywhere else:</strong> you take the vision and knowledge tests, then the road tests. Since July 1, 2026, you can be credited with up to 12 months of foreign driving experience from the past three years, which can let you take the G2 road test right away.</li>
-</ul>
-<p>Either way, Ontario&rsquo;s rules and what examiners look for may be new to you. The <a href="/guides/new-to-ontario-drivers-licence/">newcomer&rsquo;s licence guide</a> covers documents and steps in more detail.</p>`) + sources([EXCHANGE]),
-        }),
-        sec({
-          id: 'reviews', tone: 'sand', script: 'from her reviews', title: 'Adults who did it',
-          body: quotes([
-            quote(review('Fareha Hamid', 'She was very patient, supportive, and professional throughout my lessons.', 'confident behind the wheel.')),
-            quote(review('Manasa Nandikonda', 'Her patience, calm presence and clear instructions', 'throughout the lessons.'), 'new to Canada'),
-          ]),
-        }),
-      ],
-      faqs: [
-        ['Am I too old to learn?', 'No. Adult lessons are one of the services her Google reviewers tag most often, and plenty of her students started as adults.'],
-        ['I have a licence from another country. Do I still need lessons?', 'Not always, but many people book a few. Ontario&rsquo;s rules, signs and road tests can be quite different from what you&rsquo;re used to, and a lesson or two shows you what examiners expect.'],
-        ['Can lessons fit around a full-time job?', 'Often, yes. Lessons are seven days a week, by appointment, and one reviewer wrote about her flexible schedule for students and working professionals.'],
-        ['I&rsquo;m nervous about starting at my age. Is that normal?', 'Completely. There&rsquo;s a whole page on <a href="/driving-lessons-for-nervous-drivers/">lessons for nervous drivers</a>, and nerves come up in a lot of her reviews.'],
-      ],
-      guides: ['new-to-ontario-drivers-licence', 'how-many-driving-lessons-do-you-need', 'nervous-driver-tips'],
-      cta: ['It&rsquo;s not too late', 'Tell her where you&rsquo;re starting from and when you&rsquo;re free. Weekends included.'],
     }),
   ];
 }

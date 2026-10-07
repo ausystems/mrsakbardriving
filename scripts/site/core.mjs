@@ -81,7 +81,6 @@ export const SERVICES = [
   { slug: 'g2-road-test-preparation', label: 'G2 road test prep' },
   { slug: 'g-road-test-preparation', label: 'G test and highway' },
   { slug: 'parallel-parking-lessons', label: 'Parallel parking' },
-  { slug: 'adult-driving-lessons', label: 'Adult lessons' },
 ];
 export const AREAS = [
   { slug: 'driving-lessons-hamilton', label: 'Hamilton' },
