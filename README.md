@@ -4,7 +4,7 @@
 
 **One-on-one driving lessons across Hamilton, Ontario, with a certified female instructor who comes to you.**
 
-[**Visit the live site**](https://mrsakbardriving.vercel.app/) &nbsp;·&nbsp; Call or text **416-457-5778**
+[**Visit the live site**](https://www.mrsakbardriving.ca/) &nbsp;·&nbsp; Call or text **416-457-5778**
 
 </div>
 
@@ -45,24 +45,21 @@ npm run indexnow     # after a deploy: tell Bing and other IndexNow engines abou
 ## How it goes live
 
 The site is hosted on **Vercel**, connected to this repository. Every push to `main` builds and
-publishes it automatically at **https://mrsakbardriving.vercel.app/**; other branches get preview
-links. Build settings, caching and security headers live in `vercel.json`.
+publishes it automatically at **https://www.mrsakbardriving.ca/**; other branches get preview
+links. Build settings, caching, security headers and the redirect from the old
+`mrsakbardriving.vercel.app` address live in `vercel.json`.
 
 The address lives in one place, `VITE_SITE_URL` in `.env`. Canonical tags, Open Graph URLs,
 structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it.
 
-**Moving to a custom domain later** (for example `www.mrsakbardriving.ca`):
-
-1. Buy the domain, then in Vercel open the project, go to **Settings > Domains**, add it and follow
-   the DNS instructions. Vercel sets up HTTPS on its own.
-2. Change `VITE_SITE_URL` in `.env` to `https://www.mrsakbardriving.ca` and push. In **Settings >
-   Domains**, set the vercel.app address to redirect to the new domain.
+**Changing the domain:** add the new one in Vercel under **Settings > Domains**, change
+`VITE_SITE_URL` in `.env`, and update the redirect in `vercel.json`.
 
 ## Search engines
 
 1. **Google Search Console:** add a URL-prefix property for the live address, choose the
    "HTML tag" method, paste the code into `VITE_GSC_VERIFICATION` in `.env`, push, then press Verify.
-   Submit `https://mrsakbardriving.vercel.app/sitemap.xml` under Sitemaps.
+   Submit `https://www.mrsakbardriving.ca/sitemap.xml` under Sitemaps.
 2. **Bing Webmaster Tools:** import the site from Search Console (or use `VITE_BING_VERIFICATION`),
    submit the sitemap, then run `npm run indexnow`.
 3. Add the website address to her Google Business Profile.
