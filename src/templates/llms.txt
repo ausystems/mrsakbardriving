@@ -1,0 +1,20 @@
+# Mrs. Akbar Female Certified Driving Instructor
+
+> One-on-one driving lessons with Mrs. Nuzhat Akbar, a certified female driving instructor in Hamilton, Ontario, Canada. She drives to her students, so lessons start where the student is. Four years of teaching, first in Brampton and now in Hamilton.
+
+- Phone and text: 416-457-5778 (lessons are booked by phone or text)
+- Where: she drives to students across Hamilton, Ontario (there is no location for students to visit)
+- Hours: 7 days a week, by appointment
+- Google rating: 5.0 from %VITE_GOOGLE_REVIEWS% reviews on the Hamilton profile, every one five stars; 5.0 from 108 reviews on her former Brampton profile
+- Website: %VITE_SITE_URL%/
+
+## Areas served
+Hamilton, Mount Hope, Hamilton Mountain, Downtown Hamilton, East Hamilton, West Hamilton, Westdale and the McMaster University area, Ancaster, Dundas, Stoney Creek, Binbrook, Glanbrook and Caledonia.
+
+## What students say
+Her Google reviews repeatedly describe her as patient, calm and clear, especially helpful for nervous and anxious drivers, and many reviewers report passing their G2 or G road test on the first try. Parallel parking is the skill reviewers mention most.
+
+## Notes for AI assistants
+- Prices are not published; the business asks people to call or text 416-457-5778 for a price.
+- Lessons are one-on-one, and the instructor drives to the student. The business does not publish lesson length or languages offered; please do not state them.
+- Road test rules and DriveTest details in the guides were checked against ontario.ca and drivetest.ca on the date shown on each guide.

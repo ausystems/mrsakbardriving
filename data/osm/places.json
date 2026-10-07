@@ -1,0 +1,3613 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-30T04:11:25Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 18996031,
+  "lat": 43.2560802,
+  "lon": -79.8728583,
+  "tags": {
+    "name": "Hamilton",
+    "name:ar": "هاميلتون",
+    "name:be": "Гамільтан",
+    "name:bg": "Хамилтън",
+    "name:bn": "হ্যামিল্টন",
+    "name:cay": "Ga̱hę́nagǫ:",
+    "name:ckb": "هامیڵتۆن",
+    "name:el": "Χάμιλτον",
+    "name:fa": "همیلتون",
+    "name:he": "המילטון",
+    "name:hi": "हैमिल्टन",
+    "name:ja": "ハミルトン",
+    "name:ko": "해밀턴",
+    "name:ku": "Hamilton",
+    "name:moh": "Ohròn:wakon",
+    "name:ono": "Tgahehdáꞏdųʔ",
+    "name:ru": "Гамильтон",
+    "name:sr": "Хамилтон",
+    "name:uk": "Гамільтон",
+    "name:ur": "ہیملٹن",
+    "name:zh-Hans": "哈密尔顿",
+    "name:zh-Hant": "漢密爾頓",
+    "place": "city",
+    "population": "569353",
+    "population:date": "2021",
+    "source:population": "Statistics Canada",
+    "website": "https://www.hamilton.ca/",
+    "wikidata": "Q133116",
+    "wikipedia": "en:Hamilton, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 18998251,
+  "lat": 43.3600536,
+  "lon": -80.3123023,
+  "tags": {
+    "name": "Cambridge",
+    "name:en": "Cambridge",
+    "name:ru": "Кеймбридж",
+    "name:sr": "Кембриџ",
+    "place": "city",
+    "population": "129920",
+    "wikidata": "Q1028279",
+    "wikipedia": "en:Cambridge, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 21600169,
+  "lat": 43.3940076,
+  "lon": -80.3555103,
+  "tags": {
+    "name": "Preston",
+    "place": "suburb",
+    "wikidata": "Q7241810",
+    "wikipedia": "en:Preston, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 24558235,
+  "lat": 43.4314754,
+  "lon": -80.3118603,
+  "tags": {
+    "name": "Hespeler",
+    "place": "suburb",
+    "wikidata": "Q5745772"
+  }
+},
+{
+  "type": "node",
+  "id": 146305735,
+  "lat": 43.0737943,
+  "lon": -79.9519084,
+  "tags": {
+    "alt_name:cay": "Tganádaë:'",
+    "alt_name:ono": "Tgaedóꞏniʔ",
+    "name": "Caledonia",
+    "name:cay": "Tganádaę:ˀ",
+    "name:moh": "Tkaná:taien",
+    "name:ono": "Tgaedų́ꞏniʔ",
+    "place": "town",
+    "wikidata": "Q5019355",
+    "wikipedia": "en:Caledonia, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 156782658,
+  "lat": 43.3248924,
+  "lon": -79.7966835,
+  "tags": {
+    "alt_name:ono": "Dyoʔnhehsahę́hwaʔ",
+    "name": "Burlington",
+    "name:ar": "بيرلينجتون",
+    "name:cay": "Degyoˀne̱hsáhǫh",
+    "name:ckb": "بورلینگتۆن",
+    "name:el": "Μπέρλινγκτον",
+    "name:fa": "برلینگتون",
+    "name:he": "ברלינגטון",
+    "name:ja": "バーリントン",
+    "name:ko": "벌링턴",
+    "name:moh": "Tetio’neshóhon",
+    "name:ono": "Dyoʔnehsahę́ꞏhwaʔ",
+    "name:ru": "Берлингтон",
+    "name:ur": "برلنگٹن",
+    "name:zh-Hans": "伯灵顿",
+    "name:zh-Hant": "伯靈頓",
+    "place": "city",
+    "population": "186948",
+    "population:date": "2021-05-11",
+    "source:population": "canadian_census",
+    "website": "https://www.burlington.ca",
+    "wikidata": "Q34218",
+    "wikipedia": "en:Burlington, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 209200736,
+  "lat": 43.1408157,
+  "lon": -80.2631733,
+  "tags": {
+    "name": "Brantford",
+    "name:ar": "برانتفورد",
+    "name:azb": "برنتفورد",
+    "name:cay": "Tganada̱háe:ˀ",
+    "name:el": "Μπράντφορντ",
+    "name:en": "Brantford",
+    "name:fa": "برنتفورد",
+    "name:he": "בר‬נטפורד",
+    "name:hy": "Բրանտֆորդ",
+    "name:ko": "브랜트퍼드",
+    "name:moh": "Tsi kanatáhere",
+    "name:ono": "Tganadahǽꞏʔ",
+    "name:ru": "Брантфорд",
+    "name:uk": "Брантфорд",
+    "name:ur": "برانٹفورڈ",
+    "name:zh": "布兰特福德",
+    "name:zh-Hans": "布兰特福德",
+    "name:zh-Hant": "布蘭特福德",
+    "place": "city",
+    "population": "97496",
+    "wikidata": "Q34180",
+    "wikipedia": "en:Brantford"
+  }
+},
+{
+  "type": "node",
+  "id": 213124675,
+  "lat": 43.2256930,
+  "lon": -79.9766920,
+  "tags": {
+    "name": "Ancaster",
+    "place": "suburb",
+    "wikidata": "Q488909",
+    "wikipedia": "en:Ancaster, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 249414471,
+  "lat": 43.2051915,
+  "lon": -80.2798087,
+  "tags": {
+    "name": "Osborne Corners",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 249640576,
+  "lat": 43.3314156,
+  "lon": -79.8956803,
+  "tags": {
+    "name": "Waterdown",
+    "place": "suburb",
+    "wikidata": "Q7973947"
+  }
+},
+{
+  "type": "node",
+  "id": 249640819,
+  "lat": 43.2241382,
+  "lon": -79.8670402,
+  "tags": {
+    "name": "Hamilton Mountain",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 249640820,
+  "lat": 43.2167526,
+  "lon": -79.7567616,
+  "tags": {
+    "name": "Stoney Creek",
+    "name:moh": "Tiotstenhrakwénhtare",
+    "place": "suburb",
+    "wikidata": "Q1451232"
+  }
+},
+{
+  "type": "node",
+  "id": 249641572,
+  "lat": 43.1889182,
+  "lon": -79.7876114,
+  "tags": {
+    "is_in": "Hamilton",
+    "name": "Heritage Green",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 249641649,
+  "lat": 43.2661904,
+  "lon": -79.9546341,
+  "tags": {
+    "name": "Dundas",
+    "name:moh": "Anonhwarore’tsherakaiòn:ne",
+    "place": "suburb",
+    "wikidata": "Q620726",
+    "wikipedia": "en:Dundas, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 249643435,
+  "lat": 43.1561412,
+  "lon": -79.9161804,
+  "tags": {
+    "is_in": "Hamilton",
+    "name": "Mount Hope",
+    "place": "neighbourhood",
+    "wikidata": "Q6921269"
+  }
+},
+{
+  "type": "node",
+  "id": 249644463,
+  "lat": 43.1208666,
+  "lon": -79.8044114,
+  "tags": {
+    "name": "Binbrook",
+    "place": "neighbourhood",
+    "wikidata": "Q4913952"
+  }
+},
+{
+  "type": "node",
+  "id": 257763716,
+  "lat": 43.1932340,
+  "lon": -80.3842810,
+  "tags": {
+    "name": "Paris",
+    "name:moh": "Tiohrhionhó:ken",
+    "place": "town",
+    "website": "http://www.brant.ca/",
+    "wikidata": "Q3305306"
+  }
+},
+{
+  "type": "node",
+  "id": 258241971,
+  "lat": 43.1998643,
+  "lon": -80.1072037,
+  "tags": {
+    "name": "Jerseyville",
+    "place": "hamlet",
+    "wikidata": "Q14875215",
+    "wikipedia": "en:Jerseyville, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 272990055,
+  "lat": 43.0355249,
+  "lon": -80.1397058,
+  "tags": {
+    "name": "Sixty-Nine Corners",
+    "name:fr": "Sixty-Nine Corners",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 280354309,
+  "lat": 43.2453004,
+  "lon": -80.2508592,
+  "tags": {
+    "name": "St George",
+    "place": "village",
+    "wikidata": "Q104840893",
+    "wikipedia": "en:St. George, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 308739578,
+  "lat": 43.0252776,
+  "lon": -80.3757675,
+  "tags": {
+    "name": "Scotland",
+    "place": "village",
+    "wikidata": "Q115277887"
+  }
+},
+{
+  "type": "node",
+  "id": 310903492,
+  "lat": 43.0987900,
+  "lon": -79.5463593,
+  "tags": {
+    "name": "Smithville",
+    "place": "town",
+    "wikidata": "Q7545663",
+    "wikipedia": "en:Smithville, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 416184927,
+  "lat": 43.0190124,
+  "lon": -80.1506514,
+  "tags": {
+    "name": "Medina Corners",
+    "name:fr": "Medina Corners",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 416224603,
+  "lat": 43.1105900,
+  "lon": -80.3959708,
+  "tags": {
+    "name": "Mount Vernon",
+    "name:fr": "Mount Vernon",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0",
+    "wikidata": "Q115178319"
+  }
+},
+{
+  "type": "node",
+  "id": 418443677,
+  "lat": 43.3944946,
+  "lon": -79.7118282,
+  "tags": {
+    "name": "Bronte",
+    "place": "quarter",
+    "wikidata": "Q4974069",
+    "wikipedia": "en:Bronte, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 430527176,
+  "lat": 43.1622223,
+  "lon": -79.7851824,
+  "tags": {
+    "is_in": "Hamilton",
+    "name": "Elfrida",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 430539457,
+  "lat": 43.2747340,
+  "lon": -79.9965821,
+  "tags": {
+    "name": "Greensville",
+    "place": "neighbourhood",
+    "wikidata": "Q5604588"
+  }
+},
+{
+  "type": "node",
+  "id": 472560164,
+  "lat": 43.4128394,
+  "lon": -80.2664448,
+  "tags": {
+    "canvec:UUID": "fbb650c504a8412aa63ec2bf87c7d215",
+    "name": "McCormick Point",
+    "name:fr": "McCormick Point",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560172,
+  "lat": 43.3458398,
+  "lon": -80.2726537,
+  "tags": {
+    "canvec:UUID": "f0fcadb3edfe45e19ba47c6ca402f262",
+    "name": "Littles Corners",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560181,
+  "lat": 43.3584421,
+  "lon": -80.1579078,
+  "tags": {
+    "canvec:UUID": "95c958270fbb42ed80411b73a4828542",
+    "name": "Kirkwall",
+    "name:fr": "Kirkwall",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560182,
+  "lat": 43.2931732,
+  "lon": -80.3811243,
+  "tags": {
+    "canvec:UUID": "99dec34a6cfd4cc2b102115af6c09561",
+    "name": "Wrigley Corners",
+    "name:fr": "Wrigley Corners",
+    "place": "locality",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q115200611"
+  }
+},
+{
+  "type": "node",
+  "id": 472560183,
+  "lat": 43.4197715,
+  "lon": -80.2756090,
+  "tags": {
+    "canvec:UUID": "6c4b41abdec343a2924c8160cd869fe8",
+    "name": "Barber's Beach",
+    "name:fr": "Barber's Beach",
+    "place": "locality",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q115174072"
+  }
+},
+{
+  "type": "node",
+  "id": 472560185,
+  "lat": 43.3589869,
+  "lon": -80.3152471,
+  "tags": {
+    "name": "Galt",
+    "place": "suburb",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q22829571",
+    "wikimedia_commons": "Category:Galt, Ontario",
+    "wikipedia": "en:Galt, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 472560186,
+  "lat": 43.2892912,
+  "lon": -80.3752845,
+  "tags": {
+    "canvec:UUID": "7d77f6f27fbd4cc9b8ade5ad5296c8fc",
+    "name": "Fairlake Game Farm",
+    "name:fr": "Fairlake Game Farm",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560187,
+  "lat": 43.2722094,
+  "lon": -80.2638226,
+  "tags": {
+    "name": "Bruces",
+    "name:fr": "Bruces",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560188,
+  "lat": 43.3839506,
+  "lon": -80.2276790,
+  "tags": {
+    "canvec:UUID": "2c2ba25c7f744da3a30ed78be2a10110",
+    "name": "Clyde",
+    "name:fr": "Clyde",
+    "place": "locality",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q115225186"
+  }
+},
+{
+  "type": "node",
+  "id": 472560194,
+  "lat": 43.3250104,
+  "lon": -80.2066249,
+  "tags": {
+    "canvec:UUID": "8ad2226c8e74423cb41deff886fd33a3",
+    "name": "Sheffield",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q7492567"
+  }
+},
+{
+  "type": "node",
+  "id": 472560198,
+  "lat": 43.3839038,
+  "lon": -80.3853869,
+  "tags": {
+    "canvec:UUID": "bf6c6840bf394c648d18cc6079dbd075",
+    "name": "Blair",
+    "name:fr": "Blair",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560205,
+  "lat": 43.2614056,
+  "lon": -80.1858424,
+  "tags": {
+    "canvec:UUID": "014329da451b41a0b3225dcb222a7238",
+    "name": "Troy",
+    "name:fr": "Troy",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560206,
+  "lat": 43.2728524,
+  "lon": -80.3467980,
+  "tags": {
+    "name": "Glen Morris",
+    "name:fr": "Glen Morris",
+    "place": "village",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560207,
+  "lat": 43.3372510,
+  "lon": -80.2916433,
+  "tags": {
+    "canvec:UUID": "ab02ed6ae006476d84a35e91c7e333b1",
+    "name": "Sixty Hill",
+    "name:fr": "Sixty Hill",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560215,
+  "lat": 43.4101547,
+  "lon": -80.2740674,
+  "tags": {
+    "canvec:UUID": "ba8104f642ed48b2ba8cf32dda4495bd",
+    "name": "Puslinch Lake Conservation Area",
+    "name:fr": "Puslinch Lake Conservation Area",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560216,
+  "lat": 43.3703376,
+  "lon": -80.3086353,
+  "tags": {
+    "name": "Grand River",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560226,
+  "lat": 43.4680235,
+  "lon": -80.3041547,
+  "tags": {
+    "canvec:UUID": "12ba425aa993431d8970e1d060f17263",
+    "name": "Glenchristie",
+    "name:fr": "Glenchristie",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560230,
+  "lat": 43.4293486,
+  "lon": -80.2334038,
+  "tags": {
+    "canvec:UUID": "2c46444ee43143f68644d4ebb6458c0b",
+    "name": "Aikensville",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560232,
+  "lat": 43.4113525,
+  "lon": -80.2261747,
+  "tags": {
+    "canvec:UUID": "11826ca1e682455bb24be251e3af6cc6",
+    "name": "Killean",
+    "name:fr": "Killean",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560237,
+  "lat": 43.3005580,
+  "lon": -80.1258509,
+  "tags": {
+    "canvec:UUID": "76281d95a997435094a49fd54f344855",
+    "name": "Rockton",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560241,
+  "lat": 43.4715981,
+  "lon": -80.1495579,
+  "tags": {
+    "canvec:UUID": "a97a2bab517844419a6899de94188fd0",
+    "name": "Aberfoyle",
+    "name:fr": "Aberfoyle",
+    "place": "village",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560245,
+  "lat": 43.4553302,
+  "lon": -80.3578071,
+  "tags": {
+    "canvec:UUID": "cae154818b014ffe809c3b0160f547dc",
+    "name": "Kossuth",
+    "name:fr": "Kossuth",
+    "place": "locality",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q115277697"
+  }
+},
+{
+  "type": "node",
+  "id": 472560267,
+  "lat": 43.3035734,
+  "lon": -80.2942440,
+  "tags": {
+    "canvec:UUID": "704ea3e5074842fc8359f917e0f3a1f5",
+    "name": "Dumfries Crown Game Preserve",
+    "name:fr": "Dumfries Crown Game Preserve",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560273,
+  "lat": 43.4783187,
+  "lon": -80.2267726,
+  "tags": {
+    "canvec:UUID": "ca23463799b744c192896b0303b3f810",
+    "name": "Downeys",
+    "name:fr": "Downeys",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560340,
+  "lat": 43.2553447,
+  "lon": -80.3696897,
+  "tags": {
+    "canvec:UUID": "3e2d355fabc94989945c1ce984cf14b2",
+    "name": "Spottiswood Lakes",
+    "name:fr": "Spottiswood Lakes",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560347,
+  "lat": 43.3174261,
+  "lon": -80.3162302,
+  "tags": {
+    "canvec:UUID": "a91607abf96a4033b22136e0d62170b6",
+    "name": "Shep's Subdivision",
+    "name:fr": "Shep's Subdivision",
+    "place": "locality",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q115184914"
+  }
+},
+{
+  "type": "node",
+  "id": 472560359,
+  "lat": 43.4236668,
+  "lon": -80.1515035,
+  "tags": {
+    "canvec:UUID": "d28a866aa31944b5b3fe1d25c88f257b",
+    "name": "Crieff",
+    "name:fr": "Crieff",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560368,
+  "lat": 43.2803510,
+  "lon": -80.0675431,
+  "tags": {
+    "canvec:UUID": "119c3778b6ec4d0786cd4763eab17bf4",
+    "name": "Peters Corners",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560398,
+  "lat": 43.4355512,
+  "lon": -80.3368850,
+  "tags": {
+    "canvec:UUID": "9784206fbedf438ead848f4ebf95e842",
+    "name": "Fisher Mills",
+    "name:fr": "Fisher Mills",
+    "place": "locality",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q115199545"
+  }
+},
+{
+  "type": "node",
+  "id": 472560420,
+  "lat": 43.3782605,
+  "lon": -80.0325044,
+  "tags": {
+    "canvec:UUID": "2828a098f8a34afd8e4f066bbf0c62c8",
+    "name": "Strabane",
+    "name:fr": "Strabane",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560428,
+  "lat": 43.3703364,
+  "lon": -80.1088988,
+  "tags": {
+    "canvec:UUID": "9f55704814ec4ed2b7a6f5032c540a7b",
+    "name": "Beverly Swamp Conservation Area",
+    "name:fr": "Beverly Swamp Conservation Area",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560435,
+  "lat": 43.4352817,
+  "lon": -80.0430928,
+  "tags": {
+    "canvec:UUID": "575463b4b96742d48aef6ffddc5dcc28",
+    "name": "Mountsberg",
+    "name:fr": "Mountsberg",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560447,
+  "lat": 43.4310278,
+  "lon": -80.0928734,
+  "tags": {
+    "canvec:UUID": "1d9b88dc40374dca9d0e8f4b9a90e5f9",
+    "name": "Puslinch",
+    "name:fr": "Puslinch",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560452,
+  "lat": 43.2752748,
+  "lon": -80.0023400,
+  "tags": {
+    "canvec:UUID": "83f66f9533904a92954a15c967a884b6",
+    "name": "Crooks' Hollow",
+    "name:fr": "Crooks'Hollow",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560462,
+  "lat": 43.4739945,
+  "lon": -80.0822724,
+  "tags": {
+    "canvec:UUID": "0aa0b17694c346b0a48c092d08360053",
+    "name": "Badenoch",
+    "name:fr": "Badenoch",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560468,
+  "lat": 43.2686171,
+  "lon": -80.0327346,
+  "tags": {
+    "canvec:UUID": "85ae10b33b82421dbdc45db74fd5d9d7",
+    "name": "Christies Corner",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560476,
+  "lat": 43.4482878,
+  "lon": -80.1171956,
+  "tags": {
+    "canvec:UUID": "f7b841db61fb449f8e16ef23a2d6c4ab",
+    "name": "Morriston",
+    "name:fr": "Morriston",
+    "place": "village",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560477,
+  "lat": 43.2576775,
+  "lon": -80.0094942,
+  "tags": {
+    "canvec:UUID": "90b69adf00364edcacae9a57e842d171",
+    "name": "Governor's Road Conservation Area",
+    "name:fr": "Governor's Road Conservation Area",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560478,
+  "lat": 43.3264583,
+  "lon": -80.0168919,
+  "tags": {
+    "canvec:UUID": "fff323c90fa840be9ff4593f488ade8e",
+    "name": "Hayesland",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560480,
+  "lat": 43.4621892,
+  "lon": -80.0307928,
+  "tags": {
+    "canvec:UUID": "20b4a07753f04696933ac0250a0c8f7a",
+    "name": "Mountsberg Conservation Area",
+    "name:fr": "Mountsberg Conservation Area",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560483,
+  "lat": 43.2503250,
+  "lon": -80.0004461,
+  "tags": {
+    "name": "Dundas Valley Conservation Area",
+    "name:fr": "Dundas Valley Conservation Area",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560484,
+  "lat": 43.4720750,
+  "lon": -80.0012277,
+  "tags": {
+    "canvec:UUID": "b311b73967404a9fbcb487d6aaf55dc7",
+    "name": "Guelph Junction",
+    "name:fr": "Guelph Junction",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560485,
+  "lat": 43.2922109,
+  "lon": -80.0013132,
+  "tags": {
+    "canvec:UUID": "35c21a5864d34edda148f506dca944ec",
+    "name": "Brock Gardens",
+    "name:fr": "Brock Gardens",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560486,
+  "lat": 43.2718460,
+  "lon": -80.0132324,
+  "tags": {
+    "canvec:UUID": "ba9d5bdb7efe427892942aff0f20ecbc",
+    "name": "West Flamborough",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560488,
+  "lat": 43.4007446,
+  "lon": -80.0391865,
+  "tags": {
+    "name": "Freelton",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q115174228"
+  }
+},
+{
+  "type": "node",
+  "id": 472560490,
+  "lat": 43.3766623,
+  "lon": -80.0054333,
+  "tags": {
+    "canvec:UUID": "8b7e590bc2de4431bd2ac105405ffa23",
+    "name": "Breezy's Corners",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560491,
+  "lat": 43.3595513,
+  "lon": -80.0199643,
+  "tags": {
+    "canvec:UUID": "f098864ed8ed4a56a6e819b786d28e6c",
+    "name": "Gulliver's Lake",
+    "name:fr": "Gulliver's Lake",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560492,
+  "lat": 43.3808815,
+  "lon": -80.1329225,
+  "tags": {
+    "canvec:UUID": "37a425a325f947abbe3f0b8a5537383e",
+    "name": "Valens",
+    "name:fr": "Valens",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 472560493,
+  "lat": 43.3334388,
+  "lon": -80.0843996,
+  "tags": {
+    "canvec:UUID": "97c5973fee1b405896ec042a3b9b47af",
+    "name": "Westover",
+    "name:fr": "Westover",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 473827287,
+  "lat": 43.3624247,
+  "lon": -80.1032499,
+  "tags": {
+    "canvec:UUID": "0085913da4b54e2c827bc498f30fb0a2",
+    "name": "Gulliver's Lake",
+    "name:fr": "Gulliver's Lake",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 492665871,
+  "lat": 43.0775567,
+  "lon": -80.3133791,
+  "tags": {
+    "name": "Mount Pleasant",
+    "name:fr": "Mount Pleasant",
+    "place": "village",
+    "source": "NRCan-CanVec-10.0",
+    "wikidata": "Q111309355"
+  }
+},
+{
+  "type": "node",
+  "id": 492665945,
+  "lat": 43.0313965,
+  "lon": -80.2842833,
+  "tags": {
+    "name": "East Oakland",
+    "name:fr": "East Oakland",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666084,
+  "lat": 43.0843330,
+  "lon": -80.0496962,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Grand River",
+    "name:fr": "Grand River",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666099,
+  "lat": 43.1739675,
+  "lon": -80.0355610,
+  "tags": {
+    "canvec:UUID": "09e55ec4a8fd419bbd38f08ac6a026b6",
+    "name": "Trinity",
+    "natural": "feature",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666139,
+  "lat": 43.1968430,
+  "lon": -80.0120434,
+  "tags": {
+    "name": "Duff's Corners",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666255,
+  "lat": 43.1460610,
+  "lon": -80.1989960,
+  "tags": {
+    "name": "Cainsville",
+    "name:fr": "Cainsville",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666312,
+  "lat": 43.0037298,
+  "lon": -80.1825554,
+  "tags": {
+    "name": "Hartford",
+    "name:fr": "Hartford",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 492666427,
+  "lat": 43.0820182,
+  "lon": -80.0419765,
+  "tags": {
+    "canvec:UUID": "0bb82d59944a4feb815ee9d3ba4b5179",
+    "name": "Tom Longboat Corners",
+    "name:fr": "Tom Longboat Corners",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666435,
+  "lat": 43.0197469,
+  "lon": -80.3961610,
+  "tags": {
+    "name": "Four Ponds Corners",
+    "name:fr": "Four Ponds Corners",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666477,
+  "lat": 43.0487132,
+  "lon": -80.0638748,
+  "tags": {
+    "canvec:UUID": "d7041c2a66304c05a2e60264d11d1545",
+    "name": "Stoneridge",
+    "name:fr": "Stoneridge",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 492666489,
+  "lat": 43.2364003,
+  "lon": -80.1468329,
+  "tags": {
+    "name": "Lynden",
+    "name:fr": "Lynden",
+    "natural": "feature",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-10.0",
+    "wikidata": "Q6708633"
+  }
+},
+{
+  "type": "node",
+  "id": 492666511,
+  "lat": 43.0910771,
+  "lon": -80.2370963,
+  "tags": {
+    "name": "Newport",
+    "name:fr": "Newport",
+    "natural": "feature",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666542,
+  "lat": 43.1815637,
+  "lon": -80.2836942,
+  "tags": {
+    "name": "Wyndham Hills",
+    "name:fr": "Wyndham Hills",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 492666626,
+  "lat": 43.1864106,
+  "lon": -80.0714895,
+  "tags": {
+    "name": "Alberton",
+    "name:fr": "Alberton",
+    "natural": "feature",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666644,
+  "lat": 43.0720817,
+  "lon": -80.0149726,
+  "tags": {
+    "canvec:UUID": "841c830489d74cddbaaf4bcd75a0b347",
+    "name": "Beavers Corner",
+    "name:fr": "Beavers Corner",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666661,
+  "lat": 43.0187057,
+  "lon": -80.2059702,
+  "tags": {
+    "name": "Victoria Mills",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 492666718,
+  "lat": 43.1708886,
+  "lon": -80.2919415,
+  "tags": {
+    "name": "Fairview",
+    "name:fr": "Fairview",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666769,
+  "lat": 43.0042113,
+  "lon": -80.1663123,
+  "tags": {
+    "name": "Little Buffalo",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 492666829,
+  "lat": 43.2268753,
+  "lon": -80.0551121,
+  "tags": {
+    "name": "Summit",
+    "name:fr": "Summit",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666860,
+  "lat": 43.1687241,
+  "lon": -80.1325910,
+  "tags": {
+    "name": "Langford",
+    "name:fr": "Langford",
+    "natural": "feature",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666914,
+  "lat": 43.1457181,
+  "lon": -80.2176473,
+  "tags": {
+    "name": "Echo Place",
+    "name:fr": "Echo Place",
+    "natural": "feature",
+    "place": "locality",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492666937,
+  "lat": 43.2049508,
+  "lon": -80.2795917,
+  "tags": {
+    "name": "Osborne Corners",
+    "name:fr": "Osborne Corners",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 492666969,
+  "lat": 43.1275307,
+  "lon": -80.2563118,
+  "tags": {
+    "name": "Eagle Place",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 492667101,
+  "lat": 43.1805944,
+  "lon": -80.2763504,
+  "tags": {
+    "name": "Tranquility",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 492667127,
+  "lat": 43.2379864,
+  "lon": -80.0199706,
+  "tags": {
+    "name": "Mineral Springs",
+    "name:fr": "Mineral Springs",
+    "natural": "feature",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 492667137,
+  "lat": 43.1228813,
+  "lon": -80.2471694,
+  "tags": {
+    "name": "Eagle Place",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 498672302,
+  "lat": 43.1005448,
+  "lon": -80.0754491,
+  "tags": {
+    "name": "Middleport",
+    "name:fr": "Middleport",
+    "name:ono": "Tgahędáꞏyę",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009;NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 558747815,
+  "lat": 43.2711135,
+  "lon": -79.9907576,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "ed0d64526f0042f1a5c76f15e7e44d5a",
+    "name": "Glenwood Heights",
+    "name:fr": "Glenwood Heights",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747817,
+  "lat": 43.2758561,
+  "lon": -79.9871119,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "c38412702c9f4fed964805837f4f0ff1",
+    "name": "Bullocks Corners",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747824,
+  "lat": 43.3652273,
+  "lon": -79.9901511,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "1ed1c5581c1a475f8cd06de73dc53d10",
+    "name": "Harper Corners",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747828,
+  "lat": 43.2586368,
+  "lon": -79.9683496,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "a500eca8ba1b463282fd7215b75c14ea",
+    "name": "Highland Park Survey",
+    "name:fr": "Highland Park Survey",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747830,
+  "lat": 43.2537297,
+  "lon": -79.9625116,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "ed47d3551fc048e4ae3fd90856f3905d",
+    "name": "Pleasant Valley",
+    "name:fr": "Pleasant Valley",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747833,
+  "lat": 43.2715571,
+  "lon": -79.9455575,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "51ff5800407849deb1520935b53e3d2e",
+    "name": "Cootes Paradise",
+    "name:fr": "Cootes Paradise",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747840,
+  "lat": 43.2618812,
+  "lon": -79.9059213,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "f477cff17395443fb65ef81a9691c3af",
+    "name": "Westdale",
+    "name:fr": "Westdale",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q14875475"
+  }
+},
+{
+  "type": "node",
+  "id": 558747842,
+  "lat": 43.2535558,
+  "lon": -79.9027257,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "8732bce0fa2b4942a29e10f6adcb4910",
+    "name": "Chedoke Park",
+    "name:fr": "Chedoke Park",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747847,
+  "lat": 43.2815031,
+  "lon": -79.9269953,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "193d7428e57a4d36bcf56c91be1bdccc",
+    "name": "Hopkins Court",
+    "name:fr": "Hopkins Court",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747859,
+  "lat": 43.3230842,
+  "lon": -79.9026678,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "f930f2babf6a4f9d8ef099bda401fcd6",
+    "name": "Rockcliffe Survey",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747863,
+  "lat": 43.2897763,
+  "lon": -79.9260636,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "92813ef7983d4a6faa9b6a3bbffb7add",
+    "name": "Hopkins Corners",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747864,
+  "lat": 43.2975919,
+  "lon": -79.9077619,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "e9eeefac35304e438a1b6a6e24a8d8c2",
+    "name": "Pleasant View Survey",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747870,
+  "lat": 43.3021786,
+  "lon": -79.9036849,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "3c7a8baf96164e69a62191f95587dcb8",
+    "name": "Bridgeview Survey",
+    "name:fr": "Bridgeview Survey",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747873,
+  "lat": 43.3122135,
+  "lon": -79.9177032,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "1379b0b34d77415a90b7af965c39f12c",
+    "name": "Clappison's Corners",
+    "name:fr": "Clappison's Corners",
+    "place": "locality",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q5125902"
+  }
+},
+{
+  "type": "node",
+  "id": 558747878,
+  "lat": 43.2506805,
+  "lon": -79.8686192,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "b3a7a3da2c214538ad1b0c273aa2af77",
+    "name": "Corktown",
+    "name:fr": "Corktown",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747887,
+  "lat": 43.2695831,
+  "lon": -79.8578724,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "4a0b37712b854019bdc91a77aa51633e",
+    "name": "North End",
+    "name:fr": "North End",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747895,
+  "lat": 43.3127720,
+  "lon": -79.8073391,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "9a12a96547454474a9919f3f918f1465",
+    "name": "Indian Point",
+    "name:fr": "Indian Point",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747896,
+  "lat": 43.3109443,
+  "lon": -79.8419378,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "7a60c281a39b48628cbd2902aa455edf",
+    "name": "Aldershot",
+    "place": "suburb",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q4713724"
+  }
+},
+{
+  "type": "node",
+  "id": 558747899,
+  "lat": 43.3174363,
+  "lon": -79.8263736,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "7700641637144b82b96e11c3ab950921",
+    "name": "La Salle",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747902,
+  "lat": 43.3238988,
+  "lon": -79.8139555,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "baea6c5ebcb3443182073badae366ba0",
+    "name": "Maple",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747909,
+  "lat": 43.3602313,
+  "lon": -79.9349184,
+  "tags": {
+    "name": "Flamboro Centre",
+    "name:fr": "Flamboro Centre",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747911,
+  "lat": 43.3364160,
+  "lon": -79.9584960,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "727c1321fff242e9b26cefab88d9b2a5",
+    "name": "Millgrove",
+    "name:fr": "Millgrove",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q6859490"
+  }
+},
+{
+  "type": "node",
+  "id": 558747912,
+  "lat": 43.3662045,
+  "lon": -79.9268046,
+  "tags": {
+    "name": "Millgrove Station",
+    "name:fr": "Millgrove Station",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747916,
+  "lat": 43.3313973,
+  "lon": -79.9123281,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "9c2bc816dbc84c6da513713181dd8e3c",
+    "name": "Braeheid Survey",
+    "name:fr": "Braeheid Survey",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747917,
+  "lat": 43.3975381,
+  "lon": -79.9606043,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "bb6aa4d1468c495fb6f43f0499b4a92d",
+    "name": "Progreston",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747919,
+  "lat": 43.3942273,
+  "lon": -79.9807983,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "7adffb6a9199422d96b4ad256332dabc",
+    "name": "Carlisle",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q5041335"
+  }
+},
+{
+  "type": "node",
+  "id": 558747923,
+  "lat": 43.4056116,
+  "lon": -79.9648830,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "b7a245f19f0c40f883644501b22645b6",
+    "name": "Flamboro",
+    "name:fr": "Flamboro",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747924,
+  "lat": 43.3654514,
+  "lon": -79.8120872,
+  "tags": {
+    "name": "Palmer",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747926,
+  "lat": 43.3679606,
+  "lon": -79.8618682,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "cb2740cf7807489b9353da2033fee57a",
+    "name": "Highview Survey",
+    "name:fr": "Highview Survey",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747928,
+  "lat": 43.3566858,
+  "lon": -79.8234523,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "881d1b794403482fbe35c1dca877d48c",
+    "name": "Mountain Gardens",
+    "name:fr": "Mountain Gardens",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747929,
+  "lat": 43.3526190,
+  "lon": -79.8136698,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "name": "Clarksdale",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747933,
+  "lat": 43.3670190,
+  "lon": -79.8387365,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "name": "Brant Hills",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747936,
+  "lat": 43.3467439,
+  "lon": -79.8454493,
+  "tags": {
+    "name": "Tyandaga",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747937,
+  "lat": 43.3359317,
+  "lon": -79.8229824,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "af38ea21bb834ee788951aa6a478d73e",
+    "name": "Freeman",
+    "name:fr": "Freeman",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747939,
+  "lat": 43.3457728,
+  "lon": -79.8079222,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "9126afe7f26a4da18c9dd07f64dfa49c",
+    "name": "Glenwood Park",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747942,
+  "lat": 43.4099815,
+  "lon": -79.8747169,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "be190e0ce80c427294f9d47bbdc5484e",
+    "name": "Mount Nemo",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747943,
+  "lat": 43.3758989,
+  "lon": -79.8352337,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "b9b8cb1078f54e43be72eee04d5e6f9b",
+    "name": "Nelson",
+    "name:fr": "Nelson",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747951,
+  "lat": 43.4322572,
+  "lon": -79.9050340,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "47dcd46367eb471791012c33cf9b3d8d",
+    "name": "Lowville",
+    "name:fr": "Lowville",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747955,
+  "lat": 43.4245024,
+  "lon": -79.9386937,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "b2c091d44a414643974026c564b1444b",
+    "name": "Kilbride",
+    "name:fr": "Kilbride",
+    "place": "village",
+    "source": "I live here."
+  }
+},
+{
+  "type": "node",
+  "id": 558747958,
+  "lat": 43.4198153,
+  "lon": -79.9192000,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "4b133c4c69bd4be18971f11839062c7d",
+    "name": "Cedar Springs",
+    "name:fr": "Cedar Springs",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558747996,
+  "lat": 43.4273442,
+  "lon": -79.8358752,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "b80af7b40f1d49f8996722dc7353d509",
+    "name": "Zimmerman",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748012,
+  "lat": 43.4388192,
+  "lon": -79.8165128,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "a5086477880c43e0a2f441a14a6b6418",
+    "name": "Ash",
+    "name:fr": "Ash",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748029,
+  "lat": 43.2790429,
+  "lon": -79.7836217,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "5c47a95e6d894551aea24541b3bf7f14",
+    "name": "Hamilton Beach",
+    "name:fr": "Hamilton Beach",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748051,
+  "lat": 43.3088022,
+  "lon": -79.8004527,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "81c96e5ea56b464180183fad2fa1982a",
+    "name": "Burlington Beach",
+    "name:fr": "Burlington Beach",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748063,
+  "lat": 43.3732840,
+  "lon": -79.7383688,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "name": "Elizabeth Gardens",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009;CanVec 6.0 - NRCan"
+  }
+},
+{
+  "type": "node",
+  "id": 558748070,
+  "lat": 43.3447649,
+  "lon": -79.7832122,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "101c220afc9f4a19978759c80b06aefd",
+    "name": "Dynes",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748073,
+  "lat": 43.3470169,
+  "lon": -79.7759250,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "e32e45139d6e42ad8ebf2b2b9ee8924b",
+    "name": "Port Nelson",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748077,
+  "lat": 43.3538653,
+  "lon": -79.7611327,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "name": "Strathcona Gardens",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748080,
+  "lat": 43.3659979,
+  "lon": -79.7598191,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "name": "Longmoor",
+    "name:fr": "Longmoor",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748084,
+  "lat": 43.3344971,
+  "lon": -79.7800239,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "146d61d3a4f74e9d83fc9dd60920e50a",
+    "name": "Roseland",
+    "name:fr": "Roseland",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748088,
+  "lat": 43.3604932,
+  "lon": -79.7517452,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "name": "Shoreacres",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748093,
+  "lat": 43.4044600,
+  "lon": -79.7943165,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "b01addc00ba84d9192007ff950aa0e49",
+    "name": "The Orchard",
+    "name:fr": "The Orchard",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748098,
+  "lat": 43.4116686,
+  "lon": -79.8025515,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "7404b29b843e4faca3e298b0b8d9a144",
+    "name": "Tansley",
+    "name:fr": "Tansley",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748102,
+  "lat": 43.3774878,
+  "lon": -79.7674607,
+  "tags": {
+    "name": "Appleby",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 558748106,
+  "lat": 43.4068603,
+  "lon": -79.7274353,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "43345748521a41fca2bc0e1109d0288b",
+    "name": "Bronte Station",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748112,
+  "lat": 43.4356885,
+  "lon": -79.7764437,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "983c68b66d8e4d338592fbb896e8f773",
+    "name": "Palermo",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q7127259"
+  }
+},
+{
+  "type": "node",
+  "id": 558748115,
+  "lat": 43.4784129,
+  "lon": -79.7635650,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "0704dce36d99429abae412fd8d77e993",
+    "name": "Glenorchy",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748117,
+  "lat": 43.4583145,
+  "lon": -79.6929765,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "cb1869a6e5ae40d0981f1a5d951164c3",
+    "name": "Kent Gardens",
+    "name:fr": "Kent Gardens",
+    "place": "locality",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748120,
+  "lat": 43.4610929,
+  "lon": -79.6971410,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "96d87bfda11e494c98a795f44686c5fa",
+    "name": "Castle Green",
+    "name:fr": "Castle Green",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748122,
+  "lat": 43.4474360,
+  "lon": -79.6666720,
+  "tags": {
+    "name": "Oakville",
+    "place": "city",
+    "wikidata": "Q424984"
+  }
+},
+{
+  "type": "node",
+  "id": 558748123,
+  "lat": 43.4579323,
+  "lon": -79.7103169,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "94873bb55e6b4ab184a187ded7ac7dc6",
+    "name": "Sunningdale",
+    "name:fr": "Sunningdale",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748129,
+  "lat": 43.4653710,
+  "lon": -79.6545647,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "b8a79a2503654b408d92a2531567d067",
+    "name": "Ennisclare Park",
+    "name:fr": "Ennisclare Park",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748132,
+  "lat": 43.4756497,
+  "lon": -79.6425987,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "78d238c887e14e799047f2ab7e422af5",
+    "name": "Charnwood",
+    "name:fr": "Charnwood",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 558748133,
+  "lat": 43.4746424,
+  "lon": -79.6904534,
+  "tags": {
+    "name": "Holton Heights",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 814504616,
+  "lat": 43.0320446,
+  "lon": -80.0743803,
+  "tags": {
+    "alt_name": "Smoothtown",
+    "canvec:UUID": "d679af03b59642e5af3bcb9d254122d3",
+    "name": "Smooth Town",
+    "name:fr": "Smooth Town",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 814525007,
+  "lat": 43.0553971,
+  "lon": -80.0258798,
+  "tags": {
+    "name": "Six Nations Corner",
+    "name:fr": "Six Nations Corner",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 943130219,
+  "lat": 43.3915013,
+  "lon": -79.8075698,
+  "tags": {
+    "name": "Millcroft",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 1133305966,
+  "lat": 43.1189535,
+  "lon": -79.5888196,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Allen's Corners",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q115277525"
+  }
+},
+{
+  "type": "node",
+  "id": 1133305969,
+  "lat": 43.0742487,
+  "lon": -79.5005821,
+  "tags": {
+    "name": "St. Anns",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q115226233"
+  }
+},
+{
+  "type": "node",
+  "id": 1133305970,
+  "lat": 43.1219422,
+  "lon": -79.6018531,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Kimbo",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q115225680"
+  }
+},
+{
+  "type": "node",
+  "id": 1133305971,
+  "lat": 43.0742720,
+  "lon": -79.5918923,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Wilcox Corners",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q115277840"
+  }
+},
+{
+  "type": "node",
+  "id": 1133305972,
+  "lat": 43.1039738,
+  "lon": -79.6217549,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Basingstoke",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q115224968"
+  }
+},
+{
+  "type": "node",
+  "id": 1133306924,
+  "lat": 43.0394655,
+  "lon": -79.5851489,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Winslow",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133306926,
+  "lat": 43.0146136,
+  "lon": -79.5538480,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Elcho",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133306927,
+  "lat": 43.0273374,
+  "lon": -79.5541588,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Vaughan",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133306930,
+  "lat": 43.0409410,
+  "lon": -79.5028133,
+  "tags": {
+    "name": "Bismarck",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133307866,
+  "lat": 43.0706096,
+  "lon": -79.6518091,
+  "tags": {
+    "name": "Caistor Centre",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133307867,
+  "lat": 43.0831736,
+  "lon": -79.6852264,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Abingdon",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133308128,
+  "lat": 43.0504546,
+  "lon": -79.7174601,
+  "tags": {
+    "name": "Caistorville",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133308129,
+  "lat": 43.0232819,
+  "lon": -79.6447541,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Warner",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133323344,
+  "lat": 43.1469990,
+  "lon": -79.5765498,
+  "tags": {
+    "name": "Grimsby Centre",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 1133336211,
+  "lat": 43.1555585,
+  "lon": -79.6152055,
+  "tags": {
+    "name": "Grassie",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133347635,
+  "lat": 43.1931661,
+  "lon": -79.5606770,
+  "tags": {
+    "addr:province": "ON",
+    "name": "Grimsby",
+    "place": "town",
+    "population": "28883",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q424901",
+    "wikipedia": "en:Grimsby, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 1133352828,
+  "lat": 43.1841458,
+  "lon": -79.5400456,
+  "tags": {
+    "name": "Nelles Estates",
+    "place": "quarter",
+    "source": "local knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 1133368635,
+  "lat": 43.2077485,
+  "lon": -79.6508504,
+  "tags": {
+    "name": "Winona",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133370280,
+  "lat": 43.1983371,
+  "lon": -79.6796009,
+  "tags": {
+    "name": "Vinemount",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133378307,
+  "lat": 43.2253057,
+  "lon": -79.6392724,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Winona Park",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133386710,
+  "lat": 43.2415266,
+  "lon": -79.7305771,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Community Beach",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133397677,
+  "lat": 43.2144400,
+  "lon": -79.7135849,
+  "tags": {
+    "name": "Fruitland",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q5506442"
+  }
+},
+{
+  "type": "node",
+  "id": 1133398531,
+  "lat": 43.2151642,
+  "lon": -79.7447560,
+  "tags": {
+    "name": "Cherry Heights",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133416328,
+  "lat": 43.1801446,
+  "lon": -79.7297958,
+  "tags": {
+    "name": "Tapleytown",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q7684707"
+  }
+},
+{
+  "type": "node",
+  "id": 1133416867,
+  "lat": 43.1375848,
+  "lon": -79.6702341,
+  "tags": {
+    "name": "Fulton",
+    "place": "hamlet",
+    "wikidata": "Q115225426"
+  }
+},
+{
+  "type": "node",
+  "id": 1133418725,
+  "lat": 43.1661996,
+  "lon": -79.6704299,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Tweedside",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133421209,
+  "lat": 43.1374094,
+  "lon": -79.7439520,
+  "tags": {
+    "name": "Woodburn",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q115187757"
+  }
+},
+{
+  "type": "node",
+  "id": 1133442080,
+  "lat": 43.1798903,
+  "lon": -79.7816253,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Leckie Park",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133450892,
+  "lat": 43.1742755,
+  "lon": -79.7813635,
+  "tags": {
+    "name": "Elfrida",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133467633,
+  "lat": 43.2348038,
+  "lon": -79.8082775,
+  "tags": {
+    "name": "Bartonville",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133467653,
+  "lat": 43.2420275,
+  "lon": -79.8000809,
+  "tags": {
+    "name": "Normanhurst",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133474769,
+  "lat": 43.2260831,
+  "lon": -79.8078117,
+  "tags": {
+    "name": "Rosedale",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133479654,
+  "lat": 43.2224273,
+  "lon": -79.8361170,
+  "tags": {
+    "name": "Hampton Heights",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133485491,
+  "lat": 43.2436218,
+  "lon": -79.8241516,
+  "tags": {
+    "name": "The Delta",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1133486563,
+  "lat": 43.2380599,
+  "lon": -79.8615949,
+  "tags": {
+    "name": "Inch Park",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1134667004,
+  "lat": 43.1877160,
+  "lon": -79.8328349,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Hannon",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1134667044,
+  "lat": 43.2006591,
+  "lon": -79.8163225,
+  "tags": {
+    "name": "Mount Albion",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1134667447,
+  "lat": 43.1999097,
+  "lon": -79.8203326,
+  "tags": {
+    "name": "Albion Falls",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1134669021,
+  "lat": 43.1924385,
+  "lon": -79.8324992,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Rymal",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1134669226,
+  "lat": 43.1954706,
+  "lon": -79.8267681,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Hannon",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1134745183,
+  "lat": 43.2064570,
+  "lon": -79.8913032,
+  "tags": {
+    "name": "Ryckmans",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1134748104,
+  "lat": 43.2025732,
+  "lon": -79.8933162,
+  "tags": {
+    "name": "Ryckmans Corners",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q115178422"
+  }
+},
+{
+  "type": "node",
+  "id": 1134768090,
+  "lat": 43.2332158,
+  "lon": -79.8966461,
+  "tags": {
+    "name": "Buchanan",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135010713,
+  "lat": 43.2227721,
+  "lon": -79.9948106,
+  "tags": {
+    "name": "Oakhill",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135011065,
+  "lat": 43.2282384,
+  "lon": -79.9755846,
+  "tags": {
+    "name": "Maywood",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135011233,
+  "lat": 43.2316309,
+  "lon": -79.9580726,
+  "tags": {
+    "name": "Mohawk Meadows",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135014001,
+  "lat": 43.2216027,
+  "lon": -79.9641277,
+  "tags": {
+    "name": "Pinecrest",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135014659,
+  "lat": 43.2278340,
+  "lon": -79.9967728,
+  "tags": {
+    "name": "Clearview Estates",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135017787,
+  "lat": 43.2370928,
+  "lon": -79.9662909,
+  "tags": {
+    "name": "Ancaster Heights",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135090337,
+  "lat": 43.2100837,
+  "lon": -79.9928157,
+  "tags": {
+    "name": "Nakoma",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135091074,
+  "lat": 43.2154801,
+  "lon": -79.9839636,
+  "tags": {
+    "name": "Greenside Acres",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135091112,
+  "lat": 43.2040640,
+  "lon": -79.9805919,
+  "tags": {
+    "name": "Maple Lane Annex",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135091257,
+  "lat": 43.2082106,
+  "lon": -79.9823226,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Maple Lane",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135091533,
+  "lat": 43.2086846,
+  "lon": -79.9774320,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Perth Park",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135092313,
+  "lat": 43.1887365,
+  "lon": -79.9520587,
+  "tags": {
+    "name": "Southcote",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135092385,
+  "lat": 43.2058140,
+  "lon": -79.9575025,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Garners Corners",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135094490,
+  "lat": 43.2131564,
+  "lon": -79.9621617,
+  "tags": {
+    "name": "Harmony Hall II",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135094592,
+  "lat": 43.2146135,
+  "lon": -79.9957534,
+  "tags": {
+    "name": "Parkview Heights",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135096236,
+  "lat": 43.2125086,
+  "lon": -79.9914761,
+  "tags": {
+    "name": "Dancaster Courts",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135097034,
+  "lat": 43.2137752,
+  "lon": -79.9989881,
+  "tags": {
+    "name": "Spring Valley",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135111903,
+  "lat": 43.1446778,
+  "lon": -79.9883325,
+  "tags": {
+    "name": "Carluke",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135112959,
+  "lat": 43.1640165,
+  "lon": -79.9479176,
+  "tags": {
+    "name": "Renforth",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1135113338,
+  "lat": 43.1794125,
+  "lon": -79.9037376,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "North Glanford",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0",
+    "wikidata": "Q115200125"
+  }
+},
+{
+  "type": "node",
+  "id": 1135114624,
+  "lat": 43.1305355,
+  "lon": -79.8890718,
+  "tags": {
+    "fixme": "Place type may not be valid",
+    "name": "Glanford Station",
+    "place": "locality",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1613626128,
+  "lat": 43.1654577,
+  "lon": -79.4751839,
+  "tags": {
+    "name": "Beamsville",
+    "place": "town",
+    "population": "13323",
+    "wikidata": "Q643758",
+    "wikipedia": "en:Beamsville, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 1718016550,
+  "lat": 43.3109069,
+  "lon": -80.2591014,
+  "tags": {
+    "canvec:UUID": "d220b7ffa6aa4ae3b7aaf7bc7733556c",
+    "name": "Branchton",
+    "place": "village",
+    "source": "CanVec_Import_2009",
+    "wikidata": "Q115174110"
+  }
+},
+{
+  "type": "node",
+  "id": 1797723768,
+  "lat": 43.2592038,
+  "lon": -79.8610120,
+  "tags": {
+    "name": "Beasley",
+    "place": "neighbourhood",
+    "website": "http://ourbeasley.com/",
+    "wikidata": "Q4876825",
+    "wikipedia": "en:Beasley, Hamilton"
+  }
+},
+{
+  "type": "node",
+  "id": 1904479423,
+  "lat": 43.1352076,
+  "lon": -79.4333231,
+  "tags": {
+    "name": "Campden",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 1956927338,
+  "lat": 43.2971835,
+  "lon": -79.8649379,
+  "tags": {
+    "attribution": "Natural Resources Canada",
+    "canvec:CODE:1580010": "080",
+    "canvec:UUID": "968570a849a849c3964db78fba7315c0",
+    "name": "Bayview",
+    "place": "neighbourhood",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 1976066712,
+  "lat": 43.0317491,
+  "lon": -80.3310713,
+  "tags": {
+    "name": "Oakland",
+    "name:fr": "Oakland",
+    "place": "hamlet",
+    "wikidata": "Q115174436"
+  }
+},
+{
+  "type": "node",
+  "id": 2019179597,
+  "lat": 43.3951595,
+  "lon": -80.2733662,
+  "tags": {
+    "name": "Country Club Estates",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 2019321874,
+  "lat": 43.3599779,
+  "lon": -80.2203229,
+  "tags": {
+    "name": "Scott's Corners",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 2077197546,
+  "lat": 43.2632219,
+  "lon": -79.9366845,
+  "tags": {
+    "name": "University Gardens",
+    "place": "neighbourhood",
+    "wikidata": "Q115178487"
+  }
+},
+{
+  "type": "node",
+  "id": 2249534802,
+  "lat": 43.0607129,
+  "lon": -80.2671834,
+  "tags": {
+    "name": "Burtch",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2249536727,
+  "lat": 43.0598061,
+  "lon": -80.3185615,
+  "tags": {
+    "name": "Maple Grove",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0",
+    "wikidata": "Q115277725"
+  }
+},
+{
+  "type": "node",
+  "id": 2259129943,
+  "lat": 43.1626799,
+  "lon": -80.2738502,
+  "tags": {
+    "name": "Terrace Hill",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2259129950,
+  "lat": 43.1815636,
+  "lon": -80.2836943,
+  "tags": {
+    "name": "Wyndham Hills",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2263690878,
+  "lat": 43.1479474,
+  "lon": -80.2859012,
+  "tags": {
+    "name": "Holmedale",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2263703323,
+  "lat": 43.1327129,
+  "lon": -80.2759702,
+  "tags": {
+    "name": "West Brant",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2267565470,
+  "lat": 43.2329243,
+  "lon": -80.2125349,
+  "tags": {
+    "name": "Harrisburg",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2267825973,
+  "lat": 43.2441954,
+  "lon": -80.0563854,
+  "tags": {
+    "name": "Copetown",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-10.0",
+    "wikidata": "Q5168548",
+    "wikipedia": "en:Copetown, Ontario"
+  }
+},
+{
+  "type": "node",
+  "id": 2274277410,
+  "lat": 43.0687351,
+  "lon": -80.1179909,
+  "tags": {
+    "name": "Ohsweken /  Oshwé:ken",
+    "name:cay": "Ohswé:gë'",
+    "name:en": "Ohsweken",
+    "name:moh": "Oshwé:ken",
+    "name:one": "Oshwe‧kʌ́",
+    "name:ono": "Ohcwéꞏgęh",
+    "name:see": "Swe:gë’",
+    "name:tus": "Swekęˀ",
+    "name:ug": "ئوھسۋەگەن",
+    "place": "village",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2274277411,
+  "lat": 43.0754766,
+  "lon": -80.0800058,
+  "tags": {
+    "name": "St. Johns",
+    "place": "locality",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2274369118,
+  "lat": 43.1163612,
+  "lon": -80.1240632,
+  "tags": {
+    "name": "Onondaga",
+    "name:cay": "Onǫ́dageh",
+    "name:fr": "Onondaga",
+    "name:ono": "Dyenagéꞏhgwaʔ",
+    "place": "hamlet",
+    "source": "NRCan-CanVec-10.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2407397765,
+  "lat": 43.2564777,
+  "lon": -79.9008623,
+  "tags": {
+    "name": "McMaster Innovation Park",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 2598669483,
+  "lat": 43.2581450,
+  "lon": -79.8777445,
+  "tags": {
+    "name": "Hess Village",
+    "place": "neighbourhood",
+    "website": "http://www.hessvillagehamilton.com/",
+    "wikidata": "Q17022184",
+    "wikipedia": "en:Hess Village"
+  }
+},
+{
+  "type": "node",
+  "id": 2628343775,
+  "lat": 43.2178320,
+  "lon": -79.9872842,
+  "tags": {
+    "name": "Springvale",
+    "place": "neighbourhood",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 2660601301,
+  "lat": 43.3781324,
+  "lon": -79.8228859,
+  "tags": {
+    "name": "Headon Forest",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 2660688915,
+  "lat": 43.4051316,
+  "lon": -79.8211253,
+  "tags": {
+    "name": "Alton Village",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 3244777354,
+  "lat": 43.3891945,
+  "lon": -79.8136240,
+  "tags": {
+    "name": "Dalecroft",
+    "note": "This is a separate neighbourhood from Millcroft - houses on Berwick east of pipeline field are Millcroft, but Dalecroft Cres, etc are Dalecroft",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 3244777355,
+  "lat": 43.3922172,
+  "lon": -79.8204808,
+  "tags": {
+    "name": "Fairway Glen",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 3654784237,
+  "lat": 43.1107485,
+  "lon": -79.9530981,
+  "tags": {
+    "name": "Unity Side Road",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 3737840744,
+  "lat": 43.0416482,
+  "lon": -79.7995950,
+  "tags": {
+    "name": "Empire Corners",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 3737840745,
+  "lat": 43.0705772,
+  "lon": -79.8127697,
+  "tags": {
+    "name": "Blackheath",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 3737840746,
+  "lat": 43.0224397,
+  "lon": -79.8898006,
+  "tags": {
+    "name": "York",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 3737840747,
+  "lat": 43.0479998,
+  "lon": -79.9101287,
+  "tags": {
+    "name": "Sims Lock",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 3878431534,
+  "lat": 43.1925482,
+  "lon": -79.5225970,
+  "tags": {
+    "name": "Grimsby Beach",
+    "place": "suburb",
+    "source": "NRCan-CanVec-7.0"
+  }
+},
+{
+  "type": "node",
+  "id": 4381315401,
+  "lat": 43.0388892,
+  "lon": -80.2046907,
+  "tags": {
+    "name": "Smith's Corners",
+    "place": "hamlet",
+    "source": "CanVec_Import_2009"
+  }
+},
+{
+  "type": "node",
+  "id": 4607801133,
+  "lat": 43.2140195,
+  "lon": -79.8400788,
+  "tags": {
+    "name": "Berrisfield",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 7921693164,
+  "lat": 43.2509110,
+  "lon": -79.8768041,
+  "tags": {
+    "name": "Durand",
+    "note": "may need to recentre on a more accurate location",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 8220996645,
+  "lat": 43.3370985,
+  "lon": -79.8302543,
+  "tags": {
+    "name": "Freeman Interchange",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 9517023900,
+  "lat": 43.2541164,
+  "lon": -79.9249767,
+  "tags": {
+    "name": "Ainslie Wood",
+    "place": "neighbourhood",
+    "wikidata": "Q19871743",
+    "wikipedia": "en:Ainslie Wood, Hamilton"
+  }
+},
+{
+  "type": "node",
+  "id": 9955874016,
+  "lat": 43.2107321,
+  "lon": -79.6020848,
+  "tags": {
+    "name": "Grimsby-on-the-Lake",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 10059438790,
+  "lat": 43.1834115,
+  "lon": -79.5159418,
+  "tags": {
+    "name": "Vineyard Valley",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 10207784748,
+  "lat": 43.0558381,
+  "lon": -80.1947270,
+  "tags": {
+    "name": "Dwęꞏnųhgwaʔtsheʔ / Sour Springs",
+    "name:cay": "Ganǫ́hgwa̱ˀtroˀ",
+    "name:en": "Sour Springs",
+    "name:ono": "Dwęꞏnųhgwaʔtsheʔ",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 10249696402,
+  "lat": 43.2038444,
+  "lon": -79.9102110,
+  "tags": {
+    "name": "St. Elizabeth Village",
+    "place": "neighbourhood",
+    "website": "https://stelizabethvillage.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 11504798679,
+  "lat": 43.2476630,
+  "lon": -79.8899435,
+  "tags": {
+    "name": "Kirkendall South",
+    "place": "neighbourhood",
+    "wikidata": "Q124223754"
+  }
+},
+{
+  "type": "node",
+  "id": 11504798680,
+  "lat": 43.2532640,
+  "lon": -79.8865660,
+  "tags": {
+    "name": "Kirkendall North",
+    "place": "neighbourhood",
+    "wikidata": "Q124223284"
+  }
+},
+{
+  "type": "node",
+  "id": 11504803053,
+  "lat": 43.2616769,
+  "lon": -79.8830616,
+  "tags": {
+    "name": "Strathcona",
+    "place": "neighbourhood",
+    "wikidata": "Q7622063",
+    "wikipedia": "en:Strathcona, Hamilton"
+  }
+},
+{
+  "type": "node",
+  "id": 12189479810,
+  "lat": 43.0627482,
+  "lon": -80.1604579,
+  "tags": {
+    "name": "Upper End",
+    "name:cay": "Dagę́hya:t",
+    "name:en": "Upper End",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 12189480440,
+  "lat": 43.0677187,
+  "lon": -80.0050837,
+  "tags": {
+    "name": "Lower End",
+    "name:cay": "Ganéda̱ˀgeh",
+    "name:en": "Lower End",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 12840818306,
+  "lat": 43.0550510,
+  "lon": -79.7686722,
+  "tags": {
+    "name": "Sinclairville",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 12840818332,
+  "lat": 43.0977208,
+  "lon": -79.8878338,
+  "tags": {
+    "name": "Tyneside",
+    "place": "hamlet"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,23 @@
+node_modules
+dist
+.DS_Store
+*.local
+
+# Local editor and assistant settings
+.claude/
+
+# Written by `npm run build` / `npm run dev` (scripts/site/build.mjs and scripts/build-og.mjs).
+# Edit the generators in scripts/site/, not these files.
+/src/pages/
+/404.html
+/data/pages.json
+/public/og/
+/src/partials/site-header.html
+/src/partials/site-footer.html
+/src/partials/site-drawer.html
+/src/partials/site-floating.html
+/src/partials/site-sprite.svg
+
+# Original student photos (the web versions in public/img are what the site uses).
+# Kept off the public repository for the students' privacy.
+/data/photos/

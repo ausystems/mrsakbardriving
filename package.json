@@ -1,0 +1,30 @@
+{
+  "name": "mrs-akbar-driving-instructor",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "pages": "node scripts/site/build.mjs && node scripts/build-og.mjs",
+    "dev": "node scripts/site/build.mjs && vite",
+    "build": "node scripts/site/build.mjs && node scripts/build-og.mjs && vite build",
+    "preview": "vite preview --port 4173",
+    "assets": "node scripts/build-relief.mjs && node scripts/build-map.mjs && node scripts/build-hero.mjs && node scripts/build-qr.mjs && node scripts/images.mjs && node scripts/assets.mjs",
+    "validate": "npm run build && html-validate \"dist/**/*.html\"",
+    "deploy": "node scripts/deploy.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "@fontsource-variable/figtree": "^5.3.0",
+    "@fontsource/big-shoulders-display": "^5.3.0",
+    "@fontsource/caveat": "^5.3.0",
+    "@fontsource/figtree": "^5.3.0",
+    "html-validate": "^11.16.1",
+    "opentype.js": "^2.0.0",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.1"
+  }
+}
