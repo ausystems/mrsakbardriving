@@ -4,7 +4,7 @@
 
 **One-on-one driving lessons across Hamilton, Ontario, with a certified female instructor who comes to you.**
 
-[**Visit the live site**](https://ausystems.github.io/mrsakbardriving/) &nbsp;·&nbsp; Call or text **416-457-5778**
+[**Visit the live site**](https://mrsakbardriving.vercel.app/) &nbsp;·&nbsp; Call or text **416-457-5778**
 
 </div>
 
@@ -37,7 +37,6 @@ npm run dev          # generate the pages, then local development at http://127.
 npm run build        # generate pages and share images, then the production build into dist/
 npm run preview      # serve the production build (this machine uses port 4188)
 npm run validate     # build, then validate every HTML page
-npm run deploy       # build, validate and publish to GitHub Pages (the live site)
 npm run pages        # only regenerate the pages and share images
 npm run assets       # regenerate terrain, maps, hero art, QR codes, photos and icons
 npm run indexnow     # after a deploy: tell Bing and other IndexNow engines about every page
@@ -45,79 +44,25 @@ npm run indexnow     # after a deploy: tell Bing and other IndexNow engines abou
 
 ## How it goes live
 
-```bash
-npm run deploy
-```
-
-That builds the site, validates every page, and publishes `dist/` as a new commit on the
-`gh-pages` branch, which GitHub Pages serves at **https://ausystems.github.io/mrsakbardriving/**.
-Commit and push your source changes to `main` as usual; `npm run deploy` is what updates the live site.
+The site is hosted on **Vercel**, connected to this repository. Every push to `main` builds and
+publishes it automatically at **https://mrsakbardriving.vercel.app/**; other branches get preview
+links. Build settings, caching and security headers live in `vercel.json`.
 
 The address lives in one place, `VITE_SITE_URL` in `.env`. Canonical tags, Open Graph URLs,
-structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it, and because it includes the
-`/mrsakbardriving` folder, every link on the site gets that prefix at build time.
-
-<details>
-<summary><strong>Optional: deploy automatically on every push to main</strong></summary>
-
-GitHub only accepts workflow files from a login with the <code>workflow</code> permission. With one,
-save this as <code>.github/workflows/deploy.yml</code> (or create it on github.com under
-<strong>Actions &gt; New workflow &gt; set up a workflow yourself</strong>):
-
-```yaml
-name: Deploy site
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-permissions:
-  contents: write
-concurrency:
-  group: deploy
-  cancel-in-progress: true
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-      - run: npx html-validate "dist/**/*.html"
-      - name: Publish to the gh-pages branch
-        working-directory: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          touch .nojekyll
-          git init -q -b gh-pages
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -q -m "Deploy ${GITHUB_SHA::7}"
-          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
-```
-
-</details>
+structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it.
 
 **Moving to a custom domain later** (for example `www.mrsakbardriving.ca`):
 
-1. Buy the domain, then in the repository go to **Settings > Pages > Custom domain**, enter it and
-   follow GitHub's DNS instructions. Tick **Enforce HTTPS** once it's offered.
-2. Add a file `public/CNAME` containing just the domain, so each deploy keeps it.
-3. Change `VITE_SITE_URL` in `.env` to `https://www.mrsakbardriving.ca`, then run `npm run deploy`.
-   The site rebuilds at the domain root, and GitHub forwards the old github.io address to it.
+1. Buy the domain, then in Vercel open the project, go to **Settings > Domains**, add it and follow
+   the DNS instructions. Vercel sets up HTTPS on its own.
+2. Change `VITE_SITE_URL` in `.env` to `https://www.mrsakbardriving.ca` and push. In **Settings >
+   Domains**, set the vercel.app address to redirect to the new domain.
 
 ## Search engines
 
 1. **Google Search Console:** add a URL-prefix property for the live address, choose the
-   "HTML tag" method, paste the code into `VITE_GSC_VERIFICATION` in `.env`, run `npm run deploy`,
-   then press Verify. Submit `sitemap.xml` (for example `https://ausystems.github.io/mrsakbardriving/sitemap.xml`)
-   under Sitemaps. On a github.io address, search engines don't read this site's `robots.txt`, so
-   submitting the sitemap matters.
+   "HTML tag" method, paste the code into `VITE_GSC_VERIFICATION` in `.env`, push, then press Verify.
+   Submit `https://mrsakbardriving.vercel.app/sitemap.xml` under Sitemaps.
 2. **Bing Webmaster Tools:** import the site from Search Console (or use `VITE_BING_VERIFICATION`),
    submit the sitemap, then run `npm run indexnow`.
 3. Add the website address to her Google Business Profile.
@@ -149,7 +94,7 @@ Edit the generator files, not `src/pages/` (it isn't in the repository; every bu
 
 ## Keeping it current
 
-- **Review count:** update `VITE_GOOGLE_REVIEWS` in `.env` as reviews arrive, then run `npm run deploy`.
+- **Review count:** update `VITE_GOOGLE_REVIEWS` in `.env` as reviews arrive, then push.
 - **Review quotes** must be word for word. All 58 Hamilton reviews (text and Google review IDs) are in
   `data/reviews-hamilton.json`; pages quote them through `review()` in `scripts/site/core.mjs`, which
   stops the build if a quote doesn't match the review exactly. Every quote links to that exact review.

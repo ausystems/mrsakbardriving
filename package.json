@@ -10,7 +10,6 @@
     "preview": "vite preview --port 4173",
     "assets": "node scripts/build-relief.mjs && node scripts/build-map.mjs && node scripts/build-hero.mjs && node scripts/build-qr.mjs && node scripts/images.mjs && node scripts/assets.mjs",
     "validate": "npm run build && html-validate \"dist/**/*.html\"",
-    "deploy": "node scripts/deploy.mjs",
     "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
@@ -26,5 +25,8 @@
     "qrcode": "^1.5.4",
     "sharp": "^0.35.5",
     "vite": "^8.3.1"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }
