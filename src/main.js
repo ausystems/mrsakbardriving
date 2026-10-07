@@ -55,6 +55,53 @@ $$('[data-close]', drawer).forEach((el) => el.addEventListener('click', () => cl
 $$('.drawer-nav a', drawer).forEach((a) => a.addEventListener('click', () => closeDrawer({ restoreFocus: false })));
 window.matchMedia('(min-width: 1021px)').addEventListener('change', (e) => { if (e.matches) closeDrawer({ restoreFocus: false }); });
 
+/* Lessons, expandable inside the drawer */
+$$('.drawer-group__btn', drawer).forEach((btn) => {
+  const list = document.getElementById(btn.getAttribute('aria-controls'));
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') !== 'true';
+    btn.setAttribute('aria-expanded', String(open));
+    list.hidden = !open;
+  });
+});
+
+/* ---------- Lessons dropdown in the header ---------- */
+// Opens on click or tap, on the keyboard (Enter, Space, Arrow Down) and on mouse hover. A hover-opened
+// menu closes when the mouse leaves; a clicked one stays open until you click elsewhere or press Escape.
+$$('[data-drop]').forEach((drop) => {
+  const btn = $('.nav-drop__btn', drop);
+  const links = $$('.nav-drop__panel a', drop);
+  let via = '';
+  let closeTimer = 0;
+  const isOpen = () => drop.classList.contains('is-open');
+  const set = (open, how = '') => {
+    clearTimeout(closeTimer);
+    drop.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    via = open ? how : '';
+  };
+  btn.addEventListener('click', () => {
+    if (via === 'hover') { via = 'click'; return; }
+    set(!isOpen(), 'click');
+  });
+  drop.addEventListener('pointerenter', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    clearTimeout(closeTimer);
+    if (!isOpen()) set(true, 'hover');
+  });
+  drop.addEventListener('pointerleave', (e) => {
+    if (e.pointerType === 'mouse' && via === 'hover') closeTimer = setTimeout(() => set(false), 220);
+  });
+  drop.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen()) { set(false); btn.focus(); return; }
+    const i = links.indexOf(document.activeElement);
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (!isOpen()) set(true, 'click'); links[Math.min(i + 1, links.length - 1)]?.focus(); }
+    if (e.key === 'ArrowUp' && i > -1) { e.preventDefault(); (i === 0 ? btn : links[i - 1]).focus(); }
+  });
+  drop.addEventListener('focusout', (e) => { if (!drop.contains(e.relatedTarget)) set(false); });
+  document.addEventListener('click', (e) => { if (isOpen() && !drop.contains(e.target)) set(false); });
+});
+
 /* ---------- Current section in the nav ---------- */
 const navLinks = $$('.main-nav a').filter((a) => a.pathname === location.pathname && a.hash);
 if ('IntersectionObserver' in window && navLinks.length) {
@@ -256,7 +303,8 @@ document.addEventListener('click', (e) => {
   const t = e.target.closest('a[href^="sms:"]');
   if (t) window.dataLayer?.push({ event: 'text_message_click', text_location: t.dataset.text || 'link' });
   const a = e.target.closest('a[href^="tel:"]');
-  if (!a) return;
+  // Only her number counts as a call; other numbers in guides (police, OPP) are plain links
+  if (!a || a.getAttribute('href') !== 'tel:+14164575778') return;
   const where = a.dataset.call || 'link';
   window.dataLayer?.push({ event: 'phone_call_click', call_location: where });
   document.dispatchEvent(new CustomEvent('call-click', { detail: { where } }));

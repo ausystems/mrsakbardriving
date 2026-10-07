@@ -16,7 +16,7 @@
 
 ## At a glance
 
-- **29 pages:** the home page, 5 lesson pages, 8 area pages, 10 guides and a guides index, contact,
+- **49 pages:** the home page, 5 lesson pages, 8 area pages, 30 guides and a guides index, contact,
   a Privacy Policy, Terms and Conditions, and a custom 404.
 - **Fast:** Lighthouse performance 98 to 100 on phones and 100 on desktop, with no layout shift.
   Each page inlines only the CSS it uses.
@@ -81,7 +81,7 @@ structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it.
 | Home | `/` | `index.html` (hand-written) |
 | Lessons (5) | beginner, nervous drivers, G2, G and highway, parallel parking | `scripts/site/pages-services.mjs` |
 | Areas (8) | Hamilton, Mount Hope, Ancaster, Dundas, Stoney Creek, Binbrook, Caledonia, near McMaster | `scripts/site/pages-areas.mjs`, `areas-content.mjs` |
-| Guides (10 + index) | `/guides/...` | `scripts/site/pages-guides.mjs`, `guide-mountain.mjs` |
+| Guides (30 + index) | `/guides/...` | `scripts/site/guide-list.mjs` (order and section), `pages-guides.mjs`, `guides-start.mjs`, `guides-rules.mjs`, `guides-skills.mjs`, `guides-tests.mjs`, `guide-mountain.mjs` |
 | Contact, Privacy Policy, Terms and Conditions | `/contact/`, `/privacy-policy/`, `/terms-and-conditions/` | `pages-contact.mjs`, `pages-legal.mjs` |
 | 404 | `404.html` (never indexed) | `pages-404.mjs` |
 
@@ -89,6 +89,12 @@ structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it.
 buttons that the home page includes) from one layout, so navigation never drifts apart. Generated
 pages are written to `src/pages/` and published at clean URLs such as `/guides/how-to-parallel-park/`.
 Edit the generator files, not `src/pages/` (it isn't in the repository; every build recreates it).
+
+The header links to Home, a Lessons menu that lists all five lesson pages, Areas, Reviews, Guides
+and FAQ; the phone menu has the same links, with Lessons as an expandable list. The guides index
+groups the guides into Getting started, Rules of the road, Skills, Road tests and Hamilton roads,
+following each guide's `cat` in `scripts/site/guide-list.mjs`. Guide tables, practice quizzes and
+road sign drawings come from `scripts/site/guide-kit.mjs` and `scripts/site/road-signs.mjs`.
 
 ## Keeping it current
 
@@ -98,8 +104,10 @@ Edit the generator files, not `src/pages/` (it isn't in the repository; every bu
   stops the build if a quote doesn't match the review exactly. Every quote links to that exact review.
 - **"Every one of her reviews is five stars"** was true on 2026-10-06 (58 of 58). If a review below
   five stars arrives, change that sentence in `index.html`.
-- **Rules and DriveTest details** in the guides were checked on 2026-10-06 against ontario.ca and
-  drivetest.ca. Licensing rules change; recheck them every year and update the dates in the guides.
+- **Rules and DriveTest details** in the guides were checked on 2026-10-06 and 2026-10-07 against
+  ontario.ca, ontario.ca/laws, drivetest.ca and the other sources listed at the end of each guide.
+  Licensing rules, fines and insurance rules change; recheck them every year and update the dates in
+  the guides.
 - **"Four years in business"** was true in 2026. Update it each year (home page, guides, JSON-LD).
 - **She comes to you:** the site never presents a home base or distances from one. Keep it that way.
 - **Business name and phone** must stay identical to the Google Business Profile.

@@ -76,11 +76,11 @@ export const SERVICE_AREAS = ['Hamilton', 'Mount Hope', 'Hamilton Mountain', 'Do
 
 /* ---------- All pages, so navigation, footer, sitemap and llms.txt stay in sync ---------- */
 export const SERVICES = [
-  { slug: 'beginner-driving-lessons', label: 'Beginner lessons' },
-  { slug: 'driving-lessons-for-nervous-drivers', label: 'Nervous drivers' },
-  { slug: 'g2-road-test-preparation', label: 'G2 road test prep' },
-  { slug: 'g-road-test-preparation', label: 'G test and highway' },
-  { slug: 'parallel-parking-lessons', label: 'Parallel parking' },
+  { slug: 'beginner-driving-lessons', label: 'Beginner lessons', blurb: 'Never driven? Start from your very first drive.' },
+  { slug: 'driving-lessons-for-nervous-drivers', label: 'Nervous drivers', blurb: 'Calm, patient lessons at your own pace.' },
+  { slug: 'g2-road-test-preparation', label: 'G2 road test prep', blurb: 'Everything the G2 examiner checks.' },
+  { slug: 'g-road-test-preparation', label: 'G test and highway', blurb: 'Merging, lane changes and the G test.' },
+  { slug: 'parallel-parking-lessons', label: 'Parallel parking', blurb: 'Parallel, reverse and hill parking.' },
 ];
 export const AREAS = [
   { slug: 'driving-lessons-hamilton', label: 'Hamilton' },

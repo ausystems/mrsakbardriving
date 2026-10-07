@@ -86,7 +86,7 @@ export const AREA_CONTENT = (review) => [
       ['Is Mount Hope a good place for a first lesson?', 'It&rsquo;s a calm one. The residential streets are quiet, so a first lesson can focus on the basics before you move on to busier roads.'],
       ['Are there roundabouts near Mount Hope?', 'Not in Mount Hope itself. The nearest are a short drive away, in Binbrook, Ancaster and Caledonia.'],
     ],
-    guides: ['ontario-g1-g2-g-licence-explained', 'how-many-driving-lessons-do-you-need', 'nervous-driver-tips'],
+    guides: ['how-to-pass-the-g1-test', 'ontario-g1-g2-g-licence-explained', 'nervous-driver-tips'],
     cta: ['Start close to home', 'She&rsquo;ll come to you in Mount Hope. Call or text to book your first lesson.'],
   },
 
@@ -125,7 +125,7 @@ export const AREA_CONTENT = (review) => [
       ['How do I drive through a two-lane roundabout?', 'Choose your lane before you enter, following the signs and the arrows painted on the road. Slow down, yield to traffic already in the roundabout, stay in your lane, and signal right just before your exit.'],
       ['Which way do I turn my wheels when I park on a hill?', 'Facing downhill, turn your front wheels toward the curb. Facing uphill with a curb, turn them toward the road; uphill with no curb, turn them sharply right. Then set the parking brake.'],
     ],
-    guides: ['how-to-parallel-park', 'driving-the-hamilton-mountain-accesses', 'how-to-pass-the-g2-road-test'],
+    guides: ['how-to-drive-a-roundabout', 'driving-the-hamilton-mountain-accesses', 'how-to-parallel-park'],
     cta: ['Ancaster lessons start with a call', 'Tell her which part of Ancaster you&rsquo;re in and what you want to work on.'],
   },
 
@@ -203,7 +203,7 @@ export const AREA_CONTENT = (review) => [
       ['How close is the DriveTest centre to Stoney Creek?', 'Very close. The Hamilton DriveTest centre at 370 Kenora Avenue North is just west of Centennial Parkway North, near the QEW.'],
       ['Can G1 drivers practise on the QEW?', 'Only with a licensed driving instructor beside them. Otherwise, the QEW is one of the highways G1 drivers aren&rsquo;t allowed to use.'],
     ],
-    guides: ['g-road-test-tips', 'hamilton-drivetest-centre', 'winter-driving-in-hamilton'],
+    guides: ['g-road-test-tips', 'hamilton-drivetest-centre', 'ontario-speed-limits-and-speeding-tickets'],
     cta: ['Ready for the QEW?', 'Tell her your licence level and when your test is. Highway practice can start whenever you&rsquo;re ready.'],
   },
 
@@ -241,7 +241,7 @@ export const AREA_CONTENT = (review) => [
       ['How do I get through a roundabout?', 'Slow down as you approach, yield to traffic already in the roundabout, and drive counterclockwise around it. Signal right just before your exit.'],
       ['Where is the closest DriveTest centre to Binbrook?', 'The Hamilton DriveTest centre at 370 Kenora Avenue North, roughly 14 km north of the village.'],
     ],
-    guides: ['ontario-g1-g2-g-licence-explained', 'nervous-driver-tips', 'how-to-pass-the-g2-road-test'],
+    guides: ['how-to-drive-a-roundabout', 'nervous-driver-tips', 'how-to-pass-the-g2-road-test'],
     cta: ['Learning to drive in Binbrook?', 'Call or text to book. Roundabouts included, if you want them.'],
   },
 
@@ -280,7 +280,7 @@ export const AREA_CONTENT = (review) => [
       ['Where is the nearest DriveTest centre to Caledonia?', 'The Hamilton DriveTest centre at 370 Kenora Avenue North, roughly a 30-minute drive without traffic. Brantford&rsquo;s centre is a little further.'],
       ['Can G1 drivers drive on Highway 6?', 'Yes, with an eligible driver beside them. Highway 6 isn&rsquo;t one of the 400-series highways or expressways that G1 drivers have to stay off.'],
     ],
-    guides: ['ontario-g1-g2-g-licence-explained', 'hamilton-drivetest-centre', 'winter-driving-in-hamilton'],
+    guides: ['ontario-speed-limits-and-speeding-tickets', 'hamilton-drivetest-centre', 'winter-driving-in-hamilton'],
     cta: ['Learning to drive in Caledonia?', 'Tell her where in Caledonia you are and what you want to work on.'],
   },
 
@@ -319,7 +319,7 @@ export const AREA_CONTENT = (review) => [
       ['I&rsquo;m an international student. Can I take lessons?', 'Yes. If you have a licence from another country, how you get an Ontario licence depends on where it&rsquo;s from, and the newcomer&rsquo;s licence guide explains the options. Lessons help with whatever is new to you about driving here.'],
       ['Is there construction around campus?', 'Some. Metrolinx is doing utility inspections for the Hamilton LRT along the McMaster to Eastgate route until the end of 2026, with flaggers and detours where needed.'],
     ],
-    guides: ['new-to-ontario-drivers-licence', 'ontario-g1-g2-g-licence-explained', 'how-many-driving-lessons-do-you-need'],
+    guides: ['new-to-ontario-drivers-licence', 'how-to-pass-the-g1-test', 'right-of-way-rules-ontario'],
     cta: ['Fit lessons around classes', 'Call or text with the days you&rsquo;re free.'],
   },
 ];

@@ -29,14 +29,31 @@ const brand = (href, extra = '') => `<a class="brand${extra}" href="${href}">
       <span class="brand-text"><span class="brand-name">Mrs. Akbar</span> <span class="brand-sub">Driving Instructor</span></span>
     </a>`;
 
-const NAV = [
-  ['/#lessons', 'Lessons'],
+const NAV_AFTER = [
   ['/#areas', 'Areas'],
   ['/#reviews', 'Reviews'],
   ['/guides/', 'Guides'],
   ['/#faq', 'FAQ'],
 ];
-const DRAWER_NAV = [['/#meet', 'About'], ...NAV, ['/contact/', 'Contact']];
+const lessonHref = (s) => `/${s.slug}/`;
+
+// Lessons dropdown: a disclosure button (main.js opens it on click, keyboard or hover) over a panel
+// listing every lesson page, with a call button for anyone who isn't sure which one they need.
+function lessonsMenu(current, idPrefix) {
+  const onLesson = SERVICES.some((s) => lessonHref(s) === current);
+  return `<div class="nav-drop" data-drop>
+        <button class="nav-drop__btn${onLesson ? ' is-current' : ''}" type="button" aria-expanded="false" aria-controls="${idPrefix}-lessons">Lessons${icon('chev-r', 'icon nav-drop__chev')}</button>
+        <div class="nav-drop__panel" id="${idPrefix}-lessons">
+          <ul class="nav-drop__list">
+            ${SERVICES.map((s) => `<li><a href="${lessonHref(s)}"${lessonHref(s) === current ? ' aria-current="page"' : ''}><span class="nav-drop__title">${s.label}</span><span class="nav-drop__desc">${s.blurb}</span></a></li>`).join('\n            ')}
+          </ul>
+          <div class="nav-drop__foot">
+            <a class="nav-drop__all" href="/#lessons">All lessons${icon('arrow')}</a>
+            <a class="btn btn--amber nav-drop__call" href="${BIZ.tel}" data-call="nav-lessons">${icon('phone')}<span>Not sure? Call</span></a>
+          </div>
+        </div>
+      </div>`;
+}
 
 export function header({ home = false, current = '' } = {}) {
   const isCurrent = (href) => current && !href.includes('#') && (href === current || (href !== '/' && current.startsWith(href)));
@@ -45,7 +62,9 @@ export function header({ home = false, current = '' } = {}) {
   <div class="container header-inner">
     ${brand(home ? '#top' : '/')}
     <nav class="main-nav" aria-label="Main">
-      ${NAV.map(link).join('\n      ')}
+      <a href="${home ? '/#top' : '/'}"${current === '/' ? ' aria-current="page"' : ''}>Home</a>
+      ${lessonsMenu(current, 'nav')}
+      ${NAV_AFTER.map(link).join('\n      ')}
     </nav>
     <div class="header-actions">
       <a class="btn btn--dark btn--header" href="${BIZ.tel}" data-call="header">
@@ -68,7 +87,16 @@ export function drawer() {
   <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
     <button class="drawer-close" type="button" data-close aria-label="Close menu"><span aria-hidden="true"></span></button>
     <nav class="drawer-nav" aria-label="Menu">
-      ${DRAWER_NAV.map(([href, label]) => `<a href="${href}">${label}</a>`).join('\n      ')}
+      <a href="/">Home</a>
+      <a href="/#meet">About</a>
+      <div class="drawer-group">
+        <button class="drawer-group__btn" type="button" aria-expanded="false" aria-controls="drawer-lessons">Lessons<span class="drawer-group__plus" aria-hidden="true"></span></button>
+        <ul class="drawer-group__list" id="drawer-lessons" hidden>
+          ${SERVICES.map((s) => `<li><a href="${lessonHref(s)}">${s.label}</a></li>`).join('\n          ')}
+          <li><a href="/#lessons">All lessons</a></li>
+        </ul>
+      </div>
+      ${[...NAV_AFTER, ['/contact/', 'Contact']].map(([href, label]) => `<a href="${href}">${label}</a>`).join('\n      ')}
     </nav>
     <div class="drawer-foot">
       <a class="btn btn--primary btn--block" href="${BIZ.tel}" data-call="drawer">

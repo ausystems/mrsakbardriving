@@ -111,7 +111,7 @@ export function servicePages() {
         ['How many lessons will I need?', 'It depends on where you&rsquo;re starting. One student mentioned having close to 8 lessons; another wrote that they learned a lot within two. Once Mrs. Akbar knows your starting point, she can give you an honest idea.'],
         ['Can a parent or friend help me practise between lessons?', 'Yes, as long as they meet the G1 rules for the person beside you: fully licensed, at least four years of driving experience, and a blood alcohol level under .05 (zero if they&rsquo;re 21 or under). Practising what you covered in a lesson helps it stick.'],
       ],
-      guides: ['ontario-g1-g2-g-licence-explained', 'how-many-driving-lessons-do-you-need', 'nervous-driver-tips'],
+      guides: ['how-to-pass-the-g1-test', 'right-of-way-rules-ontario', 'how-many-driving-lessons-do-you-need'],
       cta: ['Book your first lesson', 'Tell her you&rsquo;re a beginner, where you live and when you&rsquo;re free. She&rsquo;ll take it from there.'],
     }),
 
@@ -161,7 +161,7 @@ export function servicePages() {
         ['Does it help that she&rsquo;s a woman?', 'For some people it does. Aleena wrote about wanting a female instructor due to personal preference and comfort, as someone who can be an anxious driver, and passed the G2 on the first try.'],
         ['How long until I feel confident?', 'Everyone is different. One student, Katherine, wrote: &ldquo;After just a few lessons, I already feel much more confident behind the wheel.&rdquo;'],
       ],
-      guides: ['nervous-driver-tips', 'how-many-driving-lessons-do-you-need', 'how-to-pass-the-g2-road-test'],
+      guides: ['nervous-driver-tips', 'how-to-drive-a-roundabout', 'how-many-driving-lessons-do-you-need'],
       cta: ['Start with one calm lesson', 'Tell her you&rsquo;re nervous when you call. It&rsquo;s useful to know, and it&rsquo;s nothing she hasn&rsquo;t heard before.'],
     }),
 
@@ -232,7 +232,7 @@ export function servicePages() {
         ['Can I book a lesson right before my test?', 'Sometimes, yes. One student, Prasad, booked a one-hour lesson two hours before their test, and passed. Her schedule changes day to day, so call as early as you can.'],
         ['What if I don&rsquo;t pass?', 'You can test again while your licence is valid. DriveTest generally asks you to wait at least 10 days between tests, and your scoresheet shows exactly what to work on in the meantime.'],
       ],
-      guides: ['how-to-pass-the-g2-road-test', 'hamilton-drivetest-centre', 'how-to-parallel-park'],
+      guides: ['how-to-pass-the-g2-road-test', 'how-to-do-a-three-point-turn', 'how-to-parallel-park'],
       cta: ['Got a test date? Call her', 'Tell her the date and which DriveTest centre you booked, and lessons can be planned around it.'],
     }),
 
@@ -287,7 +287,7 @@ export function servicePages() {
         ['Is parallel parking on the G test?', 'Not at the moment at full-time DriveTest centres. The G test there is currently a modified version that leaves out parallel parking, the roadside stop, the three-point turn and residential driving. Part-time Travel Point locations still give the standard test.'],
         ['Can I practise on the highway with a G1?', 'Only with a licensed driving instructor. G1 drivers can&rsquo;t use 400-series highways like the 403, or the QEW, unless the person beside them is a driving instructor.'],
       ],
-      guides: ['g-road-test-tips', 'hamilton-drivetest-centre', 'winter-driving-in-hamilton'],
+      guides: ['g-road-test-tips', 'ontario-speed-limits-and-speeding-tickets', 'hamilton-drivetest-centre'],
       cta: ['Ready for the full licence?', 'Tell her when your G test is and how much highway driving you&rsquo;ve done. She&rsquo;ll plan the lessons around both.'],
     }),
 
@@ -336,7 +336,7 @@ export function servicePages() {
         ['Can I use my backup camera on the test?', 'No. DriveTest doesn&rsquo;t allow backup cameras or parking aids during the road test, so lessons practise parking with mirrors and shoulder checks.'],
         ['How long does it take to get good at it?', 'Usually less time than people fear. Reviewers like Malaika and Rose wrote that she made parallel parking easy, and it&rsquo;s the skill her reviews mention most.'],
       ],
-      guides: ['how-to-parallel-park', 'how-to-pass-the-g2-road-test', 'hamilton-drivetest-centre'],
+      guides: ['how-to-parallel-park', 'how-to-do-a-three-point-turn', 'how-to-pass-the-g2-road-test'],
       cta: ['Make parking the easy part', 'Tell her which kind of parking scares you most, and that&rsquo;s where the lesson starts.'],
     }),
   ];

@@ -2,10 +2,14 @@
 // drivetest.ca, fsrao.ca and hamilton.ca (checked 2026-10-06); quotes come from her Google reviews.
 import { review, abs, plain, UPDATED, BIZ } from './core.mjs';
 import { bizRef } from './layout.mjs';
-import { GUIDE_LIST } from './guide-list.mjs';
+import { GUIDE_LIST, GUIDE_CATS } from './guide-list.mjs';
 import { crumbs, sec, toc, callout, inlineCta, sources, faq, guideCards, ctaBand, quote, quotes, chips } from './ui.mjs';
 import { signIcon, artGuides } from './art.mjs';
 import { mountainGuide } from './guide-mountain.mjs';
+import { startGuides } from './guides-start.mjs';
+import { ruleGuides } from './guides-rules.mjs';
+import { skillGuides } from './guides-skills.mjs';
+import { testGuides } from './guides-tests.mjs';
 
 export const SRC = {
   getG: ['Get a G driver&rsquo;s licence: new drivers (ontario.ca)', 'https://www.ontario.ca/page/get-g-drivers-licence-new-drivers'],
@@ -112,7 +116,7 @@ export function guidePages() {
           `<h3>Stops that are actually stops</h3>${p('Come to a full stop behind the stop line, or before the crosswalk if there&rsquo;s no line. A slow roll through a stop sign is one of the easiest ways to lose marks.')}` +
           `<h3>Space in front of you</h3>${p('Keep at least two to three seconds behind the car ahead. Pick a sign or a pole, and count when the car in front passes it.')}` +
           `<h3>Signals that start early and end on time</h3>${p('Signal before you brake for a turn, not halfway through it, and make sure the signal switches off afterwards.')}` +
-          `<h3>Three-point turns and parallel parking</h3>${p('For a three-point turn, use the whole width of the road and reverse only once. When you parallel park, the Handbook suggests leaving at least 60 cm between you and the car you park behind.')}` },
+          `<h3>Three-point turns and parallel parking</h3>${p('For a three-point turn, use the whole width of the road and reverse only once; the <a href="/guides/how-to-do-a-three-point-turn/">three-point turn guide</a> walks through it. When you pull up to parallel park, the Handbook&rsquo;s road test checklist says to stop beside the parked car in front of the space with at least 60 cm between the two cars.')}` },
         { id: 'practice', h: 'A practice plan for the last few weeks', html: ol([
           '<strong>Make a list of your weak spots.</strong> Be honest. Most people have one or two skills that only work on a good day.',
           '<strong>Practise without a backup camera.</strong> Cameras and parking aids aren&rsquo;t allowed during the test, so learn to park with mirrors and shoulder checks.',
@@ -134,7 +138,7 @@ export function guidePages() {
         ['Can my driving instructor ride with me during the test?', 'No. Nobody rides along during a road test. With your consent, an instructor can help at check-in and at the debrief afterwards.'],
         ['What happens if my car fails the examiner&rsquo;s check?', 'The test is declared out of order and you lose half of the road test fee. Common problems are a turn signal, brake light or horn that doesn&rsquo;t work, a damaged windshield and a temporary spare tire.'],
       ],
-      related: ['hamilton-drivetest-centre', 'how-to-parallel-park', 'nervous-driver-tips'],
+      related: ['how-to-do-a-three-point-turn', 'how-to-parallel-park', 'hamilton-drivetest-centre'],
       lessons: lessonsChips(['/g2-road-test-preparation/', 'G2 road test prep'], ['/parallel-parking-lessons/', 'Parallel parking']),
       cta: ['Get ready for your G2', 'Tell her your test date and which skills feel shaky. Lessons start there.'],
     }),
@@ -162,7 +166,7 @@ export function guidePages() {
         { id: 'during', h: 'During and after the test', html: p('You drive alone with the examiner. The G2 test usually takes about 20 minutes and the G test about 30, which includes highway driving. With your consent, a driving instructor or translator can help you at check-in and at the debrief.',
           'If you pass, you go back inside to apply the result and get a temporary paper licence that&rsquo;s valid for 90 days. Results you don&rsquo;t apply within 12 months expire.',
           'If you don&rsquo;t pass, DriveTest generally asks you to wait at least 10 days before testing again. Your scoresheet shows what to work on.') },
-        { id: 'other', h: 'Knowledge tests and licence exchanges', html: p('The G1 knowledge test is walk-in, with no appointment needed, and takes about 30 minutes. If you&rsquo;re exchanging a licence from another province or country, Hamilton offers bookable appointments for exchanges, and any DriveTest centre accepts walk-ins. The <a href="/guides/new-to-ontario-drivers-licence/">newcomer&rsquo;s licence guide</a> has the details.') },
+        { id: 'other', h: 'Knowledge tests and licence exchanges', html: p('The G1 knowledge test is walk-in, with no appointment needed, and takes about 30 minutes; the <a href="/guides/how-to-pass-the-g1-test/">G1 test guide</a> covers what to bring and how to study. If you&rsquo;re exchanging a licence from another province or country, Hamilton offers bookable appointments for exchanges, and any DriveTest centre accepts walk-ins. The <a href="/guides/new-to-ontario-drivers-licence/">newcomer&rsquo;s licence guide</a> has the details.') },
       ],
       sources: [SRC.centres, SRC.roadTests, SRC.vehicle, SRC.booking],
       faqs: [
@@ -170,7 +174,7 @@ export function guidePages() {
         ['Does the Hamilton DriveTest centre do G2 and G road tests?', 'Yes. DriveTest lists both the G2 and the G road test at the Hamilton centre.'],
         ['Can I use my driving instructor&rsquo;s car for the test?', 'You can use any car that&rsquo;s plated, insured and in proper working order, whether it&rsquo;s yours, borrowed or rented. It doesn&rsquo;t have to belong to an instructor.'],
       ],
-      related: ['how-to-pass-the-g2-road-test', 'g-road-test-tips', 'ontario-g1-g2-g-licence-explained'],
+      related: ['how-to-pass-the-g2-road-test', 'g-road-test-tips', 'drivers-licence-cost-ontario'],
       lessons: lessonsChips(['/g2-road-test-preparation/', 'G2 road test prep'], ['/g-road-test-preparation/', 'G test and highway'], ['/driving-lessons-hamilton/', 'Lessons in Hamilton']),
       cta: ['Testing in Hamilton soon?', 'Call with your test date. Lessons can include the kind of driving you&rsquo;ll do around the east end.'],
     }),
@@ -209,7 +213,7 @@ export function guidePages() {
         ['Is parallel parking on the G test?', 'Not at full-time DriveTest centres right now. Their G test is a modified version that leaves out parallel parking, the roadside stop, the three-point turn and residential driving. Part-time Travel Points still give the standard test.'],
         ['How much highway driving do I need before the G test?', 'DriveTest asks for at least five trips in the three months before the test on 400-series highways, freeways like the QEW, or highways with limits of 80 km/h or more.'],
       ],
-      related: ['hamilton-drivetest-centre', 'winter-driving-in-hamilton', 'how-to-pass-the-g2-road-test'],
+      related: ['ontario-speed-limits-and-speeding-tickets', 'hamilton-drivetest-centre', 'winter-driving-in-hamilton'],
       lessons: lessonsChips(['/g-road-test-preparation/', 'G test and highway'], ['/driving-lessons-stoney-creek/', 'Lessons in Stoney Creek']),
       cta: ['Get your highway trips in', 'Tell her when your G test is booked. Lessons on the 403 and the QEW can count toward your declaration.'],
     }),
@@ -228,7 +232,7 @@ export function guidePages() {
           '<strong>G2:</strong> after 12 months on your G1 (8 with an approved driver education course), pass the G2 road test.',
           '<strong>G:</strong> after 12 months on your G2, pass the G road test.',
         ]) + p('The fastest route takes at least 20 months, and DriveTest says most people take about 20 to 24. You have five years from your G1 to finish.') },
-        { id: 'g1', h: 'Getting your G1', html: p('You need to be at least 16 and an Ontario resident. At a DriveTest centre you pass a vision test and a knowledge test on the rules of the road and traffic signs. The knowledge test is walk-in, with no appointment, and takes about 30 minutes. Since May 11, 2026, applicants also declare that Ontario is their primary residence and that they are legally present in Canada.') },
+        { id: 'g1', h: 'Getting your G1', html: p('You need to be at least 16 and an Ontario resident. At a DriveTest centre you pass a vision test and a knowledge test on the rules of the road and traffic signs. The knowledge test is walk-in, with no appointment, and takes about 30 minutes. Since May 11, 2026, applicants also declare that Ontario is their primary residence and that they are legally present in Canada.', 'The <a href="/guides/how-to-pass-the-g1-test/">G1 test guide</a> explains what&rsquo;s on the test and what to bring, and the <a href="/guides/g1-practice-test/">G1 practice test</a> lets you check yourself first.') },
         { id: 'g1-rules', h: 'G1 rules', html: ul([
           'A fully licensed driver with at least four years of experience sits beside you, and they&rsquo;re the only other person in the front seat.',
           'Their blood alcohol must be under .05, or zero if they&rsquo;re 21 or under. Yours must be zero.',
@@ -249,7 +253,7 @@ export function guidePages() {
         ['Can a G1 driver drive on the highway?', 'Not on 400-series highways or high-speed expressways like the QEW, unless the accompanying driver is a driving instructor licensed in Ontario.'],
         ['Can I drive alone on a G1?', 'No. A fully licensed driver with at least four years of experience must always sit beside you.'],
       ],
-      related: ['how-many-driving-lessons-do-you-need', 'how-to-pass-the-g2-road-test', 'new-to-ontario-drivers-licence'],
+      related: ['how-to-pass-the-g1-test', 'g1-practice-test', 'how-to-pass-the-g2-road-test'],
       lessons: lessonsChips(['/beginner-driving-lessons/', 'Beginner lessons'], ['/g2-road-test-preparation/', 'G2 road test prep'], ['/g-road-test-preparation/', 'G test and highway']),
       cta: ['Whatever level you&rsquo;re on', 'Tell her if you&rsquo;re on a G1 or a G2, and what you&rsquo;re aiming for next.'],
     }),
@@ -283,14 +287,14 @@ export function guidePages() {
           '<strong>Book with a goal.</strong> &ldquo;Parallel parking&rdquo; or &ldquo;highway merges&rdquo; gives a lesson a clear focus.',
           '<strong>Tell her your test date early.</strong> Lessons can be spaced out sensibly instead of crammed into the last week.',
         ]) },
-        { id: 'bde', h: 'A note on driver education courses', html: p('Ministry-approved beginner driver education courses are a separate thing. They run at least 40 hours and take four months off your G1 waiting period. If you only want lessons to build skills or prepare for a test, you don&rsquo;t need a full course.') },
+        { id: 'bde', h: 'A note on driver education courses', html: p('Ministry-approved beginner driver education courses are a separate thing. They run at least 40 hours and take four months off your G1 waiting period. If you only want lessons to build skills or prepare for a test, you don&rsquo;t need a full course. The <a href="/guides/drivers-licence-cost-ontario/">licence cost guide</a> lists every fee along the way.') },
       ],
       sources: [SRC.handbookLicence, SRC.getG],
       faqs: [
         ['How many driving lessons does a beginner need?', 'There&rsquo;s no fixed number. It depends on your starting point, how much you practise between lessons and your goal. One of her reviewers mentioned close to eight lessons; another wrote that they learned a lot within two.'],
         ['Can one lesson before my road test help?', 'It can, if the basics are already solid. One student booked a single lesson two hours before their test and passed.'],
       ],
-      related: ['ontario-g1-g2-g-licence-explained', 'nervous-driver-tips', 'how-to-pass-the-g2-road-test'],
+      related: ['drivers-licence-cost-ontario', 'nervous-driver-tips', 'how-to-pass-the-g2-road-test'],
       lessons: lessonsChips(['/beginner-driving-lessons/', 'Beginner lessons'], ['/g2-road-test-preparation/', 'G2 road test prep']),
       cta: ['Ask for an honest estimate', 'Tell her where you&rsquo;re starting and when your test is. She&rsquo;ll tell you what she thinks it&rsquo;ll take.'],
     }),
@@ -322,7 +326,8 @@ export function guidePages() {
           p('Move to the next layer when the current one feels a little boring. Boring means your brain has stopped treating it as a threat.') },
         { id: 'specific', h: 'When the fear is about something specific', html: `<h3>Left turns</h3>${p('While you wait to turn left across traffic, keep your wheels pointing straight ahead until it&rsquo;s clear. If someone hits you from behind, straight wheels won&rsquo;t push you into oncoming traffic.')}` +
           `<h3>Merging</h3>${p('The scary part is usually going too slowly. Use the whole ramp to get up to speed; the <a href="/guides/g-road-test-tips/">G road test guide</a> walks through it.')}` +
-          `<h3>Parking</h3>${p('It&rsquo;s a method, not a talent. The <a href="/guides/how-to-parallel-park/">parallel parking guide</a> breaks it into steps.')}` },
+          `<h3>Parking</h3>${p('It&rsquo;s a method, not a talent. The <a href="/guides/how-to-parallel-park/">parallel parking guide</a> breaks it into steps.')}` +
+          `<h3>Roundabouts</h3>${p('They run on one rule: traffic already in the roundabout goes first. Start with single-lane ones, and read the <a href="/guides/how-to-drive-a-roundabout/">roundabout guide</a> before trying two-lane ones.')}` },
         { id: 'test', h: 'Test-day nerves', html: p('Practise in test conditions: someone giving directions without warning, no backup camera, and the full routine of mirror, signal and shoulder check. A lesson close to the test can help too.') +
           quote(review('Stephanie', 'She completely helped me overcome my test anxiety', 'until i felt 100% confident.'), 'passed the G2, first try') +
           p('If anxiety about driving is affecting your day-to-day life, it&rsquo;s worth mentioning to your doctor as well. That&rsquo;s a normal thing to do.') },
@@ -332,7 +337,7 @@ export function guidePages() {
         ['Is it normal to be scared of driving?', 'Very. Nervous drivers come up again and again in her reviews, and many of them went on to pass.'],
         ['What helps with driving anxiety during a lesson?', 'Slow breathing at stops, talking through what you see, looking further ahead, and pulling over somewhere safe when you need a minute.'],
       ],
-      related: ['how-many-driving-lessons-do-you-need', 'how-to-pass-the-g2-road-test', 'how-to-parallel-park'],
+      related: ['how-to-drive-a-roundabout', 'how-many-driving-lessons-do-you-need', 'how-to-parallel-park'],
       lessons: lessonsChips(['/driving-lessons-for-nervous-drivers/', 'Nervous drivers'], ['/beginner-driving-lessons/', 'Beginner lessons']),
       cta: ['One calm lesson at a time', 'Tell her you&rsquo;re nervous when you call. It&rsquo;s useful to know, and she&rsquo;s heard it plenty of times.'],
     }),
@@ -367,7 +372,7 @@ export function guidePages() {
           'At pedestrian crossovers and school crossings, you wait until people have completely crossed the road.',
           'When you see an emergency vehicle or tow truck stopped with its lights flashing, slow down and move over if you safely can.',
           'Winter. If you&rsquo;ve never driven on snow and ice, the <a href="/guides/winter-driving-in-hamilton/">winter driving guide</a> is worth a read.',
-        ]) + quote(review('Manasa Nandikonda', 'I was nervous about driving in new Country.', 'comfortable throughout the lessons.'), 'new to Canada, passed the G2') },
+        ]) + p('The <a href="/guides/right-of-way-rules-ontario/">right-of-way guide</a> and the <a href="/guides/ontario-road-signs/">road signs guide</a> cover these rules in more detail.') + quote(review('Manasa Nandikonda', 'I was nervous about driving in new Country.', 'comfortable throughout the lessons.'), 'new to Canada, passed the G2') },
       ],
       sources: [SRC.exchange, SRC.exchangeDT, SRC.credits, SRC.handbookLicence],
       faqs: [
@@ -375,7 +380,7 @@ export function guidePages() {
         ['Can I exchange my licence for a full G?', 'If it&rsquo;s from a province, U.S. state or a country with an exchange agreement, and you have at least two years of driving experience in the last three years, yes, without a road test.'],
         ['How much foreign experience can count if my country has no exchange agreement?', 'Since July 1, 2026, up to 12 months of experience from the past three years can be credited.'],
       ],
-      related: ['ontario-g1-g2-g-licence-explained', 'hamilton-drivetest-centre', 'winter-driving-in-hamilton'],
+      related: ['right-of-way-rules-ontario', 'ontario-road-signs', 'hamilton-drivetest-centre'],
       lessons: lessonsChips(['/g2-road-test-preparation/', 'G2 road test prep'], ['/g-road-test-preparation/', 'G test and highway']),
       cta: ['New to Hamilton&rsquo;s roads?', 'Tell her where you learned to drive and what you need next. Lessons start from there.'],
     }),
@@ -398,7 +403,7 @@ export function guidePages() {
           '<strong>Turn the wheel all the way toward the road.</strong> The front of your car swings in, and the car straightens up beside the curb.',
           '<strong>Fix it if it&rsquo;s not straight.</strong> Pull forward a little and adjust. Nobody is marked down for a small correction.',
           '<strong>Park properly.</strong> Parking brake on, shift to park, engine off. Check for traffic and cyclists before you open your door.',
-        ]) + callout('tip', 'On the road test', p('Leave some space to the car you park behind. The Handbook&rsquo;s road test chapter suggests at least 60 cm. And practise without your backup camera, because it can&rsquo;t be used during the test.')) },
+        ]) + callout('tip', 'On the road test', p('When you pull up beside the car in front of the space, leave at least 60 cm between the two cars; that&rsquo;s the gap the Handbook&rsquo;s road test checklist asks for. And practise without your backup camera, because it can&rsquo;t be used during the test.')) },
         { id: 'fixes', h: 'Fixing the usual mistakes', html: `<h3>You end up too far from the curb</h3>${p('You probably straightened out too early, or started too far from the car beside you. Try turning toward the curb a moment longer.')}` +
           `<h3>Your back tire hits the curb</h3>${p('You turned toward the curb for too long. Straighten the wheels a little sooner, as soon as that rear corner appears.')}` +
           `<h3>The front of the car sticks out</h3>${p('You turned toward the road too late, or not far enough. Turn the wheel fully, and do it a touch earlier next time.')}` },
@@ -417,7 +422,7 @@ export function guidePages() {
         ['Which way do I turn my wheels when parking downhill?', 'Toward the curb or the right shoulder, whether or not there&rsquo;s a curb.'],
         ['Is parallel parking on the Ontario road test?', 'It&rsquo;s one of the skills DriveTest lists for the G2 road test. The modified G test at full-time DriveTest centres currently leaves it out.'],
       ],
-      related: ['how-to-pass-the-g2-road-test', 'driving-the-hamilton-mountain-accesses', 'nervous-driver-tips'],
+      related: ['how-to-do-a-three-point-turn', 'how-to-pass-the-g2-road-test', 'driving-the-hamilton-mountain-accesses'],
       lessons: lessonsChips(['/parallel-parking-lessons/', 'Parallel parking lessons'], ['/g2-road-test-preparation/', 'G2 road test prep']),
       cta: ['Make parking the easy part', 'Tell her which kind of parking you dread most, and that&rsquo;s where the lesson starts.'],
     }),
@@ -462,6 +467,10 @@ export function guidePages() {
       lessons: lessonsChips(['/g-road-test-preparation/', 'G test and highway'], ['/driving-lessons-hamilton/', 'Lessons in Hamilton']),
       cta: ['Get some winter practice in', 'A lesson or two in winter conditions takes a lot of the fear out of the first snowfall.'],
     }),
+    ...startGuides(),
+    ...ruleGuides(),
+    ...skillGuides(),
+    ...testGuides(),
   ];
 }
 
@@ -480,16 +489,37 @@ export function guidesHub() {
     'how-to-parallel-park': 'A simple, repeatable method, plus hill parking.',
     'driving-the-hamilton-mountain-accesses': 'The escarpment roads, one by one, and how to drive them.',
     'winter-driving-in-hamilton': 'Tires, ice, skids and the Mountain in snow.',
+    'how-to-pass-the-g1-test': 'What&rsquo;s on the knowledge test, the pass mark, what to bring and how to study.',
+    'g1-practice-test': 'Forty questions on the rules of the road and road signs, with every answer explained.',
+    'drivers-licence-cost-ontario': 'Every DriveTest fee from your G1 to a full G, plus retests and the costs people forget.',
+    'ontario-road-signs': 'Shapes, colours, traffic lights and pavement markings, and the signs new drivers mix up.',
+    'right-of-way-rules-ontario': 'Four-way stops, left turns, pedestrians, school buses and emergency vehicles.',
+    'ontario-speed-limits-and-speeding-tickets': 'Default limits, fines, demerit points, speed cameras and what counts as stunt driving.',
+    'distracted-driving-ontario': 'What&rsquo;s allowed with a phone, what isn&rsquo;t, and the penalties for G1 and G2 drivers.',
+    'demerit-points-ontario': 'How points add up, what happens at each level, and how long they stay on your record.',
+    'how-to-do-a-three-point-turn': 'The three-point turn and the roadside stop from the G2 road test, step by step.',
+    'how-to-drive-a-roundabout': 'Single and two-lane roundabouts: who yields, which lane to pick, and how to exit.',
+    'how-to-book-a-road-test-ontario': 'Booking online, by phone or in person, finding an earlier date, standby, and the 48-hour rule.',
+    'why-people-fail-the-g2-road-test': 'The mistakes that cost people their G2, how the test is marked, and what to do after a fail.',
+    'g1-g2-licence-expiry-ontario': 'The five-year clock, requalifying for five more years, the 42-day extension, and starting over.',
+    'how-to-drive-a-car': 'Seat, mirrors, steering, gas and brakes: your first drives, broken into simple steps.',
+    'first-driving-lesson': 'What happens on a first lesson, what to bring, and how to make it count.',
+    'how-to-check-your-blind-spot': 'Setting your mirrors, where the blind spots are, and when to shoulder check.',
+    'how-to-reverse-park': 'Backing into a parking spot, step by step, plus angle parking and pulling out safely.',
+    'defensive-driving-tips': 'Space, scanning and the habits that help you avoid other people&rsquo;s mistakes.',
+    'impaired-driving-rules-ontario': 'Zero tolerance for G1 and G2 drivers, the warn range, cannabis, and the penalties.',
+    'what-to-do-after-a-car-accident-ontario': 'Your legal duties at the scene, when to call police, reporting, towing and insurance.',
   };
-  const featured = GUIDE_LIST[0];
-  const groups = [...new Set(GUIDE_LIST.map((g) => g.cat))];
+  const featured = GUIDE_LIST.find((g) => g.featured) || GUIDE_LIST[0];
+  const groups = GUIDE_CATS.filter((cat) => GUIDE_LIST.some((g) => g.cat === cat));
+  const catId = (cat) => cat.toLowerCase().replace(/[^a-z]+/g, '-');
   const main = `<section class="phero" aria-labelledby="page-title">
   <div class="container phero-grid">
     <div class="phero-copy">
       ${crumbs(trail)}
       <p class="script phero-script"><span>read before you drive</span></p>
       <h1 class="phero-title" id="page-title" data-letters>Driving guides for Hamilton learners</h1>
-      <p class="phero-lede">Plain answers about Ontario&rsquo;s licences, road tests and the roads around Hamilton. Checked against ontario.ca and DriveTest, and written for people who are still learning.</p>
+      <p class="phero-lede">Plain answers about Ontario&rsquo;s licences, the G1 test, the rules of the road, road tests and the roads around Hamilton. Checked against ontario.ca and DriveTest, and written for people who are still learning.</p>
     </div>
     <div class="phero-art" aria-hidden="true" data-play>${artGuides()}</div>
   </div>
@@ -497,13 +527,14 @@ export function guidesHub() {
 ${sec({
   id: 'all', tone: 'white', script: 'start here', title: 'Every guide',
   body: `<a class="ghub-feature" href="/guides/${featured.slug}/" data-reveal><span><span class="gcard-cat">${featured.cat}</span><span class="gcard-title" style="display:block">${featured.title}</span><span class="gcard-desc" style="display:block">${desc[featured.slug]}</span><span class="gcard-go">Read the guide<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span><span class="gcard-sign" aria-hidden="true">${signIcon(featured.sign)}</span></a>` +
-    groups.map((cat) => `<div class="ghub-group"><h3 class="ghub-group-title" data-reveal>${cat.toLowerCase()}</h3>${guideCards(GUIDE_LIST.filter((g) => g.cat === cat && g.slug !== featured.slug).map((g) => g.slug), desc)}</div>`).join(''),
+    `<nav class="ghub-jump" aria-label="Guide topics" data-reveal>${groups.map((cat) => `<a href="#${catId(cat)}">${cat}<span>${GUIDE_LIST.filter((g) => g.cat === cat).length}</span></a>`).join('')}</nav>` +
+    groups.map((cat) => `<div class="ghub-group" id="${catId(cat)}"><h3 class="ghub-group-title" data-reveal>${cat.toLowerCase()}</h3>${guideCards(GUIDE_LIST.filter((g) => g.cat === cat && g.slug !== featured.slug).map((g) => g.slug), desc)}</div>`).join(''),
 })}
 ${ctaBand({ title: 'Rather ask in person?', text: 'Call or text Mrs. Akbar with your question. If it&rsquo;s about your licence or your test, she&rsquo;s probably been asked it before.' })}`;
   return {
     type: 'hub', path, trail, name: 'Guides', h1: 'Driving guides for Hamilton learners',
     title: 'Driving Guides for Ontario Learners in Hamilton | Mrs. Akbar',
-    description: 'Guides for learner drivers in Hamilton: passing the G2 and G road tests, the Hamilton DriveTest centre, parallel parking, the Mountain accesses and winter driving.',
+    description: 'Free guides for Ontario learner drivers: the G1 test and practice questions, road signs, right-of-way, demerit points, the G2 and G road tests, and Hamilton roads.',
     main, webPageType: 'CollectionPage', ogScript: 'read before you drive',
     ld: [{
       '@type': 'ItemList',
