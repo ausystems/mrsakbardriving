@@ -1,6 +1,6 @@
 // Lesson pages. Rules are paraphrased from ontario.ca and drivetest.ca (checked 2026-10-06);
 // every quote comes from her Google reviews through review(), which rejects anything not word for word.
-import { review, REVIEWS_COUNT, SERVICES, abs, plain } from './core.mjs';
+import { review, SERVICES, abs, plain } from './core.mjs';
 import { bizRef } from './layout.mjs';
 import { pageHero, sec, facts, lead, prose, checks, steps, quote, quotes, notes, faq, chips, guideCards, ctaBand, ctaCard, ctaRow, withCta, sources } from './ui.mjs';
 import { artBeginner, artNervous, artG2, artHighway, artParking } from './art.mjs';
@@ -14,7 +14,7 @@ const EXCHANGE = ['Exchange an out-of-province driver&rsquo;s licence (ontario.c
 const otherLessons = (slug) => chips(SERVICES.filter((s) => s.slug !== slug).map((s) => ({ href: `/${s.slug}/`, label: s.label })));
 const ratingFacts = [
   { num: '5.0', label: 'average on Google' },
-  { num: REVIEWS_COUNT, count: REVIEWS_COUNT, label: 'Google reviews in Hamilton' },
+  { num: '1:1', label: 'one-on-one lessons, just you and her' },
   { num: '7', count: 7, label: 'days a week, by appointment' },
 ];
 

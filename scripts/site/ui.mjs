@@ -1,6 +1,6 @@
 // Section components for the generated pages. Every block carries one small effect,
 // styled in main.css and driven by main.js / fx.js (all of it switched off for reduced motion).
-import { BIZ, REVIEWS_COUNT } from './core.mjs';
+import { BIZ } from './core.mjs';
 import { icon } from './layout.mjs';
 import { GUIDE_LIST } from './guide-list.mjs';
 import { signIcon } from './art.mjs';
@@ -32,7 +32,7 @@ export function pageHero({ trail, script, h1, lede, art, artLabel, proof = true,
         ${callBtn('page-hero')}
         ${textBtn('page-hero')}
       </div>
-      ${proof ? `<p class="phero-proof">${STARS}<span><strong>5.0</strong> from ${REVIEWS_COUNT} Google reviews</span><span class="phero-proof__dot" aria-hidden="true"></span><span>Lessons 7 days a week</span></p>` : ''}
+      ${proof ? `<p class="phero-proof">${STARS}<span><strong>5.0</strong> stars from tons of Google reviews</span><span class="phero-proof__dot" aria-hidden="true"></span><span>Lessons 7 days a week</span></p>` : ''}
     </div>
     <div class="phero-art"${artLabel ? '' : ' aria-hidden="true"'} data-play>${art}</div>
   </div>
@@ -152,7 +152,7 @@ export function ctaCard({ where, script, title, text, sign = '', proof = false }
     <p class="script ccard-script">${script}</p>
     <p class="ccard-title">${title}</p>
     ${text ? `<p class="ccard-text">${text}</p>` : ''}
-    ${proof ? `<p class="ccard-proof">${STARS}<span><strong>5.0</strong> from ${REVIEWS_COUNT} Google reviews</span><span class="ccard-proof__dot" aria-hidden="true"></span><span>She comes to you</span></p>` : ''}
+    ${proof ? `<p class="ccard-proof">${STARS}<span><strong>5.0</strong> stars from tons of Google reviews</span><span class="ccard-proof__dot" aria-hidden="true"></span><span>She comes to you</span></p>` : ''}
   </div>
   <div class="ccard-actions">
     <a class="btn btn--amber btn--call" href="${BIZ.tel}" data-call="${where}">${icon('phone')}<span class="btn-call__text"><span class="btn-call__label">Call Mrs. Akbar</span> <span class="btn-call__num">${BIZ.phone}</span></span></a>
@@ -164,7 +164,7 @@ export function ctaCard({ where, script, title, text, sign = '', proof = false }
 // A quieter row: one line, then call and text (optionally the Google rating above it).
 export function ctaRow({ where, text, stars = false }) {
   return `<div class="crow" data-reveal>
-  ${stars ? `<p class="crow-proof">${STARS}<span><strong>5.0</strong> from ${REVIEWS_COUNT} Google reviews</span></p>` : ''}
+  ${stars ? `<p class="crow-proof">${STARS}<span><strong>5.0</strong> stars from tons of Google reviews</span></p>` : ''}
   <p class="crow-text">${text}</p>
   <div class="crow-actions">${callBtn(where)}${textBtn(where)}</div>
 </div>`;

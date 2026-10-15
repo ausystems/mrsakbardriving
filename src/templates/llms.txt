@@ -5,7 +5,7 @@
 - Phone and text: 416-457-5778 (lessons are booked by phone or text)
 - Where: she drives to students across Hamilton, Ontario (there is no location for students to visit)
 - Hours: 7 days a week, by appointment
-- Google rating: 5.0 from %VITE_GOOGLE_REVIEWS% reviews on the Hamilton profile, every one five stars; 5.0 from 108 reviews on her former Brampton profile
+- Google rating: 5.0 from lots of reviews on her Hamilton profile, plus many more on her former Brampton profile
 - Website: %VITE_SITE_URL%/
 
 ## Areas served

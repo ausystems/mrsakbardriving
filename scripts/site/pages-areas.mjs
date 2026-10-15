@@ -1,7 +1,7 @@
 // Area pages. Each one is built from verified local detail (OpenStreetMap, City of Hamilton,
 // DriveTest), real review quotes and its own mini-map, so no two pages say the same thing.
 // She drives to her students, so pages talk about the area itself, never a distance from her.
-import { review, REVIEWS_COUNT, abs, plain } from './core.mjs';
+import { review, abs, plain } from './core.mjs';
 import { bizRef } from './layout.mjs';
 import { pageHero, sec, facts, lead, prose, spots, quote, quotes, faq, chips, guideCards, ctaBand, ctaCard, ctaRow, withCta, sources } from './ui.mjs';
 import { miniMap, PLACES } from './art.mjs';
@@ -41,7 +41,7 @@ function areaPage(a, all) {
       id: 'why', tone: 'white', script: a.whyScript, title: a.whyTitle,
       body: lead(a.lead) + facts([
         { num: '5.0', label: 'average on Google' },
-        { num: REVIEWS_COUNT, count: REVIEWS_COUNT, label: 'Google reviews in Hamilton' },
+        { num: '1:1', label: 'one-on-one lessons, just you and her' },
         { num: '7', count: 7, label: 'days a week, and she comes to you' },
       ]),
     }),

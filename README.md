@@ -103,12 +103,11 @@ header (`ctaCard`, `ctaRow` and `ctaBand` in `scripts/site/ui.mjs`).
 
 ## Keeping it current
 
-- **Review count:** update `VITE_GOOGLE_REVIEWS` in `.env` as reviews arrive, then push.
+- **No review counts:** the site never shows how many reviews she has (it would go out of date); it says "tons of Google reviews" instead. Keep it that way.
 - **Review quotes** must be word for word. All 58 Hamilton reviews (text and Google review IDs) are in
   `data/reviews-hamilton.json`; pages quote them through `review()` in `scripts/site/core.mjs`, which
   stops the build if a quote doesn't match the review exactly. Every quote links to that exact review.
-- **"Every one of her reviews is five stars"** was true on 2026-10-06 (58 of 58). If a review below
-  five stars arrives, change that sentence in `index.html`.
+- **"Full of five stars"** describes her Hamilton reviews in `index.html`; recheck it if lower ratings arrive.
 - **Rules and DriveTest details** in the guides were checked on 2026-10-06 and 2026-10-07 against
   ontario.ca, ontario.ca/laws, drivetest.ca and the other sources listed at the end of each guide.
   Licensing rules, fines and insurance rules change; recheck them every year and update the dates in
@@ -130,7 +129,7 @@ header (`ctaCard`, `ctaRow` and `ctaBand` in `scripts/site/ui.mjs`).
 
 | Fact | Source |
 | --- | --- |
-| Name, phone, hours, 5.0 rating, 58 reviews (all five stars) | Google Business Profile (Hamilton), checked 2026-10-06 |
+| Name, phone, hours, 5.0 rating | Google Business Profile (Hamilton), checked 2026-10-06 |
 | 5.0 rating from 108 reviews, Brampton | Her former Google Business Profile |
 | First name Nuzhat | Named by reviewers |
 | Four years in business | Provided by the client |
