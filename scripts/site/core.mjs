@@ -35,7 +35,7 @@ export const abs = (path) => `${SITE}${path}`;
 
 /* ---------- Google reviews: quotes must match the review word for word ---------- */
 const reviewData = JSON.parse(fs.readFileSync(`${root}data/reviews-hamilton.json`, 'utf8')).reviews;
-const REVIEW_URL = (id) => `https://www.google.com/maps/reviews/@43.1550825,-79.9251779,17z/data=!3m1!4b1!4m6!14m5!1m4!2m3!1s${id}!2m1!1s0x0:0xd61e773a89a4a1b9`;
+const REVIEW_URL = (id) => `https://www.google.com/maps/reviews/@43.2557,-79.8711,12z/data=!3m1!4b1!4m6!14m5!1m4!2m3!1s${id}!2m1!1s0x0:0xd61e773a89a4a1b9`;
 const shortName = (full) => {
   const words = full.replace(/\d+/g, '').trim().split(/\s+/);
   const cap = (w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();

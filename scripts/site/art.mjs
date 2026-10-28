@@ -287,8 +287,20 @@ export function artContact() {
 ${SKY}
 <defs><path id="contact-ring" d="M280 250m-150 0a150 150 0 1 1 300 0a150 150 0 1 1-300 0"/></defs>
 <circle cx="280" cy="250" r="190" class="art-seal"/>
-<g class="art-seal-ring"><text class="art-seal-text"><textPath href="#contact-ring">call or text Mrs. Akbar &#8226; 416-457-5778 &#8226; call or text Mrs. Akbar &#8226; 416-457-5778 &#8226;</textPath></text></g>
+<g class="art-seal-ring"><text class="art-seal-text"><textPath href="#contact-ring" textLength="940" lengthAdjust="spacing">call or text Mrs. Akbar &#8226; 416-457-5778 &#8226; 7 days a week &#8226;</textPath></text></g>
 <g class="art-seal-wheel" transform="translate(280 250)"><svg x="-70" y="-70" width="140" height="140" viewBox="0 0 48 48"><use href="#i-wheel"/></svg></g>
+</svg>`;
+}
+
+export function artReviews() {
+  const star = (x, y, s, d) => `<use href="#i-star" class="art-seal-star" style="--d:${d}s" x="${x - s / 2}" y="${y - s / 2}" width="${s}" height="${s}"/>`;
+  return `<svg class="art art-contact art-reviews" viewBox="0 0 560 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+${SKY}
+<defs><path id="reviews-ring" d="M280 250m-150 0a150 150 0 1 1 300 0a150 150 0 1 1-300 0"/></defs>
+<circle cx="280" cy="250" r="190" class="art-seal"/>
+<g class="art-seal-ring"><text class="art-seal-text"><textPath href="#reviews-ring" textLength="940" lengthAdjust="spacing">word for word &#8226; from her google reviews &#8226; 5.0 stars &#8226;</textPath></text></g>
+<g class="art-seal-stars">${star(196, 262, 46, 0)}${star(238, 236, 54, 0.12)}${star(280, 224, 62, 0.24)}${star(322, 236, 54, 0.36)}${star(364, 262, 46, 0.48)}</g>
+<text class="art-seal-big" x="280" y="322" text-anchor="middle">5.0</text>
 </svg>`;
 }
 

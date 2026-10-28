@@ -30,6 +30,7 @@ export const GUIDE_LIST = [
   { slug: 'why-people-fail-the-g2-road-test', short: 'Why people fail the G2', title: 'Why people fail the G2 road test (and what to do next)', cat: 'Road tests', sign: 'alert', footer: false },
   { slug: 'how-to-book-a-road-test-ontario', short: 'Booking a road test', title: 'How to book a road test in Ontario (and get an earlier date)', cat: 'Road tests', sign: 'calendar', footer: true },
   { slug: 'hamilton-drivetest-centre', short: 'Hamilton DriveTest centre', title: 'The Hamilton DriveTest centre: what to know before your road test', cat: 'Road tests', sign: 'flag', footer: true },
+  { slug: 'hamilton-g2-road-test-route', short: 'Hamilton G2 test route', title: 'Hamilton G2 road test route: the roads around Kenora Avenue', cat: 'Road tests', sign: 'curve', footer: false },
   { slug: 'g-road-test-tips', short: 'The G road test', title: 'The G road test: what changes after the G2', cat: 'Road tests', sign: 'merge', footer: false },
   { slug: 'driving-the-hamilton-mountain-accesses', short: 'The Mountain accesses', title: 'Driving the Mountain: Hamilton’s escarpment roads for new drivers', cat: 'Hamilton roads', sign: 'curve', footer: false },
   { slug: 'winter-driving-in-hamilton', short: 'Winter driving', title: 'Winter driving in Hamilton: a new driver’s guide', cat: 'Hamilton roads', sign: 'snow', footer: false },

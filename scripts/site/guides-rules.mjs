@@ -78,7 +78,7 @@ export function ruleGuides() {
     guidePage({
       slug: 'ontario-road-signs',
       published: DATE, updated: DATE,
-      title: 'Ontario Road Signs: Meanings, Shapes and Colours | Mrs. Akbar',
+      title: 'Ontario Road Signs: Meanings, Shapes and Colours',
       description: 'Ontario road signs explained: what each shape and colour means, the signs new drivers mix up, traffic lights like the flashing green, and pavement markings.',
       script: 'rules of the road',
       dek: 'Shapes, colours, traffic lights and pavement markings: what you need for the G1 test and your first drives.',
@@ -179,7 +179,7 @@ export function ruleGuides() {
     guidePage({
       slug: 'right-of-way-rules-ontario',
       published: DATE, updated: DATE,
-      title: 'Right-of-Way Rules in Ontario: 4-Way Stops and More | Mrs. Akbar',
+      title: 'Right-of-Way Rules in Ontario: 4-Way Stops and More',
       description: 'Who goes first at a 4-way stop, uncontrolled intersections, left turns, pedestrian crossovers, school buses and emergency vehicles, with Ontario&rsquo;s fines and points.',
       script: 'rules of the road',
       dek: 'Four-way stops, uncontrolled intersections, left turns, pedestrians, school buses and emergency vehicles, in plain words.',
@@ -264,7 +264,7 @@ export function ruleGuides() {
     guidePage({
       slug: 'ontario-speed-limits-and-speeding-tickets',
       published: DATE, updated: DATE,
-      title: 'Ontario Speed Limits, Speeding Tickets and Stunt Driving | Mrs. Akbar',
+      title: 'Ontario Speed Limits, Speeding Tickets and Stunt Driving',
       description: 'Ontario speed limits in 2026, what a speeding ticket costs, demerit points by km/h over, when speeding becomes stunt driving, and what G1 and G2 drivers risk.',
       script: 'rules of the road',
       dek: 'Default limits, the new 110 km/h highways, what a ticket costs, the points it carries, and the line where speeding becomes stunt driving.',
@@ -365,7 +365,7 @@ export function ruleGuides() {
     guidePage({
       slug: 'distracted-driving-ontario',
       published: DATE, updated: DATE,
-      title: 'Distracted Driving in Ontario: Phone Laws and Fines | Mrs. Akbar',
+      title: 'Distracted Driving in Ontario: Phone Laws and Fines',
       description: 'Ontario&rsquo;s distracted driving law in plain words: what you can and can&rsquo;t do with a phone, the $615 fine, demerit points, and the suspensions G1 and G2 drivers face.',
       script: 'rules of the road',
       dek: 'What the law actually says about phones, what&rsquo;s allowed, and why the penalties hit G1 and G2 drivers hardest.',
@@ -437,7 +437,7 @@ export function ruleGuides() {
     guidePage({
       slug: 'demerit-points-ontario',
       published: DATE, updated: DATE,
-      title: 'Demerit Points in Ontario: How They Work (2026) | Mrs. Akbar',
+      title: 'Demerit Points in Ontario: How They Work (2026)',
       description: 'How Ontario demerit points work: points for speeding and other tickets, when G1, G2 and full licences get suspended, how long points last and how to check yours.',
       script: 'rules of the road',
       dek: 'How points get added, what happens at each level for G1, G2 and full licences, and how long they stay on your record.',
@@ -515,7 +515,7 @@ export function ruleGuides() {
     guidePage({
       slug: 'impaired-driving-rules-ontario',
       published: DATE, updated: DATE,
-      title: 'Alcohol, Cannabis and Driving: Ontario Zero Tolerance | Mrs. Akbar',
+      title: 'Alcohol, Cannabis and Driving: Ontario Zero Tolerance',
       description: 'Ontario’s zero tolerance rules for G1, G2 and drivers 21 and under: alcohol and cannabis limits, roadside suspensions, penalties, breath tests and the 2026 changes.',
       script: 'rules of the road',
       dek: 'Who has to be at zero, what happens at the roadside, and the rules that changed in 2026.',
@@ -589,7 +589,7 @@ export function ruleGuides() {
     guidePage({
       slug: 'what-to-do-after-a-car-accident-ontario',
       published: DATE, updated: DATE,
-      title: 'What to Do After a Car Accident in Ontario (Hamilton) | Mrs. Akbar',
+      title: 'What to Do After a Car Accident in Ontario (Hamilton)',
       description: 'What to do after a car accident in Ontario: your duties at the scene, when to call police, Hamilton’s collision reporting centres, towing rights and insurance.',
       script: 'rules of the road',
       dek: 'Your duties at the scene, when to call police, where to report in Hamilton, and what happens with towing and insurance.',

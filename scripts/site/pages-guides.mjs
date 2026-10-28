@@ -30,6 +30,13 @@ export const SRC = {
   rhvp: ['Red Hill Valley Parkway speed limit (hamilton.ca)', 'https://www.hamilton.ca/city-council/news-notices/news-releases/speed-limit-reduction-red-hill-valley-parkway-beginning'],
 };
 
+const CAT_MORE = {
+  'Getting started': 'More on getting started',
+  'Rules of the road': 'More on the rules of the road',
+  Skills: 'More driving skills',
+  'Road tests': 'More on road tests',
+  'Hamilton roads': 'More on Hamilton roads',
+};
 const words = (html) => plain(html).split(/\s+/).length;
 const longDate = (iso) => new Date(`${iso}T12:00:00`).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -40,6 +47,8 @@ export function guidePage(g) {
   const body = g.sections.map((s) => (typeof s === 'string' ? s : `<section id="${s.id}" aria-labelledby="${s.id}-h"><h2 id="${s.id}-h" data-reveal>${s.h}</h2>${s.html}</section>`)).join('\n');
   const minutes = Math.max(3, Math.round(words(g.intro + body) / 220));
   const tocItems = g.sections.filter((s) => typeof s !== 'string').map((s) => [s.id, s.toc || plain(s.h)]);
+  // Every other guide on the same topic, so each guide is a click away from its whole topic
+  const siblings = GUIDE_LIST.filter((x) => x.cat === meta.cat && x.slug !== g.slug && !g.related.includes(x.slug)).map((x) => ({ href: `/guides/${x.slug}/`, label: x.short }));
   const main = `<div class="read-road" aria-hidden="true"><span class="read-road__fill"></span><span class="read-road__car"><svg viewBox="-32 -16 64 32" focusable="false"><use href="#i-car"/></svg></span></div>
 <article class="guide" aria-labelledby="page-title">
 <header class="phero ghero">
@@ -67,7 +76,7 @@ export function guidePage(g) {
   </div>
 </div>
 </article>
-${sec({ id: 'next', tone: 'paper', script: 'keep reading', title: 'More guides', body: guideCards(g.related) + (g.lessons ? `<div class="more-lessons" data-reveal><p class="more-lessons__title">Related lessons</p>${chips(g.lessons)}</div>` : '') })}
+${sec({ id: 'next', tone: 'paper', script: 'keep reading', title: 'More guides', body: guideCards(g.related) + (siblings.length ? `<div class="more-lessons" data-reveal><p class="more-lessons__title">${CAT_MORE[meta.cat]}</p>${chips(siblings)}</div>` : '') + (g.lessons ? `<div class="more-lessons" data-reveal><p class="more-lessons__title">Related lessons</p>${chips(g.lessons)}</div>` : '') })}
 ${ctaBand({ title: 'Book a lesson with Mrs. Akbar', text: 'Call or text 7 days a week. She comes to you, so your lesson starts where you are.' })}`;
   return {
     type: 'guide', path, trail, name: meta.short, h1: meta.title, title: g.title, description: g.description, faqs: g.faqs, main,
@@ -101,7 +110,7 @@ export function guidePages() {
     /* ---------- 1. Passing the G2 ---------- */
     guidePage({
       slug: 'how-to-pass-the-g2-road-test',
-      title: 'How to Pass the G2 Road Test in Ontario (Hamilton Guide) | Mrs. Akbar',
+      title: 'How to Pass the G2 Road Test in Ontario (Hamilton Guide)',
       description: 'What the G2 road test checks, the habits examiners watch for, how to practise in the last few weeks, and what to bring on the day. A Hamilton instructor’s guide.',
       script: 'road tests',
       dek: 'What the examiner is watching for, the small habits that cost people marks, and how to use the weeks before your test.',
@@ -147,13 +156,13 @@ export function guidePages() {
     /* ---------- 2. Hamilton DriveTest centre ---------- */
     guidePage({
       slug: 'hamilton-drivetest-centre',
-      title: 'Hamilton DriveTest Centre on Kenora Ave: Road Test Guide | Mrs. Akbar',
+      title: 'Hamilton DriveTest Centre (Kenora Ave): Road Test Guide',
       description: 'Everything to know before a road test at the Hamilton DriveTest centre on Kenora Avenue: booking, what to bring, the car check, and what happens after.',
       script: 'road tests',
       dek: 'Where it is, how booking works, what to bring, and what happens before and after the drive.',
       intro: 'Most road test stress is about the unknown. Where do I park? What do they check? What happens if the car has a problem? Here&rsquo;s how the day works at Hamilton&rsquo;s DriveTest centre, using DriveTest&rsquo;s own rules.',
       sections: [
-        { id: 'where', h: 'Where it is', html: p('The Hamilton DriveTest centre is at <strong>370 Kenora Avenue North, Hamilton, L8E 2W2</strong>, in the east end near Barton Street. It offers both the G2 and the G road tests, along with knowledge tests and licence services.',
+        { id: 'where', h: 'Where it is', html: p('The Hamilton DriveTest centre is at <strong>370 Kenora Avenue North, Hamilton, L8E 2W2</strong>, in the east end near Barton Street. It offers both the G2 and the G road tests, along with knowledge tests and licence services. The <a href="/guides/hamilton-g2-road-test-route/">Hamilton test route guide</a> describes the roads around it.',
           'When we checked in October 2026, DriveTest listed road tests running Monday to Saturday. Hours change, so check the centre&rsquo;s listing on drivetest.ca before you go.') },
         { id: 'booking', h: 'Booking your test', html: p('You can book, move or cancel a road test online, by phone, or in person at any DriveTest centre. You&rsquo;ll need your licence number with its expiry date, a first choice of location plus two backups, and a preferred date and time.') +
           ul(['Online booking needs a Visa or Mastercard, and online slots can be booked up to 24 hours ahead.', 'To cancel or reschedule without losing the fee, do it at least 48 hours before the test.', 'You can&rsquo;t book a test for a date after your licence expires.']) },
@@ -183,7 +192,7 @@ export function guidePages() {
     /* ---------- 3. The G road test ---------- */
     guidePage({
       slug: 'g-road-test-tips',
-      title: 'The G Road Test in Ontario: What Changes After the G2 | Mrs. Akbar',
+      title: 'The G Road Test in Ontario: What Changes After the G2',
       description: 'The G road test explained: the highway declaration, what full-time DriveTest centres test right now, and how to merge, change lanes and exit with confidence.',
       script: 'road tests',
       dek: 'The highway declaration, what the test covers at full-time centres right now, and how to merge without drama.',
@@ -222,7 +231,7 @@ export function guidePages() {
     /* ---------- 4. G1, G2 and G explained ---------- */
     guidePage({
       slug: 'ontario-g1-g2-g-licence-explained',
-      title: 'G1, G2 and G Licences in Ontario Explained (2026) | Mrs. Akbar',
+      title: 'G1, G2 and G Licences in Ontario Explained (2026)',
       description: 'Ontario’s graduated licensing in plain words: how to get a G1, the G1 and G2 rules, when you can take each road test, and how long it all takes.',
       script: 'getting started',
       dek: 'How each level works, the rules that come with it, and how long the whole thing takes.',
@@ -262,7 +271,7 @@ export function guidePages() {
     /* ---------- 5. How many lessons ---------- */
     guidePage({
       slug: 'how-many-driving-lessons-do-you-need',
-      title: 'How Many Driving Lessons Do You Need? An Honest Answer | Mrs. Akbar',
+      title: 'How Many Driving Lessons Do You Need? An Honest Answer',
       description: 'There’s no magic number of driving lessons. What changes how many you need, real examples from her Google reviews, and how to make each lesson count.',
       script: 'getting started',
       dek: 'There&rsquo;s no magic number. Here&rsquo;s what actually changes it, with real examples.',
@@ -303,7 +312,7 @@ export function guidePages() {
     /* ---------- 6. Nervous drivers ---------- */
     guidePage({
       slug: 'nervous-driver-tips',
-      title: 'Nervous About Driving? Practical Tips That Actually Help | Mrs. Akbar',
+      title: 'Nervous About Driving? Practical Tips That Actually Help',
       description: 'Driving anxiety is common. Practical things that help before and during a drive, how to build up gradually, and how to handle test-day nerves.',
       script: 'getting started',
       dek: 'Practical things that help before and during a drive, and how to build up without overwhelming yourself.',
@@ -346,7 +355,7 @@ export function guidePages() {
     /* ---------- 7. Newcomers ---------- */
     guidePage({
       slug: 'new-to-ontario-drivers-licence',
-      title: 'New to Ontario? Getting Your Driver’s Licence | Mrs. Akbar',
+      title: 'New to Ontario? Getting Your Driver’s Licence',
       description: 'Moving to Ontario with a foreign licence: the 60-day rule, which countries can exchange, experience credit rules from July 2026, and documents to bring.',
       script: 'getting started',
       dek: 'The 60-day rule, licence exchanges, experience credit, and the documents DriveTest will ask for.',
@@ -389,7 +398,7 @@ export function guidePages() {
     /* ---------- 8. Parallel parking ---------- */
     guidePage({
       slug: 'how-to-parallel-park',
-      title: 'How to Parallel Park Step by Step (Ontario Method) | Mrs. Akbar',
+      title: 'How to Parallel Park Step by Step (Ontario Method)',
       description: 'Parallel parking broken into simple steps that follow Ontario’s Driver’s Handbook, plus hill parking rules and fixes for the most common mistakes.',
       script: 'skills',
       dek: 'A simple, repeatable method, plus hill parking and fixes for the usual mistakes.',
@@ -433,7 +442,7 @@ export function guidePages() {
     /* ---------- 10. Winter ---------- */
     guidePage({
       slug: 'winter-driving-in-hamilton',
-      title: 'Winter Driving in Hamilton: Tips for New Drivers | Mrs. Akbar',
+      title: 'Winter Driving in Hamilton: Tips for New Drivers',
       description: 'Winter driving tips for new drivers in Hamilton: winter tires and the insurance discount, where ice forms first, skids, the Mountain in snow and winter road tests.',
       script: 'hamilton roads',
       dek: 'Tires, ice, skids, the Mountain in snow, and what happens to road tests in bad weather.',
@@ -464,7 +473,7 @@ export function guidePages() {
         ['Do road tests get cancelled for snow?', 'Road tests go ahead in any weather unless DriveTest tells you otherwise. Check DriveTest&rsquo;s service disruptions page in extreme weather.'],
         ['Where does ice form first?', 'On bridges, overpasses and shaded parts of the road. Shiny black pavement can be black ice.'],
       ],
-      related: ['driving-the-hamilton-mountain-accesses', 'g-road-test-tips', 'nervous-driver-tips'],
+      related: ['driving-the-hamilton-mountain-accesses', 'defensive-driving-tips', 'what-to-do-after-a-car-accident-ontario'],
       lessons: lessonsChips(['/g-road-test-preparation/', 'G test and highway'], ['/driving-lessons-hamilton/', 'Lessons in Hamilton']),
       cta: ['Get some winter practice in', 'A lesson or two in winter conditions takes a lot of the fear out of the first snowfall.'],
     }),
@@ -482,6 +491,7 @@ export function guidesHub() {
   const desc = {
     'how-to-pass-the-g2-road-test': 'What examiners watch for, a practice plan for the last few weeks, and what to bring on the day.',
     'hamilton-drivetest-centre': 'Booking, the car check, and what happens before and after a test at Kenora Avenue.',
+    'hamilton-g2-road-test-route': 'The streets around the Kenora Avenue centre: speed limits, the railway crossing and what to practise.',
     'g-road-test-tips': 'The highway declaration, what the test covers right now, and merging without drama.',
     'ontario-g1-g2-g-licence-explained': 'How each licence level works, the rules that come with it, and how long it takes.',
     'how-many-driving-lessons-do-you-need': 'What changes the number, with real examples from her reviews.',

@@ -31,7 +31,7 @@ const brand = (href, extra = '') => `<a class="brand${extra}" href="${href}">
 
 const NAV_AFTER = [
   ['/#areas', 'Areas'],
-  ['/#reviews', 'Reviews'],
+  ['/reviews/', 'Reviews'],
   ['/guides/', 'Guides'],
   ['/#faq', 'FAQ'],
 ];
@@ -102,6 +102,10 @@ export function drawer() {
       <a class="btn btn--primary btn--block" href="${BIZ.tel}" data-call="drawer">
         ${icon('phone')}
         <span>Call ${BIZ.phone}</span>
+      </a>
+      <a class="btn btn--ghost btn--block" href="${BIZ.sms}" data-text="drawer">
+        ${icon('chat')}
+        <span>Text ${BIZ.phone}</span>
       </a>
       <p>Lessons 7 days a week, by appointment.</p>
     </div>

@@ -70,7 +70,7 @@ export function servicePages() {
     servicePage({
       slug: 'beginner-driving-lessons', crumb: 'Beginner lessons', name: 'Beginner driving lessons',
       title: 'Beginner Driving Lessons in Hamilton | Mrs. Akbar',
-      description: 'Never driven before? One-on-one beginner driving lessons in Hamilton with a patient female instructor who comes to you. G1 basics at your pace. Call 416-457-5778.',
+      description: 'Never driven? One-on-one beginner driving lessons in Hamilton with a patient female instructor who comes to you. G1 basics at your pace. Call 416-457-5778.',
       script: 'first time behind the wheel',
       h1: 'Beginner driving lessons in Hamilton',
       lede: 'Just passed your G1 knowledge test, and the driver&rsquo;s seat still feels like someone else&rsquo;s? Start here. One-on-one, in the car, at your pace.',
@@ -78,7 +78,8 @@ export function servicePages() {
       sections: [
         sec({
           id: 'start', tone: 'white', script: 'where you start', title: 'Never driven? That&rsquo;s fine',
-          body: lead('Some of her students had never sat behind the wheel before their first lesson. Gurleen wrote that they had never driven a car before, and they passed the G2. <em>Nobody expects you to know anything yet.</em>') + facts(ratingFacts),
+          body: lead('Some of her students had never sat behind the wheel before their first lesson. Gurleen wrote that they had never driven a car before, and they passed the G2. <em>Nobody expects you to know anything yet.</em>') +
+            prose('<p>She drives to you, so your first lessons can start on quiet streets near home: in <a href="/driving-lessons-westdale/">Westdale</a>, on <a href="/driving-lessons-hamilton-mountain/">the Mountain</a>, in <a href="/driving-lessons-mount-hope/">Mount Hope</a> or <a href="/driving-lessons-binbrook/">Binbrook</a>, or anywhere else in <a href="/driving-lessons-hamilton/">Hamilton</a>.</p>') + facts(ratingFacts),
         }),
         sec({
           id: 'cover', tone: 'paper', script: 'lesson by lesson', title: 'What the first lessons cover',
@@ -95,7 +96,7 @@ export function servicePages() {
         sec({
           id: 'how', tone: 'white', script: 'the usual route', title: 'How the first few lessons go',
           body: steps([
-            { title: 'You call and say where you&rsquo;re at', text: 'G1 for a week or a year, some practice with family or none at all. Every answer is normal, and it decides where lesson one starts.' },
+            { title: 'Tell her where you&rsquo;re starting from', text: 'G1 for a week or a year, some practice with family or none at all. Every answer is normal, and it decides where lesson one starts.' },
             { title: 'The car first, then the road', text: 'Mirrors, signals, and how the brake and gas actually feel under your foot. Small things, but everything else is built on them.' },
             { title: 'Repeat until it&rsquo;s boring', text: 'Turns, stops and keeping your lane, practised until they stop feeling like a big deal.' },
             { title: 'Busier roads when you&rsquo;re ready', text: 'More traffic comes once the basics happen without you thinking about them. Not before.' },
@@ -122,11 +123,13 @@ export function servicePages() {
       ],
       faqs: [
         ['I&rsquo;ve never driven at all. Can I still book?', 'Yes. Some of her students started from zero. One reviewer, Gurleen, wrote that they had never driven a car before their lessons, and they passed the G2.'],
-        ['Do I need my G1 first?', 'Yes. The G1 is the learner&rsquo;s licence that lets you practise on Ontario roads. You get it by passing a vision test and a knowledge test on the rules of the road and traffic signs at a DriveTest centre. The knowledge test is walk-in, no appointment needed.'],
-        ['How many lessons will I need?', 'It depends on where you&rsquo;re starting. One student mentioned having close to 8 lessons; another wrote that they learned a lot within two. Once Mrs. Akbar knows your starting point, she can give you an honest idea.'],
+        ['Do I need my G1 first?', 'Yes. The G1 is the learner&rsquo;s licence that lets you practise on Ontario roads. You get it by passing a vision test and a knowledge test on the rules of the road and traffic signs at a DriveTest centre. The knowledge test is walk-in, no appointment needed, and the <a href="/guides/how-to-pass-the-g1-test/">G1 test guide</a> explains how to study for it.'],
+        ['How many lessons will I need?', 'It depends on where you&rsquo;re starting. One student mentioned having close to 8 lessons; another wrote that they learned a lot within two. Once Mrs. Akbar knows your starting point, she can give you an honest idea. The <a href="/guides/how-many-driving-lessons-do-you-need/">how many lessons guide</a> explains what changes the number.'],
+        ['Can a parent book lessons for their teen?', 'Yes. A parent or guardian can call or text <a href="tel:+14164575778">416-457-5778</a> to set up lessons, and say where the lessons should start.'],
+        ['How much do lessons cost?', 'Call or text <a href="tel:+14164575778">416-457-5778</a> for her current prices. Plenty of her Google reviews call the price reasonable, and once she knows where you&rsquo;re starting, she can give you an honest idea of how many lessons you might need.'],
         ['Can a parent or friend help me practise between lessons?', 'Yes, as long as they meet the G1 rules for the person beside you: fully licensed, at least four years of driving experience, and a blood alcohol level under .05 (zero if they&rsquo;re 21 or under). Practising what you covered in a lesson helps it stick.'],
       ],
-      guides: ['how-to-pass-the-g1-test', 'right-of-way-rules-ontario', 'how-many-driving-lessons-do-you-need'],
+      guides: ['first-driving-lesson', 'how-to-drive-a-car', 'how-many-driving-lessons-do-you-need'],
       cta: ['Book your first lesson', 'Tell her you&rsquo;re a beginner, where you live and when you&rsquo;re free. She&rsquo;ll take it from there.'],
     }),
 
@@ -136,13 +139,14 @@ export function servicePages() {
       title: 'Driving Lessons for Nervous Drivers in Hamilton | Mrs. Akbar',
       description: 'Anxious about driving? Calm, patient one-on-one lessons in Hamilton with a female instructor whose reviews keep mentioning nerves. Call 416-457-5778.',
       script: 'no rush, ever',
-      h1: 'Driving lessons for nervous drivers',
+      h1: 'Driving lessons for nervous drivers in Hamilton',
       lede: 'Sweaty hands at every left turn. A knot in your stomach on the highway. One bad drive you can&rsquo;t shake. Plenty of her students started out exactly like that.',
       art: artNervous(), serviceType: 'Driving lessons for anxious and nervous drivers', audience: 'Nervous and anxious drivers',
       sections: [
         sec({
           id: 'you', tone: 'white', script: 'you&rsquo;re in good company', title: 'Nerves come up a lot in her reviews',
-          body: lead('Anxious driver, nervous driver, test anxiety. Those words show up again and again in her Google reviews, and <em>most of those reviews end with a pass.</em>') + facts(ratingFacts),
+          body: lead('Anxious driver, nervous driver, test anxiety. Those words show up again and again in her Google reviews, and <em>most of those reviews end with a pass.</em>') +
+            prose('<p>She drives to you anywhere in <a href="/driving-lessons-hamilton/">Hamilton</a>, from <a href="/driving-lessons-dundas/">Dundas</a> to <a href="/driving-lessons-stoney-creek/">Stoney Creek</a>, so you can start on streets you already know.</p>') + facts(ratingFacts),
         }),
         sec({
           id: 'difference', tone: 'paper', script: 'what helps', title: 'What makes it easier',
@@ -174,6 +178,7 @@ export function servicePages() {
         ['What if I panic during a lesson?', 'Say so. You can pull over somewhere safe and take a minute. A lesson isn&rsquo;t a test, and nobody is marking you.'],
         ['I failed my road test and lost my confidence. Can lessons help?', 'Yes. Tell her what happened on the test when you call, so the lessons can go straight at it instead of starting over. DriveTest generally asks you to wait at least 10 days before testing again, which is a useful window for practice.'],
         ['Does it help that she&rsquo;s a woman?', 'For some people it does. Aleena wrote about wanting a female instructor due to personal preference and comfort, as someone who can be an anxious driver, and passed the G2 on the first try.'],
+        ['How much do lessons cost?', 'Call or text <a href="tel:+14164575778">416-457-5778</a> for her current prices. Plenty of her Google reviews call the price reasonable, and once she knows where you&rsquo;re starting, she can give you an honest idea of how many lessons you might need.'],
         ['How long until I feel confident?', 'Everyone is different. One student, Katherine, wrote: &ldquo;After just a few lessons, I already feel much more confident behind the wheel.&rdquo;'],
       ],
       guides: ['nervous-driver-tips', 'how-to-drive-a-roundabout', 'how-many-driving-lessons-do-you-need'],
@@ -184,7 +189,7 @@ export function servicePages() {
     servicePage({
       slug: 'g2-road-test-preparation', crumb: 'G2 road test prep', name: 'G2 road test preparation',
       title: 'G2 Road Test Preparation in Hamilton | Mrs. Akbar',
-      description: 'Get ready for your G2 road test in Hamilton: turns, lane changes, one-way streets, parallel parking and three-point turns. Call 416-457-5778.',
+      description: 'Get ready for your G2 road test (the G1 exit test) in Hamilton: turns, lane changes, one-way streets, parking and three-point turns. Call 416-457-5778.',
       script: 'test day, sorted',
       h1: 'G2 road test preparation in Hamilton',
       lede: 'The G2 road test takes about 20 minutes, and the examiner is watching for specific things. Lessons go straight at those, so the test feels like one more drive.',
@@ -193,6 +198,7 @@ export function servicePages() {
         sec({
           id: 'timing', tone: 'white', script: 'the basics', title: 'When you can take the G2',
           body: lead('You can take the G2 road test once you&rsquo;ve held your G1 for 12 months, or <em>8 months if you finish a government-approved driver education course.</em> Book through DriveTest, then call Mrs. Akbar with your date so the lessons can work back from it.') +
+            prose('<p>She comes to you in <a href="/driving-lessons-hamilton/">Hamilton</a>, including <a href="/driving-lessons-east-hamilton/">East Hamilton</a> near the test centre, and in <a href="/driving-lessons-ancaster/">Ancaster</a>, <a href="/driving-lessons-dundas/">Dundas</a>, <a href="/driving-lessons-stoney-creek/">Stoney Creek</a>, <a href="/driving-lessons-binbrook/">Binbrook</a>, <a href="/driving-lessons-glanbrook/">Glanbrook</a>, <a href="/driving-lessons-mount-hope/">Mount Hope</a> and <a href="/driving-lessons-caledonia/">Caledonia</a>.</p>') +
             facts([
               { num: '12', count: 12, unit: 'months', label: 'on a G1 before the G2 road test' },
               { num: '8', count: 8, unit: 'months', label: 'with an approved driver education course' },
@@ -231,23 +237,25 @@ export function servicePages() {
         }),
         sec({
           id: 'centre', tone: 'white', script: 'on test day', title: 'Testing at the Hamilton DriveTest centre',
-          body: prose(`<p>Hamilton&rsquo;s DriveTest centre is at 370 Kenora Avenue North, in the east end near Barton Street. A few things that catch people out:</p>
+          body: prose(`<p>Hamilton&rsquo;s DriveTest centre is at 370 Kenora Avenue North, in <a href="/driving-lessons-east-hamilton/">the east end</a> near Barton Street. A few things that catch people out:</p>
 <ul>
 <li>DriveTest doesn&rsquo;t supply cars. You bring one that&rsquo;s plated, insured and in good working order, with enough gas for the test.</li>
 <li>Arrive at least 30 minutes early, with your licence and glasses or contacts if you drive with them.</li>
 <li>Backup cameras and parking aids can&rsquo;t be used during the test, so practise without them.</li>
 <li>To cancel or move your test without losing the fee, give at least 48 hours&rsquo; notice.</li>
 </ul>
-<p>The <a href="/guides/hamilton-drivetest-centre/">Hamilton DriveTest centre guide</a> has the rest, from booking to what happens after you pass.</p>`) + sources([DT_ROAD, ONTARIO_G]),
+<p>The <a href="/guides/hamilton-drivetest-centre/">Hamilton DriveTest centre guide</a> has the rest, from booking to what happens after you pass, and the <a href="/guides/hamilton-g2-road-test-route/">Hamilton test route guide</a> describes the roads around the centre.</p>`) + sources([DT_ROAD, ONTARIO_G]),
         }),
       ],
       faqs: [
         ['When can I take my G2 road test?', 'After 12 months on your G1, or 8 months if you complete a government-approved beginner driver education course.'],
+        ['Is the G2 road test the same as the G1 exit test?', 'Yes. Many people still call the G2 road test the G1 exit test, because passing it takes you from a G1 licence to a G2.'],
         ['What does the G2 road test check?', 'Basic skills: left and right turns, stopping, lane changes, one-way streets, traffic lights and stop and yield signs, residential driving, parallel parking and three-point turns. It usually takes about 20 minutes.'],
         ['Can I book a lesson right before my test?', 'Sometimes, yes. One student, Prasad, booked a one-hour lesson two hours before their test, and passed. Her schedule changes day to day, so call as early as you can.'],
         ['What if I don&rsquo;t pass?', 'You can test again while your licence is valid. DriveTest generally asks you to wait at least 10 days between tests, and your scoresheet shows exactly what to work on in the meantime.'],
+        ['How much do lessons cost?', 'Call or text <a href="tel:+14164575778">416-457-5778</a> for her current prices. Plenty of her Google reviews call the price reasonable, and once she knows where you&rsquo;re starting, she can give you an honest idea of how many lessons you might need.'],
       ],
-      guides: ['how-to-pass-the-g2-road-test', 'how-to-do-a-three-point-turn', 'how-to-parallel-park'],
+      guides: ['how-to-pass-the-g2-road-test', 'why-people-fail-the-g2-road-test', 'how-to-do-a-three-point-turn'],
       cta: ['Got a test date? Call her', 'Tell her the date and which DriveTest centre you booked, and lessons can be planned around it.'],
     }),
 
@@ -255,19 +263,19 @@ export function servicePages() {
     servicePage({
       slug: 'g-road-test-preparation', crumb: 'G test and highway', name: 'G road test and highway driving lessons',
       title: 'G Test & Highway Driving Lessons in Hamilton | Mrs. Akbar',
-      description: 'Prepare for the G road test in Hamilton with highway lessons on the 403, the QEW, the Linc and the Red Hill. Merging, lane changes and exits. Call 416-457-5778.',
+      description: 'Prepare for the G road test (the G2 exit test) in Hamilton: highway lessons on the 403, QEW, Linc and Red Hill. Merging, lane changes, exits. Call 416-457-5778.',
       script: 'the full licence',
-      h1: 'G test and highway driving lessons',
+      h1: 'G test and highway driving lessons in Hamilton',
       lede: 'The G road test adds the highway: merging at speed, changing lanes with traffic all around you, and getting off at the right exit. Hamilton has all of it: the Linc, the Red Hill, the 403 and the QEW.',
       art: artHighway(), serviceType: 'G road test preparation and highway driving lessons', audience: 'G2 drivers preparing for the G road test',
       sections: [
         sec({
           id: 'roads', tone: 'white', script: 'close to home', title: 'Highways around Hamilton',
           body: `<ol class="spots">
-<li class="spot" data-reveal><h3 class="spot-name"><span>Highway 403</span></h3><p>West through Ancaster toward Brantford, and north through the west end toward Burlington. It&rsquo;s one of the roads the G test&rsquo;s highway declaration counts.</p></li>
-<li class="spot" data-reveal style="--d:80ms"><h3 class="spot-name"><span>The QEW</span></h3><p>Fast and busy along the lake through Stoney Creek, with Burlington one way and Niagara the other. Also on the declaration list.</p></li>
-<li class="spot" data-reveal><h3 class="spot-name"><span>The Linc</span></h3><p>The Lincoln Alexander Parkway runs across the Mountain, from the 403 to the Red Hill. A good first taste of merging and keeping pace.</p></li>
-<li class="spot" data-reveal style="--d:80ms"><h3 class="spot-name"><span>Red Hill Valley Parkway</span></h3><p>Carries on from the Linc down to the QEW, with curves through the valley. Most of it is posted at 80 km/h.</p></li>
+<li class="spot" data-reveal><h3 class="spot-name"><span>Highway 403</span></h3><p>West through <a href="/driving-lessons-ancaster/">Ancaster</a>, and north through <a href="/driving-lessons-west-hamilton/">the west end</a> of the city. It&rsquo;s one of the roads the G test&rsquo;s highway declaration counts.</p></li>
+<li class="spot" data-reveal style="--d:80ms"><h3 class="spot-name"><span>The QEW</span></h3><p>Fast and busy along the lake through <a href="/driving-lessons-stoney-creek/">Stoney Creek</a>. Also on the declaration list.</p></li>
+<li class="spot" data-reveal><h3 class="spot-name"><span>The Linc</span></h3><p>The Lincoln Alexander Parkway runs across <a href="/driving-lessons-hamilton-mountain/">the Mountain</a>, from the 403 to the Red Hill. A good first taste of merging and keeping pace.</p></li>
+<li class="spot" data-reveal style="--d:80ms"><h3 class="spot-name"><span>Red Hill Valley Parkway</span></h3><p>Carries on from the Linc down through <a href="/driving-lessons-east-hamilton/">the east end</a> to the QEW, with curves through the valley. Most of it is posted at 80 km/h.</p></li>
 </ol>`,
         }),
         sec({
@@ -286,7 +294,7 @@ export function servicePages() {
           id: 'declaration', tone: 'white', script: 'before you book', title: 'The highway declaration',
           body: lead('Before the G road test, you sign a declaration of your highway driving. <em>DriveTest asks for at least five trips in the last three months</em> on a 400-series highway, a freeway like the QEW, or a highway signed at 80 km/h or more.') +
             prose(`<p>If you can&rsquo;t honestly sign it, the test is cancelled and you lose half the fee. Lessons on the 403 and the QEW count toward those trips, and they&rsquo;re a calmer way to build them than your first solo merge.</p>
-<p>On a G1, you can only use those highways with a licensed driving instructor beside you, so lessons are also how many people get their first highway time.</p>`) + sources([DT_ROAD, HANDBOOK_FREEWAY]),
+<p>On a G1, you can&rsquo;t use 400-series highways such as the 403, or the QEW, unless a licensed driving instructor is beside you, so lessons are also how many people get their first highway time.</p>`) + sources([DT_ROAD, HANDBOOK_FREEWAY]),
         }),
         sec({
           id: 'reviews', tone: 'sand', script: 'from her reviews', title: 'Passed the G, and said so',
@@ -298,9 +306,11 @@ export function servicePages() {
       ],
       faqs: [
         ['When can I take the G road test?', 'After you&rsquo;ve held your G2 for 12 months. You have five years in total to finish graduated licensing.'],
+        ['Is the G road test the same as the G2 exit test?', 'Yes. Many people still call the G road test the G2 exit test, because passing it takes you from a G2 to a full G licence.'],
         ['Do I need highway experience before the G test?', 'Yes. You sign a declaration of highway driving experience, and DriveTest asks for at least five trips in the three months before the test on 400-series highways, freeways like the QEW, or highways signed at 80 km/h or more.'],
         ['Is parallel parking on the G test?', 'Not at the moment at full-time DriveTest centres. The G test there is currently a modified version that leaves out parallel parking, the roadside stop, the three-point turn and residential driving. Part-time Travel Point locations still give the standard test.'],
         ['Can I practise on the highway with a G1?', 'Only with a licensed driving instructor. G1 drivers can&rsquo;t use 400-series highways like the 403, or the QEW, unless the person beside them is a driving instructor.'],
+        ['How much do lessons cost?', 'Call or text <a href="tel:+14164575778">416-457-5778</a> for her current prices. Plenty of her Google reviews call the price reasonable, and once she knows where you&rsquo;re starting, she can give you an honest idea of how many lessons you might need.'],
       ],
       guides: ['g-road-test-tips', 'ontario-speed-limits-and-speeding-tickets', 'hamilton-drivetest-centre'],
       cta: ['Ready for the full licence?', 'Tell her when your G test is and how much highway driving you&rsquo;ve done. She&rsquo;ll plan the lessons around both.'],
@@ -312,7 +322,7 @@ export function servicePages() {
       title: 'Parallel Parking Lessons in Hamilton | Mrs. Akbar',
       description: 'Parallel parking, reverse parking, three-point turns and hill parking, practised until they feel easy. One-on-one lessons in Hamilton. Call 416-457-5778.',
       script: 'the bit everyone dreads',
-      h1: 'Parallel parking lessons',
+      h1: 'Parallel parking lessons in Hamilton',
       lede: 'Parking comes up in her reviews more than any other skill. It isn&rsquo;t a talent. It&rsquo;s a method, and once it clicks, it stays.',
       art: artParking(), serviceType: 'Parallel parking and parking manoeuvre lessons',
       sections: [
@@ -325,7 +335,8 @@ export function servicePages() {
             'Parking uphill and downhill, wheels turned the right way',
             'Tight spaces in busy plaza parking lots',
             'Doing it all without leaning on a backup camera',
-          ]) + quote(review('Malaika J', 'She makes parallel parking and reverse parking so easy.'), 'passed on the first try'),
+          ]) + prose('<p>She comes to you, and Hamilton has plenty of real streets to practise on, from <a href="/driving-lessons-west-hamilton/">Locke Street in West Hamilton</a> to <a href="/driving-lessons-downtown-hamilton/">downtown</a> and <a href="/driving-lessons-westdale/">Westdale Village</a>.</p>') +
+            quote(review('Malaika J', 'She makes parallel parking and reverse parking so easy.'), 'passed on the first try'),
         }),
         sec({
           id: 'method', tone: 'paper', script: 'the method', title: 'Parallel parking, in short',
@@ -349,9 +360,10 @@ export function servicePages() {
         ['Is parallel parking on the road test?', 'It&rsquo;s one of the basic skills DriveTest lists for the G2 road test. The G test at full-time DriveTest centres currently leaves it out.'],
         ['Which way do I turn the wheels when I park on a hill?', 'Facing downhill, turn the front wheels toward the curb or the right shoulder. Facing uphill with a curb, turn them toward the road, so the tires catch the curb if the car rolls back. Facing uphill with no curb, turn them sharply right. Then set the parking brake.'],
         ['Can I use my backup camera on the test?', 'No. DriveTest doesn&rsquo;t allow backup cameras or parking aids during the road test, so lessons practise parking with mirrors and shoulder checks.'],
+        ['How much do lessons cost?', 'Call or text <a href="tel:+14164575778">416-457-5778</a> for her current prices. Plenty of her Google reviews call the price reasonable, and once she knows where you&rsquo;re starting, she can give you an honest idea of how many lessons you might need.'],
         ['How long does it take to get good at it?', 'Usually less time than people fear. Reviewers like Malaika and Rose wrote that she made parallel parking easy, and it&rsquo;s the skill her reviews mention most.'],
       ],
-      guides: ['how-to-parallel-park', 'how-to-do-a-three-point-turn', 'how-to-pass-the-g2-road-test'],
+      guides: ['how-to-parallel-park', 'how-to-reverse-park', 'how-to-do-a-three-point-turn'],
       cta: ['Make parking the easy part', 'Tell her which kind of parking scares you most, and that&rsquo;s where the lesson starts.'],
     }),
   ];

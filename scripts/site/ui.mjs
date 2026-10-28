@@ -32,7 +32,7 @@ export function pageHero({ trail, script, h1, lede, art, artLabel, proof = true,
         ${callBtn('page-hero')}
         ${textBtn('page-hero')}
       </div>
-      ${proof ? `<p class="phero-proof">${STARS}<span><strong>5.0</strong> stars from tons of Google reviews</span><span class="phero-proof__dot" aria-hidden="true"></span><span>Lessons 7 days a week</span></p>` : ''}
+      ${proof ? `<p class="phero-proof">${STARS}<span><strong>5.0</strong> stars from ${trail.at(-1)[1] === '/reviews/' ? 'tons of Google reviews' : '<a href="/reviews/">tons of Google reviews</a>'}</span><span class="phero-proof__dot" aria-hidden="true"></span><span>Lessons 7 days a week</span></p>` : ''}
     </div>
     <div class="phero-art"${artLabel ? '' : ' aria-hidden="true"'} data-play>${art}</div>
   </div>

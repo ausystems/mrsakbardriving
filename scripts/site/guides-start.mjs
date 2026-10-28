@@ -67,7 +67,7 @@ export function startGuides() {
     guidePage({
       slug: 'how-to-pass-the-g1-test',
       published: DATE, updated: DATE,
-      title: 'How to Pass the G1 Test in Ontario (2026 Guide) | Mrs. Akbar',
+      title: 'How to Pass the G1 Test in Ontario (2026 Guide)',
       description: 'The Ontario G1 knowledge test explained: the 80% pass mark, what to bring, the $159.75 fee, languages, the vision test, and a study plan to pass the first time.',
       script: 'getting started',
       dek: 'What&rsquo;s on the knowledge test, how it&rsquo;s marked, what to bring to DriveTest, and how to study so you pass the first time.',
@@ -144,7 +144,7 @@ export function startGuides() {
     guidePage({
       slug: 'g1-practice-test',
       published: DATE, updated: DATE,
-      title: 'G1 Practice Test Ontario: 40 Free Questions with Answers | Mrs. Akbar',
+      title: 'G1 Practice Test Ontario: 40 Free Questions with Answers',
       description: 'A free Ontario G1 practice test: 20 rules-of-the-road and 20 road sign questions, written from the Official MTO Driver&rsquo;s Handbook, with every answer explained.',
       script: 'getting started',
       dek: 'Twenty questions on the rules of the road and twenty on signs and signals, each with the answer explained.',
@@ -222,7 +222,7 @@ export function startGuides() {
     guidePage({
       slug: 'g1-g2-licence-expiry-ontario',
       published: DATE, updated: DATE,
-      title: 'G1 or G2 Licence Expiring in Ontario? What to Do | Mrs. Akbar',
+      title: 'G1 or G2 Licence Expiring in Ontario? What to Do',
       description: 'What happens when an Ontario G1 or G2 expires: the five-year rule, requalifying for five more years, the 42-day road test extension, and how to avoid starting over.',
       script: 'getting started',
       dek: 'The five-year clock, your options before it runs out, and what happens if it already has.',
@@ -277,7 +277,7 @@ export function startGuides() {
     guidePage({
       slug: 'drivers-licence-cost-ontario',
       published: DATE, updated: DATE,
-      title: 'How Much Does a Driver&rsquo;s Licence Cost in Ontario? (2026) | Mrs. Akbar',
+      title: 'How Much Does a Driver&rsquo;s Licence Cost in Ontario? (2026)',
       description: 'Every DriveTest fee for 2026: the $159.75 G1 package, the $91.25 G road test, retests, late cancellations and renewals, plus driver education and insurance.',
       script: 'getting started',
       dek: 'Every government fee from your G1 to a full G, what happens to your money if a test is cancelled, and the costs people forget.',
@@ -354,7 +354,7 @@ export function startGuides() {
     guidePage({
       slug: 'how-to-drive-a-car',
       published: DATE, updated: DATE,
-      title: 'How to Drive a Car: A Beginner’s Step-by-Step Guide | Mrs. Akbar',
+      title: 'How to Drive a Car: A Beginner’s Step-by-Step Guide',
       description: 'How to drive an automatic car, step by step: seat and mirrors, starting and gears, steering, braking, signals and turns, following Ontario’s Driver’s Handbook.',
       script: 'getting started',
       dek: 'Seat, mirrors, gears, steering, braking and turning: the basics, in the order you&rsquo;ll learn them.',
@@ -442,7 +442,7 @@ export function startGuides() {
     guidePage({
       slug: 'first-driving-lesson',
       published: DATE, updated: DATE,
-      title: 'Your First Driving Lesson: What to Expect and Bring | Mrs. Akbar',
+      title: 'Your First Driving Lesson: What to Expect and Bring',
       description: 'What usually happens on a first driving lesson in Ontario, what to bring and wear, the G1 rules with an instructor, and how to settle your nerves before you start.',
       script: 'getting started',
       dek: 'What usually happens, what to bring and wear, and the G1 rules that apply, even if you&rsquo;ve never sat in the driver&rsquo;s seat.',

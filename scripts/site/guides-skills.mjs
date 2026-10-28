@@ -43,7 +43,7 @@ export function skillGuides() {
     guidePage({
       slug: 'how-to-check-your-blind-spot',
       published: DATE, updated: DATE,
-      title: 'How to Adjust Your Mirrors and Check Your Blind Spot | Mrs. Akbar',
+      title: 'How to Adjust Your Mirrors and Check Your Blind Spot',
       description: 'How to set your mirrors the Ontario Handbook way, where your blind spots are, when to shoulder check, the wider mirror setting, and why cameras aren&rsquo;t enough.',
       script: 'skills',
       dek: 'Setting your seat and mirrors, finding your blind spots, and the moments you always turn your head.',
@@ -100,7 +100,7 @@ export function skillGuides() {
     guidePage({
       slug: 'defensive-driving-tips',
       published: DATE, updated: DATE,
-      title: 'Defensive Driving Tips for New Drivers (Ontario) | Mrs. Akbar',
+      title: 'Defensive Driving Tips for New Drivers (Ontario)',
       description: 'Defensive driving habits from Ontario&rsquo;s Driver&rsquo;s Handbook: the 2-second rule, scanning 12 to 15 seconds ahead, space cushions, tailgaters, fatigue and distraction.',
       script: 'skills',
       dek: 'See trouble early, keep space around you, and make sure others see you: the habits that prevent collisions.',
@@ -166,7 +166,7 @@ export function skillGuides() {
     guidePage({
       slug: 'how-to-reverse-park',
       published: DATE, updated: DATE,
-      title: 'How to Reverse Park (Back Into a Parking Spot) | Mrs. Akbar',
+      title: 'How to Reverse Park (Back Into a Parking Spot)',
       description: 'How to back into a parking spot step by step: where to look, when to turn the wheel, fixing a crooked park, parking lot safety, and whether it&rsquo;s on the G2 test.',
       script: 'skills',
       dek: 'Backing into a parking spot, step by step, where to look, and how to leave safely.',
@@ -228,7 +228,7 @@ export function skillGuides() {
     guidePage({
       slug: 'how-to-drive-a-roundabout',
       published: DATE, updated: DATE,
-      title: 'How to Drive a Roundabout in Ontario (2-Lane Guide) | Mrs. Akbar',
+      title: 'How to Drive a Roundabout in Ontario (2-Lane Guide)',
       description: 'How to drive single and two-lane roundabouts in Ontario: who yields, which lane to choose, when to signal, trucks and emergency vehicles, and Hamilton&rsquo;s roundabouts.',
       script: 'skills',
       dek: 'Who yields, which lane to pick, when to signal, and what to do about trucks, cyclists and ambulances.',
@@ -293,7 +293,7 @@ export function skillGuides() {
     guidePage({
       slug: 'how-to-do-a-three-point-turn',
       published: DATE, updated: DATE,
-      title: 'How to Do a Three-Point Turn (Ontario G2 Road Test) | Mrs. Akbar',
+      title: 'How to Do a Three-Point Turn (Ontario G2 Road Test)',
       description: 'The three-point turn and roadside stop, step by step: the checks the G2 examiner looks for, where turning around is illegal in Ontario, and the usual mistakes.',
       script: 'skills',
       dek: 'Two short, slow G2 manoeuvres, broken into simple steps, with the exact checks the examiner looks for.',

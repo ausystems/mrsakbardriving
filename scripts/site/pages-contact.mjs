@@ -12,13 +12,15 @@ export function contactPage() {
     ['How do I book a driving lesson?', `Call or text ${BIZ.phone}. Mention your licence level, where you live and your road test date if you have one.`],
     ['What if she doesn&rsquo;t answer?', 'She&rsquo;s often in the car with a student and can&rsquo;t pick up. Leave a message with your name and area, or send a text.'],
     ['When are lessons available?', 'Seven days a week, by appointment.'],
+    ['Can a parent or guardian book for a student?', `Yes. A parent or guardian can call or text ${BIZ.phone} to set up lessons. Mention the student&rsquo;s licence level and where lessons should start.`],
+    ['How much do lessons cost?', `Call or text ${BIZ.phone} for her current prices. Plenty of her Google reviews call the price reasonable.`],
     ['Do I need to get to her for lessons?', 'No. She drives to you, so your lesson starts where you are.'],
     ['Which areas does she cover?', 'All of Hamilton, including Mount Hope, Hamilton Mountain, Downtown, East and West Hamilton, Westdale, Ancaster, Dundas, Stoney Creek, Binbrook and Glanbrook, plus Caledonia.'],
   ];
   const main = [
     pageHero({
       trail, script: 'say hi', h1: 'Book a driving lesson',
-      lede: 'The quickest way to book is a call or a text. If she&rsquo;s in the car with a student she can&rsquo;t pick up, so leave a message or send a text.',
+      lede: 'A female driving instructor who comes to you, anywhere in Hamilton. Call or text to book. If she&rsquo;s in the car with a student and can&rsquo;t pick up, leave a message or send a text.',
       art: artContact(),
     }),
     `<section class="psec band band--white" id="ways" data-callbar-end aria-labelledby="ways-title">
@@ -67,6 +69,7 @@ export function contactPage() {
 <span><a href="${BIZ.tel}" data-call="contact-nap">${BIZ.phone}</a></span>
 <span>Open 7 days, by appointment</span>
 </address>
+<p class="contact-summary">${BIZ.name} gives one-on-one driving lessons with a female instructor who drives to her students, 7 days a week by appointment. She covers Hamilton (Downtown, the Mountain, East and West Hamilton, Westdale and the McMaster area), Mount Hope, Ancaster, Dundas, Stoney Creek, Binbrook, Glanbrook and Caledonia. Lessons cover beginner driving, nervous drivers, parallel and reverse parking, G2 road test preparation, and highway driving and G test preparation. To book, call or text <a href="${BIZ.tel}" data-call="contact-summary">${BIZ.phone}</a>.</p>
 <p class="contact-links"><a class="link-arrow" href="${BIZ.gbp}" target="_blank" rel="noopener">Google Business Profile${icon('out')}<span class="visually-hidden"> (opens in a new tab)</span></a></p>
 </div>
 <div class="more-lessons" data-reveal><p class="more-lessons__title">Areas she covers</p>${chips(AREAS.map((a) => ({ href: `/${a.slug}/`, label: a.label })))}</div>`,
@@ -84,7 +87,6 @@ export function contactPage() {
       telephone: '+1-416-457-5778',
       contactType: 'customer service',
       areaServed: 'CA-ON',
-      availableLanguage: 'English',
     }],
   };
 }

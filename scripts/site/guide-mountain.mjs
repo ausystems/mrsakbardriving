@@ -13,7 +13,7 @@ const access = (name, html) => `<h3>${name}</h3>${html}`;
 export function mountainGuide() {
   return guidePage({
     slug: 'driving-the-hamilton-mountain-accesses',
-    title: 'Hamilton Mountain Accesses: A New Driver’s Guide | Mrs. Akbar',
+    title: 'Hamilton Mountain Accesses: A New Driver’s Guide',
     description: 'The Jolley Cut, Claremont, Sherman and Kenilworth Accesses, James Mountain Road and Beckett Drive: what each Mountain access is like and how to drive it.',
     script: 'hamilton roads',
     dek: 'The roads that climb Hamilton&rsquo;s escarpment, one by one, and how to drive them up and down.',

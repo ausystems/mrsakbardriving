@@ -31,7 +31,7 @@ function areaPage(a, all) {
     .sort((x, y) => km(here, PLACES[x.mapKey]) - km(here, PLACES[y.mapKey]))
     .slice(0, 6)
     .map((x) => ({ href: `/${x.slug}/`, label: x.crumb }))
-    .concat({ href: '/#areas', label: 'All areas' });
+    .concat({ href: '/#areas', label: 'See every area she covers' });
   const main = [
     pageHero({
       trail, script: a.script, h1: a.h1, lede: a.lede,

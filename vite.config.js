@@ -179,7 +179,7 @@ function seoFiles(siteUrl, env) {
         return list.length ? `\n## ${heading}\n${list.map((p) => `- [${p.name}](${siteUrl}${p.path}): ${fill(p.description)}`).join('\n')}\n` : '';
       };
       const llms = fill(fs.readFileSync(path.join(ROOT, 'src/templates/llms.txt'), 'utf8')) +
-        group('service', 'Lessons') + group('area', 'Areas') + group('guide', 'Guides') + group('contact', 'Contact');
+        group('service', 'Lessons') + group('area', 'Areas') + group('guide', 'Guides') + group('reviews', 'Reviews') + group('contact', 'Contact');
       this.emitFile({ type: 'asset', fileName: 'llms.txt', source: llms });
     },
   };

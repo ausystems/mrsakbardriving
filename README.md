@@ -16,9 +16,9 @@
 
 ## At a glance
 
-- **55 pages:** the home page, 5 lesson pages, 14 area pages, 30 guides and a guides index, contact,
-  a Privacy Policy, Terms and Conditions, and a custom 404.
-- **Fast:** Lighthouse performance 98 to 100 on phones and 100 on desktop, with no layout shift.
+- **57 pages:** the home page, 5 lesson pages, 14 area pages, 31 guides and a guides index, a reviews
+  page, contact, a Privacy Policy, Terms and Conditions, and a custom 404.
+- **Fast:** Lighthouse 100 for performance, accessibility, best practices and SEO on phones, with no layout shift.
   Each page inlines only the CSS it uses.
 - **Accessible:** no axe violations on any page, keyboard friendly, and every animation switches off
   for visitors who ask for reduced motion.
@@ -81,7 +81,8 @@ structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it.
 | Home | `/` | `index.html` (hand-written) |
 | Lessons (5) | beginner, nervous drivers, G2, G and highway, parallel parking | `scripts/site/pages-services.mjs` |
 | Areas (14) | Hamilton, Downtown Hamilton, Hamilton Mountain, East Hamilton, West Hamilton, Westdale, near McMaster, Mount Hope, Binbrook, Glanbrook, Ancaster, Dundas, Stoney Creek, Caledonia | `scripts/site/pages-areas.mjs`, `areas-content.mjs` |
-| Guides (30 + index) | `/guides/...` | `scripts/site/guide-list.mjs` (order and section), `pages-guides.mjs`, `guides-start.mjs`, `guides-rules.mjs`, `guides-skills.mjs`, `guides-tests.mjs`, `guide-mountain.mjs` |
+| Guides (31 + index) | `/guides/...` | `scripts/site/guide-list.mjs` (order and section), `pages-guides.mjs`, `guides-start.mjs`, `guides-rules.mjs`, `guides-skills.mjs`, `guides-tests.mjs`, `guide-mountain.mjs` |
+| Reviews | `/reviews/`: word-for-word excerpts grouped by theme, no count and no review markup | `pages-reviews.mjs` |
 | Contact, Privacy Policy, Terms and Conditions | `/contact/`, `/privacy-policy/`, `/terms-and-conditions/` | `pages-contact.mjs`, `pages-legal.mjs` |
 | 404 | `404.html` (never indexed) | `pages-404.mjs` |
 
@@ -90,8 +91,8 @@ buttons that the home page includes) from one layout, so navigation never drifts
 pages are written to `src/pages/` and published at clean URLs such as `/guides/how-to-parallel-park/`.
 Edit the generator files, not `src/pages/` (it isn't in the repository; every build recreates it).
 
-The header links to Home, a Lessons menu that lists all five lesson pages, Areas, Reviews, Guides
-and FAQ; the phone menu has the same links, with Lessons as an expandable list. The guides index
+The header links to Home, a Lessons menu that lists all five lesson pages, Areas, Reviews (the
+`/reviews/` page), Guides and FAQ; the phone menu has the same links, with Lessons as an expandable list. The guides index
 groups the guides into Getting started, Rules of the road, Skills, Road tests and Hamilton roads,
 following each guide's `cat` in `scripts/site/guide-list.mjs`. Guide tables, practice quizzes and
 road sign drawings come from `scripts/site/guide-kit.mjs` and `scripts/site/road-signs.mjs`.
@@ -114,6 +115,10 @@ header (`ctaCard`, `ctaRow` and `ctaBand` in `scripts/site/ui.mjs`).
   the guides.
 - **"Four years in business"** was true in 2026. Update it each year (home page, guides, JSON-LD).
 - **She comes to you:** the site never presents a home base or distances from one. Keep it that way.
+- **Dated road work** on the area pages (the Main Street two-way conversion, LRT work) follows the
+  City's schedule as of October 2026. Recheck it every few months and delete anything that has ended.
+- **Years in titles:** some guide titles say 2026 (fees, demerit points, the G1 test, licence levels).
+  Recheck the facts and update the year each January.
 - **Business name and phone** must stay identical to the Google Business Profile.
 
 ## SEO set-up
@@ -124,6 +129,15 @@ header (`ctaCard`, `ctaRow` and `ctaBand` in `scripts/site/ui.mjs`).
   serves, `WebPage`, `BreadcrumbList`, plus `Service` (lessons and areas), `Article` (guides),
   `FAQPage` where a page has questions, `ItemList` (guides index) and `ContactPage`.
 - `sitemap.xml`, `robots.txt` and `llms.txt` are generated at build time from the page list.
+- Sitemap dates are real: `data/lastmod.json` keeps a fingerprint of every page, and a page's
+  `lastmod` (and its `WebPage` `dateModified`) only changes when its content does. Commit that file
+  after building. Guides keep their own visible "Updated" date, which you change by hand when the
+  guide's content changes.
+- Titles: the home page and lesson pages end in "| Mrs. Akbar"; area pages end in "| Female
+  Instructor" and guides have no suffix, so titles stay under about 60 characters (Google shows the
+  site name above each result anyway). The home page targets "female driving instructor Hamilton";
+  `/driving-lessons-hamilton/` targets "driving lessons Hamilton". Keep them from competing.
+- Price questions are answered with "call or text for her current prices"; never publish a price.
 
 ## Facts used on the site, and where they came from
 

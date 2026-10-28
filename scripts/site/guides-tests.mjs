@@ -29,6 +29,9 @@ const S = {
   auditor: ['Auditor General of Ontario, 2023 report on driver training and testing, Appendix 2 (auditor.on.ca, PDF)', 'https://www.auditor.on.ca/en/content/annualreports/arreports/en23/AR_drivertraining_en23.pdf'],
   brokerlink: ['How do I pass my G2 road test on the first try? (brokerlink.ca)', 'https://www.brokerlink.ca/blog/how-do-i-pass-my-g2-road-test-on-the-first-try'],
   belair: ['Driving instructors on common driving exam mistakes (belairdirect.com)', 'https://www.belairdirect.com/blog/driving-instructors-driving-exam-mistakes'],
+  cityRoads: ['City of Hamilton open data: road segments, speed limits and truck routes (open.hamilton.ca)', 'https://open.hamilton.ca/'],
+  osm: ['Map data &copy; OpenStreetMap contributors (openstreetmap.org)', 'https://www.openstreetmap.org/copyright'],
+  hta: ['Highway Traffic Act, sections 163 and 164: railway crossings (ontario.ca/laws)', 'https://www.ontario.ca/laws/statute/90h08'],
 };
 
 export function testGuides() {
@@ -37,7 +40,7 @@ export function testGuides() {
     guidePage({
       slug: 'how-to-book-a-road-test-ontario',
       published: DATE, updated: DATE,
-      title: 'Booking a Road Test in Ontario: Earlier Dates and Rules | Mrs. Akbar',
+      title: 'Booking a Road Test in Ontario: Earlier Dates and Rules',
       description: 'How to book your G2 or G road test with DriveTest, find an earlier date, use the standby list, and avoid losing your fee when you need to change or cancel.',
       script: 'road tests',
       dek: 'Booking online, by phone or in person, how to find an earlier date, and the rules that can cost you your fee.',
@@ -110,7 +113,7 @@ export function testGuides() {
     guidePage({
       slug: 'why-people-fail-the-g2-road-test',
       published: DATE, updated: DATE,
-      title: 'Why People Fail the G2 Road Test (and What to Do Next) | Mrs. Akbar',
+      title: 'Why People Fail the G2 Road Test (and What to Do Next)',
       description: 'The mistakes that most often fail the G2 road test in Ontario, the truth about automatic fails, and what to do after a fail: your scoresheet, the wait and the fee.',
       script: 'road tests',
       dek: 'The mistakes that cost people the test, what &ldquo;automatic fail&rdquo; really means, and a plan for your next attempt.',
@@ -185,6 +188,55 @@ export function testGuides() {
       related: ['how-to-pass-the-g2-road-test', 'how-to-book-a-road-test-ontario', 'hamilton-drivetest-centre'],
       lessons: lessonsChips(['/g2-road-test-preparation/', 'G2 road test prep'], ['/parallel-parking-lessons/', 'Parallel parking']),
       cta: ['Turn your scoresheet into a plan', 'Call or text with what your scoresheet says. Lessons start with the marks you lost.'],
+    }),
+    /* ---------- The roads around the Hamilton test centre ---------- */
+    // Speed limits and truck routes: City of Hamilton road segments (open data, checked 2026-10-28).
+    // Railway crossing: OpenStreetMap. Centre location: DriveTest's centre list and OpenStreetMap.
+    guidePage({
+      slug: 'hamilton-g2-road-test-route',
+      published: '2026-10-28', updated: '2026-10-28',
+      title: 'Hamilton G2 Road Test Route: Roads Near Kenora Ave',
+      description: 'The roads around the Hamilton DriveTest centre on Kenora Avenue: speed limits, the railway crossing, truck routes and how to practise for your G2 or G test.',
+      script: 'road tests',
+      dek: 'There&rsquo;s no published route to memorize. Here&rsquo;s what the streets around the Kenora Avenue centre are really like, and how to get ready for them.',
+      intro: 'Search for the Hamilton G2 test route and you&rsquo;ll find old maps and plenty of guesses. DriveTest examiners do use a set of predefined routes, but DriveTest doesn&rsquo;t publish them, and the examiner gives you directions as you drive. So the useful question isn&rsquo;t which route you&rsquo;ll get. It&rsquo;s whether you&rsquo;re ready for the kinds of roads around the centre. Here they are, with speed limits from the City of Hamilton&rsquo;s road data.',
+      sections: [
+        { id: 'where', h: 'Where the test starts', html: p('The Hamilton DriveTest centre is at <strong>370 Kenora Avenue North</strong>, just north of Barton Street East, between Nash Road North and Centennial Parkway North. It gives both the G2 and the G road tests. The <a href="/guides/hamilton-drivetest-centre/">Hamilton DriveTest centre guide</a> covers booking, what to bring and the car check.',
+          'DriveTest asks you to arrive at least 30 minutes early. If you&rsquo;ve never been, drive past the centre once before test day, so finding it isn&rsquo;t one more thing to think about.') },
+        { id: 'route', h: 'Is there a set route?', html: p('Yes and no. DriveTest says its examiners use a set of predefined test routes, along with set driving tasks and scoresheets, so everyone is judged the same way. Those routes aren&rsquo;t published, though, and you won&rsquo;t know which one you&rsquo;ll get. The examiner tells you where to go as you drive.',
+          'That&rsquo;s why memorizing a map from the internet doesn&rsquo;t help much. A route you find online may be out of date, and you aren&rsquo;t marked on knowing the way. You&rsquo;re marked on how you handle each road: your observation, your speed, your space and your control.') },
+        { id: 'roads', h: 'The roads around the centre', html: p('These are the streets right around Kenora Avenue, with the speed limits the City has on record for them.') +
+          h3('Kenora Avenue') + p('North of Barton Street East, where the centre is, Kenora Avenue is a 50&nbsp;km/h full-time truck route through an industrial area, so expect large trucks turning in and out. A short way north of the centre it crosses the CN railway at a level crossing with gates. South of Barton it changes character completely: a 40&nbsp;km/h residential street with side streets and courts.') +
+          h3('Barton Street East') + p('A 50&nbsp;km/h arterial road and full-time truck route, with bike lanes along parts of it. It&rsquo;s the place to practise busy intersections, left turns across oncoming traffic and lane changes.') +
+          h3('Nash Road North and Centennial Parkway North') + p('The main roads on either side of the centre, both posted at 50&nbsp;km/h. Centennial Parkway North is a busy truck route with an interchange at the QEW, so plenty of its traffic is heading to or from the highway. Nash Road North is a truck route north of Barton and a quieter road through a residential area south of it.') +
+          h3('The residential streets south of Barton') + p('Streets like Kentley Drive, Nugent Drive, Oakland Drive and Delawana Drive are posted at 40&nbsp;km/h, and Delawana drops to 30&nbsp;km/h along one stretch near Lake Avenue North. Parked cars, driveways and people walking: this is the kind of street where residential driving, smooth stops, a roadside stop or a three-point turn are easiest to practise.') +
+          h3('For the G test: the QEW and the Red Hill') + p('The QEW runs just north of the centre, posted at 100&nbsp;km/h, with an interchange at Centennial Parkway. To the west, the Red Hill Valley Parkway, mostly posted at 80&nbsp;km/h, has an interchange at Barton Street East. The <a href="/guides/g-road-test-tips/">G road test guide</a> covers merging, lane changes and exits.') },
+        { id: 'skills', h: 'What to practise for these roads', html: ul([
+          '<strong>The railway crossing.</strong> Slow down and look both ways as you approach. If the lights are flashing or the gates are down, stop at least 5 metres from the nearest rail, wait, and never drive around a gate. That&rsquo;s Ontario law, not just good test manners.',
+          '<strong>Trucks.</strong> Leave extra space behind large trucks, stay out of their blind spots, and expect them to swing wide when they turn.',
+          '<strong>Left turns on busy roads.</strong> Wait with your wheels straight, then go when there&rsquo;s a safe gap. The <a href="/guides/right-of-way-rules-ontario/">right-of-way guide</a> explains who goes first.',
+          '<strong>Lane changes.</strong> Mirror, signal, shoulder check, then move. The <a href="/guides/how-to-check-your-blind-spot/">blind spot guide</a> shows where to look.',
+          '<strong>Changing speed limits.</strong> Around the centre the limit changes from 50 to 40 to 30&nbsp;km/h within a few blocks, so check the sign each time you turn onto a new street.',
+          '<strong>Residential skills.</strong> Smooth stops, the <a href="/guides/how-to-do-a-three-point-turn/">three-point turn and roadside stop</a>, and <a href="/guides/how-to-parallel-park/">parallel parking</a>.',
+        ]) },
+        inlineCta('Testing at Kenora Avenue? Call or text Mrs. Akbar.'),
+        { id: 'week', h: 'The week before your test', html: ol([
+          '<strong>Practise the skills, not a route.</strong> Railway crossings, left turns, lane changes and residential streets, until each one feels routine.',
+          '<strong>Leave the backup camera off.</strong> Driving aids can&rsquo;t be used during the test, so park with your mirrors and shoulder checks.',
+          '<strong>Do a mock test.</strong> Have someone give you directions without warning, the way the examiner will.',
+          '<strong>Book a lesson close to the date.</strong> A lesson in the east end lets you practise these kinds of roads with someone watching for the habits examiners mark.',
+        ]) + quote(review('Gazali Fauzan', 'The lessons were structured and focused on what the examiner looks for.'), 'passed the G2') },
+      ],
+      sources: [S.testsOverview, S.centres, S.roadTests, S.cityRoads, S.osm, S.hta],
+      faqs: [
+        ['Is there an official G2 test route in Hamilton?', 'DriveTest examiners use a set of predefined routes, but DriveTest doesn&rsquo;t publish them, and the examiner gives you directions as you drive. Being comfortable with the kinds of roads around the centre helps more than memorizing a map.'],
+        ['What are the speed limits around the Hamilton DriveTest centre?', 'Kenora Avenue is 50&nbsp;km/h north of Barton Street East and 40&nbsp;km/h south of it. Barton Street East, Nash Road North and Centennial Parkway North are 50&nbsp;km/h, and some residential streets nearby drop to 30&nbsp;km/h.'],
+        ['Is there a railway crossing near the Hamilton DriveTest centre?', 'Yes. Kenora Avenue crosses the CN railway just north of the centre, at a level crossing with gates. When the lights flash or the gates are down, stop at least 5 metres from the nearest rail, and never drive around a gate.'],
+        ['Which highways are near the Kenora Avenue centre?', 'The QEW runs just north of it, with an interchange at Centennial Parkway, and to the west the Red Hill Valley Parkway has an interchange at Barton Street East.'],
+      ],
+      related: ['hamilton-drivetest-centre', 'how-to-pass-the-g2-road-test', 'why-people-fail-the-g2-road-test'],
+      lessons: lessonsChips(['/g2-road-test-preparation/', 'G2 road test prep'], ['/g-road-test-preparation/', 'G test and highway'], ['/driving-lessons-east-hamilton/', 'Lessons in East Hamilton']),
+      cta: ['Testing at Kenora Avenue?', 'Tell her your test date. Lessons can include the kinds of roads around the centre, so test day feels familiar.'],
     }),
   ];
 }
