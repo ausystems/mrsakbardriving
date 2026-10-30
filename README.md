@@ -16,7 +16,7 @@
 
 ## At a glance
 
-- **57 pages:** the home page, 5 lesson pages, 14 area pages, 31 guides and a guides index, a reviews
+- **62 pages:** the home page, 5 lesson pages, 14 area pages, 36 guides and a guides index, a reviews
   page, contact, a Privacy Policy, Terms and Conditions, and a custom 404.
 - **Fast:** Lighthouse 100 for performance, accessibility, best practices and SEO on phones, with no layout shift.
   Each page inlines only the CSS it uses.
@@ -81,7 +81,7 @@ structured data, `sitemap.xml`, `robots.txt` and `llms.txt` all follow it.
 | Home | `/` | `index.html` (hand-written) |
 | Lessons (5) | beginner, nervous drivers, G2, G and highway, parallel parking | `scripts/site/pages-services.mjs` |
 | Areas (14) | Hamilton, Downtown Hamilton, Hamilton Mountain, East Hamilton, West Hamilton, Westdale, near McMaster, Mount Hope, Binbrook, Glanbrook, Ancaster, Dundas, Stoney Creek, Caledonia | `scripts/site/pages-areas.mjs`, `areas-content.mjs` |
-| Guides (31 + index) | `/guides/...` | `scripts/site/guide-list.mjs` (order and section), `pages-guides.mjs`, `guides-start.mjs`, `guides-rules.mjs`, `guides-skills.mjs`, `guides-tests.mjs`, `guide-mountain.mjs` |
+| Guides (36 + index) | `/guides/...` | `scripts/site/guide-list.mjs` (order and section), `pages-guides.mjs`, `guides-start.mjs`, `guides-rules.mjs`, `guides-skills.mjs`, `guides-tests.mjs`, `guides-licence.mjs` (G1 and G2 rules), `guides-driving.mjs` (highway, turns, night and rain), `guide-mountain.mjs` |
 | Reviews | `/reviews/`: word-for-word excerpts grouped by theme, no count and no review markup | `pages-reviews.mjs` |
 | Contact, Privacy Policy, Terms and Conditions | `/contact/`, `/privacy-policy/`, `/terms-and-conditions/` | `pages-contact.mjs`, `pages-legal.mjs` |
 | 404 | `404.html` (never indexed) | `pages-404.mjs` |

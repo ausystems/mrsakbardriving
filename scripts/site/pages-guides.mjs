@@ -10,6 +10,8 @@ import { startGuides } from './guides-start.mjs';
 import { ruleGuides } from './guides-rules.mjs';
 import { skillGuides } from './guides-skills.mjs';
 import { testGuides } from './guides-tests.mjs';
+import { licenceGuides } from './guides-licence.mjs';
+import { drivingGuides } from './guides-driving.mjs';
 
 export const SRC = {
   getG: ['Get a G driver&rsquo;s licence: new drivers (ontario.ca)', 'https://www.ontario.ca/page/get-g-drivers-licence-new-drivers'],
@@ -110,6 +112,7 @@ export function guidePages() {
     /* ---------- 1. Passing the G2 ---------- */
     guidePage({
       slug: 'how-to-pass-the-g2-road-test',
+      updated: '2026-10-30',
       title: 'How to Pass the G2 Road Test in Ontario (Hamilton Guide)',
       description: 'What the G2 road test checks, the habits examiners watch for, how to practise in the last few weeks, and what to bring on the day. A Hamilton instructor’s guide.',
       script: 'road tests',
@@ -145,6 +148,9 @@ export function guidePages() {
       sources: [SRC.getG, SRC.roadTests, SRC.vehicle, SRC.handbookRoadTest],
       faqs: [
         ['How long is the G2 road test?', 'Usually about 20 minutes.'],
+        ['Does the G2 road test include highway driving?', 'No. The G2 test covers basic skills such as turns, stops, lane changes, one-way streets, residential streets, parallel parking and three-point turns. Highway driving is part of the G road test.'],
+        ['Do I need my own car for the G2 road test?', 'You need to bring one, because DriveTest doesn&rsquo;t provide cars. It can be owned, borrowed or rented, as long as it&rsquo;s plated, insured and in good working order.'],
+        ['What happens if it rains on the day of my road test?', 'Road tests go ahead in any weather unless DriveTest tells you otherwise, so it&rsquo;s worth practising in the rain too. The <a href="/guides/driving-at-night-and-in-the-rain/">night and rain guide</a> covers what changes.'],
         ['Can my driving instructor ride with me during the test?', 'No. Nobody rides along during a road test. With your consent, an instructor can help at check-in and at the debrief afterwards.'],
         ['What happens if my car fails the examiner&rsquo;s check?', 'The test is declared out of order and you lose half of the road test fee. Common problems are a turn signal, brake light or horn that doesn&rsquo;t work, a damaged windshield and a temporary spare tire.'],
       ],
@@ -192,6 +198,7 @@ export function guidePages() {
     /* ---------- 3. The G road test ---------- */
     guidePage({
       slug: 'g-road-test-tips',
+      updated: '2026-10-30',
       title: 'The G Road Test in Ontario: What Changes After the G2',
       description: 'The G road test explained: the highway declaration, what full-time DriveTest centres test right now, and how to merge, change lanes and exit with confidence.',
       script: 'road tests',
@@ -214,12 +221,13 @@ export function guidePages() {
         ]) },
         inlineCta('Want highway time with an instructor beside you? Call or text Mrs. Akbar.'),
         { id: 'exits', h: 'Changing lanes and getting off', html: p('Lane changes at highway speed are the same routine as in the city, done earlier and more smoothly: mirror, signal, shoulder check, then a gradual move. Plan exits well ahead. Get into the right lane early, signal, and do most of your slowing on the exit ramp rather than on the highway itself.') },
-        { id: 'hamilton', h: 'Practising around Hamilton', html: p('Hamilton has a good spread of practice roads. Highway 403 runs west through Ancaster and north through the west end. The QEW runs along the lake through Stoney Creek. The Lincoln Alexander Parkway crosses the Mountain, and the Red Hill Valley Parkway, posted at 80 km/h for most of its length, connects it to the QEW.') +
+        { id: 'hamilton', h: 'Practising around Hamilton', html: p('New to highways altogether? The <a href="/guides/how-to-drive-on-the-highway/">highway driving guide</a> starts from the very first merge.') + p('Hamilton has a good spread of practice roads. Highway 403 runs west through Ancaster and north through the west end. The QEW runs along the lake through Stoney Creek. The Lincoln Alexander Parkway crosses the Mountain, and the Red Hill Valley Parkway, posted at 80 km/h for most of its length, connects it to the QEW.') +
           quote(review('Maher Ahmad', 'She helped me prepare for the G test', 'pass on the first try!'), 'passed the G, first try') },
       ],
       sources: [SRC.roadTests, SRC.getG, SRC.handbookFreeway, SRC.handbookRoadTest, SRC.rhvp],
       faqs: [
         ['How long after my G2 can I take the G road test?', 'After you&rsquo;ve held your G2 for 12 months.'],
+        ['Is the modified G road test permanent?', 'DriveTest says the G test is modified at full-time centres until further notice. Part-time Travel Point locations still give the standard G test.'],
         ['Is parallel parking on the G test?', 'Not at full-time DriveTest centres right now. Their G test is a modified version that leaves out parallel parking, the roadside stop, the three-point turn and residential driving. Part-time Travel Points still give the standard test.'],
         ['How much highway driving do I need before the G test?', 'DriveTest asks for at least five trips in the three months before the test on 400-series highways, freeways like the QEW, or highways with limits of 80 km/h or more.'],
       ],
@@ -231,6 +239,7 @@ export function guidePages() {
     /* ---------- 4. G1, G2 and G explained ---------- */
     guidePage({
       slug: 'ontario-g1-g2-g-licence-explained',
+      updated: '2026-10-30',
       title: 'G1, G2 and G Licences in Ontario Explained (2026)',
       description: 'Ontario’s graduated licensing in plain words: how to get a G1, the G1 and G2 rules, when you can take each road test, and how long it all takes.',
       script: 'getting started',
@@ -249,9 +258,9 @@ export function guidePages() {
           'No driving between midnight and 5&nbsp;a.m.',
           'No more passengers than working seatbelts.',
           'No 400-series highways, such as the 403, and no high-speed expressways, such as the QEW.',
-        ]) + callout('rule', 'The instructor exception', p('If the person beside you is a driving instructor licensed in Ontario, the highway rule doesn&rsquo;t apply, so you can practise on any road. That&rsquo;s why many learners get their first highway time in lessons.')) },
+        ]) + callout('rule', 'The instructor exception', p('If the person beside you is a driving instructor licensed in Ontario, the highway rule doesn&rsquo;t apply, so you can practise on any road. That&rsquo;s why many learners get their first highway time in lessons.')) + p('The <a href="/guides/g1-licence-rules-ontario/">G1 rules guide</a> answers the detailed questions, from which roads you can use to who can sit beside you.') },
         { id: 'g2', h: 'G2 and its rules', html: p('Pass the G2 road test and you can drive on your own, on any road. A few rules still apply:') +
-          ul(['Zero blood alcohol.', 'No more passengers than working seatbelts.', 'If you&rsquo;re 19 or under, between midnight and 5&nbsp;a.m.: one passenger aged 19 or under in your first six months, then up to three, until you get your G or turn 20. Family members and a fully licensed driver in the front seat are exceptions.']) },
+          ul(['Zero blood alcohol.', 'No more passengers than working seatbelts.', 'If you&rsquo;re 19 or under, between midnight and 5&nbsp;a.m.: one passenger aged 19 or under in your first six months, then up to three, until you get your G or turn 20. Family members and a fully licensed driver in the front seat are exceptions.']) + p('The <a href="/guides/g2-licence-rules-ontario/">G2 rules guide</a> walks through the passenger rule with real examples.') },
         inlineCta('Starting your G1, or ready for the G2? Call or text Mrs. Akbar.'),
         { id: 'g', h: 'The full G', html: p('After 12 months on your G2, the G road test is your last step. It includes highway driving, and you&rsquo;ll sign a declaration of your recent highway experience first. The <a href="/guides/g-road-test-tips/">G road test guide</a> explains both.',
           'One rule doesn&rsquo;t go away with a full licence: every driver aged 21 or under must keep their blood alcohol at zero, whatever licence they hold.') },
@@ -312,6 +321,7 @@ export function guidePages() {
     /* ---------- 6. Nervous drivers ---------- */
     guidePage({
       slug: 'nervous-driver-tips',
+      updated: '2026-10-30',
       title: 'Nervous About Driving? Practical Tips That Actually Help',
       description: 'Driving anxiety is common. Practical things that help before and during a drive, how to build up gradually, and how to handle test-day nerves.',
       script: 'getting started',
@@ -334,8 +344,9 @@ export function guidePages() {
         inlineCta('Want calm lessons with no rush? Call or text Mrs. Akbar.'),
         { id: 'layers', h: 'Build up in layers', html: ol(['Quiet streets and empty parking lots', 'Residential streets with a bit of traffic', 'Busier roads with traffic lights and turning lanes', 'Faster roads, then the highway']) +
           p('Move to the next layer when the current one feels a little boring. Boring means your brain has stopped treating it as a threat.') },
-        { id: 'specific', h: 'When the fear is about something specific', html: `<h3>Left turns</h3>${p('While you wait to turn left across traffic, keep your wheels pointing straight ahead until it&rsquo;s clear. If someone hits you from behind, straight wheels won&rsquo;t push you into oncoming traffic.')}` +
-          `<h3>Merging</h3>${p('The scary part is usually going too slowly. Use the whole ramp to get up to speed; the <a href="/guides/g-road-test-tips/">G road test guide</a> walks through it.')}` +
+        { id: 'specific', h: 'When the fear is about something specific', html: `<h3>Left turns</h3>${p('While you wait to turn left across traffic, keep your wheels pointing straight ahead until it&rsquo;s clear. If someone hits you from behind, straight wheels won&rsquo;t push you into oncoming traffic. The <a href="/guides/how-to-turn-left-and-right/">turning guide</a> breaks every kind of turn into steps.')}` +
+          `<h3>Merging</h3>${p('The scary part is usually going too slowly. Use the whole acceleration lane to get up to speed; the <a href="/guides/how-to-drive-on-the-highway/">highway driving guide</a> walks through it, starting with quieter roads like the Linc.')}` +
+          `<h3>Night and rain</h3>${p('Learn a route in daylight and dry weather first, then drive it at dusk or in light rain. The <a href="/guides/driving-at-night-and-in-the-rain/">night and rain guide</a> covers headlights, glare and wet roads.')}` +
           `<h3>Parking</h3>${p('It&rsquo;s a method, not a talent. The <a href="/guides/how-to-parallel-park/">parallel parking guide</a> breaks it into steps.')}` +
           `<h3>Roundabouts</h3>${p('They run on one rule: traffic already in the roundabout goes first. Start with single-lane ones, and read the <a href="/guides/how-to-drive-a-roundabout/">roundabout guide</a> before trying two-lane ones.')}` },
         { id: 'test', h: 'Test-day nerves', html: p('Practise in test conditions: someone giving directions without warning, no backup camera, and the full routine of mirror, signal and shoulder check. A lesson close to the test can help too.') +
@@ -345,6 +356,7 @@ export function guidePages() {
       sources: [SRC.handbookRoadTest, SRC.getG],
       faqs: [
         ['Is it normal to be scared of driving?', 'Very. Nervous drivers come up again and again in her reviews, and many of them went on to pass.'],
+        ['What if left turns scare me?', 'Keep your wheels straight while you wait, go only when you&rsquo;re sure of the gap, and practise at quieter intersections first. The turning guide breaks it down step by step.'],
         ['What helps with driving anxiety during a lesson?', 'Slow breathing at stops, talking through what you see, looking further ahead, and pulling over somewhere safe when you need a minute.'],
       ],
       related: ['how-to-drive-a-roundabout', 'how-many-driving-lessons-do-you-need', 'how-to-parallel-park'],
@@ -473,7 +485,7 @@ export function guidePages() {
         ['Do road tests get cancelled for snow?', 'Road tests go ahead in any weather unless DriveTest tells you otherwise. Check DriveTest&rsquo;s service disruptions page in extreme weather.'],
         ['Where does ice form first?', 'On bridges, overpasses and shaded parts of the road. Shiny black pavement can be black ice.'],
       ],
-      related: ['driving-the-hamilton-mountain-accesses', 'defensive-driving-tips', 'what-to-do-after-a-car-accident-ontario'],
+      related: ['driving-the-hamilton-mountain-accesses', 'driving-at-night-and-in-the-rain', 'what-to-do-after-a-car-accident-ontario'],
       lessons: lessonsChips(['/g-road-test-preparation/', 'G test and highway'], ['/driving-lessons-hamilton/', 'Lessons in Hamilton']),
       cta: ['Get some winter practice in', 'A lesson or two in winter conditions takes a lot of the fear out of the first snowfall.'],
     }),
@@ -481,6 +493,8 @@ export function guidePages() {
     ...ruleGuides(),
     ...skillGuides(),
     ...testGuides(),
+    ...licenceGuides(),
+    ...drivingGuides(),
   ];
 }
 
@@ -494,6 +508,11 @@ export function guidesHub() {
     'hamilton-g2-road-test-route': 'The streets around the Kenora Avenue centre: speed limits, the railway crossing and what to practise.',
     'g-road-test-tips': 'The highway declaration, what the test covers right now, and merging without drama.',
     'ontario-g1-g2-g-licence-explained': 'How each licence level works, the rules that come with it, and how long it takes.',
+    'g1-licence-rules-ontario': 'Night driving, highways, passengers and who can sit beside you, one question at a time.',
+    'g2-licence-rules-ontario': 'Highways, zero alcohol, and the late-night passenger limit for drivers 19 and under, with examples.',
+    'how-to-turn-left-and-right': 'The right lane, signals, advance greens and arrows, and turning on a red light.',
+    'how-to-drive-on-the-highway': 'Merging, speed and space, lane changes, exits, and where to start around Hamilton.',
+    'driving-at-night-and-in-the-rain': 'Headlights, glare, hydroplaning, fog and drowsy driving.',
     'how-many-driving-lessons-do-you-need': 'What changes the number, with real examples from her reviews.',
     'nervous-driver-tips': 'Practical things that help before and during a drive.',
     'new-to-ontario-drivers-licence': 'The 60-day rule, licence exchanges and experience credit.',

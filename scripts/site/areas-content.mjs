@@ -377,7 +377,7 @@ export const AREA_CONTENT = (review) => [
       ['Can I turn left on a red light downtown?', 'Only from a one-way street onto another one-way street, after a full stop and when it&rsquo;s clear, unless a sign says otherwise. The City says it isn&rsquo;t allowed from or onto Cannon Street, because its two-way bike track means it no longer counts as one-way.'],
       ['Is there a roundabout downtown?', 'No. The nearest is a small single-lane roundabout on Harbour Front Drive, by the waterfront north of downtown.'],
     ],
-    guides: ['right-of-way-rules-ontario', 'how-to-parallel-park', 'how-to-pass-the-g2-road-test'],
+    guides: ['how-to-turn-left-and-right', 'how-to-parallel-park', 'how-to-pass-the-g2-road-test'],
     cta: ['Learning to drive downtown?', 'Tell her where you are and what feels hardest. One-way streets can be part of it.'],
   },
 
@@ -460,7 +460,7 @@ export const AREA_CONTENT = (review) => [
       ['What is the speed limit on the Claremont Access?', 'Mostly 70&nbsp;km/h, with some 60&nbsp;km/h stretches. It&rsquo;s divided, with merges and no sidewalk.'],
       ['Are there roundabouts on the Mountain?', 'A few. The main one is a single-lane roundabout on Stone Church Road West at Omni Boulevard, on the west Mountain, and there are small ones in some newer subdivisions.'],
     ],
-    guides: ['driving-the-hamilton-mountain-accesses', 'g-road-test-tips', 'winter-driving-in-hamilton'],
+    guides: ['driving-the-hamilton-mountain-accesses', 'how-to-drive-on-the-highway', 'winter-driving-in-hamilton'],
     cta: ['Learning to drive on the Mountain?', 'Tell her where you are and whether you feel ready for the Linc. She&rsquo;ll plan from there.'],
   },
 

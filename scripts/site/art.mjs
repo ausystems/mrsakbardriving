@@ -40,6 +40,9 @@ const GLYPHS = {
   shield: '<path class="sg-s" d="M32 19.5 43 23.5v8c0 7-4.7 11.5-11 13.5-6.3-2-11-6.5-11-13.5v-8Z"/><path class="sg-s" d="M27 32.2l3.5 3.5 7-7.5" style="stroke-width:2.8"/>',
   glass: '<path class="sg-s" d="M26 21h12l-1.5 9a4.5 4.5 0 0 1-9 0ZM32 34.5V42M27.5 42h9M20 44 44 20"/>',
   hazard: '<path class="sg-s" d="M32 19.5 44.5 41.5h-25Z"/><path class="sg-s" d="M32 28v6" style="stroke-width:2.8"/><circle class="sg-f" cx="32" cy="37.8" r="1.8"/>',
+  turn: '<path class="sg-s" d="M38 45V31.5a6.5 6.5 0 0 0-6.5-6.5H23.5M28 20.5 23.5 25l4.5 4.5"/>',
+  road: '<path class="sg-s" d="M25.5 45 29.5 19M38.5 45l-4-26"/><path class="sg-s" d="M32 43v-4.5M32 34v-3.5M32 26.5V24" style="stroke-width:2.4"/>',
+  moon: '<path class="sg-f" d="M30.5 19.6a9.6 9.6 0 1 0 10.9 12.5 7.6 7.6 0 0 1-10.9-12.5Z"/><path class="sg-s" d="M36.6 37.6 34.9 42M42 36.2l-1.7 4.4" style="stroke-width:2.6"/>',
 };
 export function signIcon(glyph) {
   return `<svg class="sign" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g class="sign-board"><rect x="13" y="13" width="38" height="38" rx="5" transform="rotate(45 32 32)" class="sign-face"/>${GLYPHS[glyph] || ''}</g></svg>`;

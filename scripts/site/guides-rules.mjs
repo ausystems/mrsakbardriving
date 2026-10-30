@@ -200,12 +200,12 @@ export function ruleGuides() {
           'Wait for oncoming traffic and for pedestrians crossing where you&rsquo;re turning. Your signal doesn&rsquo;t give you the right-of-way.',
           'Keep your wheels pointing straight while you wait. If you&rsquo;re hit from behind, turned wheels can push you into oncoming traffic.',
           'Watch for oncoming cyclists, and don&rsquo;t pull up beside a bicycle or motorcycle that&rsquo;s turning left.',
-        ]) + p('Not yielding to a pedestrian at a signalized crosswalk costs $300 to $1,000 and 4 demerit points.') },
+        ]) + p('Not yielding to a pedestrian at a signalized crosswalk costs $300 to $1,000 and 4 demerit points. The <a href="/guides/how-to-turn-left-and-right/">turning guide</a> covers which lane to start and finish in.') },
         { id: 'right', h: 'Right turns and turning right on red', html: ul([
           'Wait for pedestrians crossing where you&rsquo;re turning.',
           'Shoulder check for cyclists coming up beside you in a bike lane, on the sidewalk or on a trail.',
           'Turning right on a red light is allowed after a complete stop, once the way is clear, unless a sign forbids it.',
-        ]) + callout('local', 'Hamilton note', p('Right turns on red are banned at a number of intersections along Main Street and King Street downtown. Watch for the signs.')) },
+        ]) + callout('local', 'Hamilton note', p('Right turns on red are banned at a number of intersections along Main Street and King Street downtown. Watch for the signs.')) + p('Left turns on red, advance greens and turning arrows are in the <a href="/guides/how-to-turn-left-and-right/">turning guide</a>.') },
         { id: 'lights', h: 'Flashing lights and lights that are out', html: ul([
           '<strong>Flashing red:</strong> stop completely, yield, then go when it&rsquo;s safe.',
           '<strong>Flashing yellow:</strong> go through with caution.',

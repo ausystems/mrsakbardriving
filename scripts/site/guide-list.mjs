@@ -4,6 +4,8 @@ export const GUIDE_CATS = ['Getting started', 'Rules of the road', 'Skills', 'Ro
 
 export const GUIDE_LIST = [
   { slug: 'ontario-g1-g2-g-licence-explained', short: 'G1, G2 and G explained', title: 'G1, G2 and G: Ontario’s licence levels, explained', cat: 'Getting started', sign: 'steps', footer: true },
+  { slug: 'g1-licence-rules-ontario', short: 'G1 rules', title: 'G1 rules in Ontario: what you can and can’t do on a G1', cat: 'Getting started', sign: 'lock', footer: false },
+  { slug: 'g2-licence-rules-ontario', short: 'G2 rules', title: 'G2 rules in Ontario: what you can and can’t do on a G2', cat: 'Getting started', sign: 'doc', footer: false },
   { slug: 'how-to-pass-the-g1-test', short: 'Passing the G1 test', title: 'How to pass the G1 test in Ontario', cat: 'Getting started', sign: 'pencil', footer: true },
   { slug: 'g1-practice-test', short: 'G1 practice test', title: 'G1 practice test: 40 questions with answers', cat: 'Getting started', sign: 'quiz', footer: true },
   { slug: 'how-to-drive-a-car', short: 'How to drive a car', title: 'How to drive a car: a beginner’s step-by-step guide', cat: 'Getting started', sign: 'wheel', footer: false },
@@ -21,11 +23,14 @@ export const GUIDE_LIST = [
   { slug: 'demerit-points-ontario', short: 'Demerit points', title: 'Demerit points in Ontario: how they work', cat: 'Rules of the road', sign: 'points', footer: false },
   { slug: 'what-to-do-after-a-car-accident-ontario', short: 'After a collision', title: 'What to do after a car accident in Ontario', cat: 'Rules of the road', sign: 'hazard', footer: false },
   { slug: 'how-to-check-your-blind-spot', short: 'Mirrors and blind spots', title: 'How to adjust your mirrors and check your blind spot', cat: 'Skills', sign: 'eye', footer: false },
+  { slug: 'how-to-turn-left-and-right', short: 'Left and right turns', title: 'How to turn left and right at an intersection', cat: 'Skills', sign: 'turn', footer: false },
   { slug: 'defensive-driving-tips', short: 'Defensive driving', title: 'Defensive driving: habits that keep new drivers safe', cat: 'Skills', sign: 'shield', footer: false },
   { slug: 'how-to-parallel-park', short: 'How to parallel park', title: 'How to parallel park, step by step', cat: 'Skills', sign: 'parking', footer: false },
   { slug: 'how-to-reverse-park', short: 'Reverse parking', title: 'How to reverse park, step by step', cat: 'Skills', sign: 'reverse', footer: false },
   { slug: 'how-to-do-a-three-point-turn', short: 'Three-point turns', title: 'How to do a three-point turn (and the roadside stop)', cat: 'Skills', sign: 'uturn', footer: false },
   { slug: 'how-to-drive-a-roundabout', short: 'Driving a roundabout', title: 'How to drive a roundabout in Ontario', cat: 'Skills', sign: 'roundabout', footer: false },
+  { slug: 'how-to-drive-on-the-highway', short: 'Highway driving', title: 'How to drive on the highway for the first time', cat: 'Skills', sign: 'road', footer: false },
+  { slug: 'driving-at-night-and-in-the-rain', short: 'Night and rain driving', title: 'Driving at night and in the rain: a new driver’s guide', cat: 'Skills', sign: 'moon', footer: false },
   { slug: 'how-to-pass-the-g2-road-test', short: 'Passing the G2', title: 'How to pass the G2 road test in Ontario', cat: 'Road tests', sign: 'check', footer: true, featured: true },
   { slug: 'why-people-fail-the-g2-road-test', short: 'Why people fail the G2', title: 'Why people fail the G2 road test (and what to do next)', cat: 'Road tests', sign: 'alert', footer: false },
   { slug: 'how-to-book-a-road-test-ontario', short: 'Booking a road test', title: 'How to book a road test in Ontario (and get an earlier date)', cat: 'Road tests', sign: 'calendar', footer: true },

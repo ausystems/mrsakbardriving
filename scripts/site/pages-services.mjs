@@ -129,7 +129,7 @@ export function servicePages() {
         ['How much do lessons cost?', 'Call or text <a href="tel:+14164575778">416-457-5778</a> for her current prices. Plenty of her Google reviews call the price reasonable, and once she knows where you&rsquo;re starting, she can give you an honest idea of how many lessons you might need.'],
         ['Can a parent or friend help me practise between lessons?', 'Yes, as long as they meet the G1 rules for the person beside you: fully licensed, at least four years of driving experience, and a blood alcohol level under .05 (zero if they&rsquo;re 21 or under). Practising what you covered in a lesson helps it stick.'],
       ],
-      guides: ['first-driving-lesson', 'how-to-drive-a-car', 'how-many-driving-lessons-do-you-need'],
+      guides: ['first-driving-lesson', 'how-to-drive-a-car', 'g1-licence-rules-ontario'],
       cta: ['Book your first lesson', 'Tell her you&rsquo;re a beginner, where you live and when you&rsquo;re free. She&rsquo;ll take it from there.'],
     }),
 
@@ -181,7 +181,7 @@ export function servicePages() {
         ['How much do lessons cost?', 'Call or text <a href="tel:+14164575778">416-457-5778</a> for her current prices. Plenty of her Google reviews call the price reasonable, and once she knows where you&rsquo;re starting, she can give you an honest idea of how many lessons you might need.'],
         ['How long until I feel confident?', 'Everyone is different. One student, Katherine, wrote: &ldquo;After just a few lessons, I already feel much more confident behind the wheel.&rdquo;'],
       ],
-      guides: ['nervous-driver-tips', 'how-to-drive-a-roundabout', 'how-many-driving-lessons-do-you-need'],
+      guides: ['nervous-driver-tips', 'how-to-drive-on-the-highway', 'how-many-driving-lessons-do-you-need'],
       cta: ['Start with one calm lesson', 'Tell her you&rsquo;re nervous when you call. It&rsquo;s useful to know, and it&rsquo;s nothing she hasn&rsquo;t heard before.'],
     }),
 
@@ -312,7 +312,7 @@ export function servicePages() {
         ['Can I practise on the highway with a G1?', 'Only with a licensed driving instructor. G1 drivers can&rsquo;t use 400-series highways like the 403, or the QEW, unless the person beside them is a driving instructor.'],
         ['How much do lessons cost?', 'Call or text <a href="tel:+14164575778">416-457-5778</a> for her current prices. Plenty of her Google reviews call the price reasonable, and once she knows where you&rsquo;re starting, she can give you an honest idea of how many lessons you might need.'],
       ],
-      guides: ['g-road-test-tips', 'ontario-speed-limits-and-speeding-tickets', 'hamilton-drivetest-centre'],
+      guides: ['g-road-test-tips', 'how-to-drive-on-the-highway', 'g2-licence-rules-ontario'],
       cta: ['Ready for the full licence?', 'Tell her when your G test is and how much highway driving you&rsquo;ve done. She&rsquo;ll plan the lessons around both.'],
     }),
 
