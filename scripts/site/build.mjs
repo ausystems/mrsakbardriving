@@ -11,6 +11,7 @@ import { areaPages } from './pages-areas.mjs';
 import { guidePages, guidesHub } from './pages-guides.mjs';
 import { contactPage } from './pages-contact.mjs';
 import { reviewsPage } from './pages-reviews.mjs';
+import { dashChartSvg } from './guides-explainers.mjs';
 import { privacyPage, termsPage } from './pages-legal.mjs';
 import { notFoundPage } from './pages-404.mjs';
 import { areaBento, BENTO_SLUGS } from './area-bento.mjs';
@@ -87,6 +88,8 @@ fs.writeFileSync(path.join(partials, 'site-floating.html'), floating());
 const missing = BENTO_SLUGS.filter((slug) => !all.some((p) => p.path === `/${slug}/`));
 if (missing.length) console.warn(`site: area grid links to pages not built yet: ${missing.join(', ')}`);
 fs.writeFileSync(path.join(partials, 'area-bento.html'), bento);
+// The dashboard symbols chart that the warning lights guide shows and links to
+fs.writeFileSync(path.join(root, 'public/img/dashboard-warning-lights-chart.svg'), dashChartSvg());
 
 fs.writeFileSync(path.join(root, 'data/pages.json'), JSON.stringify(manifest, null, 1));
 const live = new Set(manifest.map((m) => m.path));

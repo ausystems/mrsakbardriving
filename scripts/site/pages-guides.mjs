@@ -515,7 +515,7 @@ export function guidesHub() {
     'how-to-turn-left-and-right': 'The right lane, signals, advance greens and arrows, and turning on a red light.',
     'how-to-drive-on-the-highway': 'Merging, speed and space, lane changes, exits, and where to start around Hamilton.',
     'driving-at-night-and-in-the-rain': 'Headlights, glare, hydroplaning, fog and drowsy driving.',
-    'dashboard-warning-lights': 'Red, yellow, green and blue: which lights mean pull over now, and which can wait.',
+    'dashboard-warning-lights': 'Pictures and meanings of 28 dashboard symbols, from the check engine light to tire pressure.',
     'stopping-distance': 'How far you really travel before the car stops, and why speed matters so much.',
     'how-many-driving-lessons-do-you-need': 'What changes the number, with real examples from her reviews.',
     'nervous-driver-tips': 'Practical things that help before and during a drive.',

@@ -7,6 +7,7 @@ import { guidePage } from './pages-guides.mjs';
 import { callout, inlineCta, quote } from './ui.mjs';
 import { review } from './core.mjs';
 import { p, ul, ol, h3, table, lessonsChips } from './guide-kit.mjs';
+import { dashIcon, dashChart } from './dash-icons.mjs';
 
 const DATE = '2026-10-31';
 const S = {
@@ -18,9 +19,54 @@ const S = {
   vehicle: ['Road test vehicle requirements (drivetest.ca)', 'https://drivetest.ca/tests/road-test-vehicle-requirements/'],
 };
 
-// A row of dashboard lamps: colour, name and what to do
-const lights = (items) => `<ul class="dash-lights" data-reveal>${items.map(([tone, name, what]) =>
-  `<li class="dash-light dash-light--${tone}"><span class="dash-light__lamp" aria-hidden="true"></span><span class="dash-light__name">${name}</span><span class="dash-light__what">${what}</span></li>`).join('')}</ul>`;
+// Every light: [colour, icon, name, looks like, what it means, what to do, chart label]
+const DASH = {
+  red: [
+    ['red', 'brake', 'Brake system warning light', 'An exclamation mark in a circle, with brackets on both sides. Some cars show the word BRAKE.', 'The parking brake is on, the brake fluid is low, or the brake system has a fault.', 'Make sure the parking brake is fully off. If the light stays on, pull over safely and get help. Don&rsquo;t drive on brakes that might fail.', 'Brake system'],
+    ['red', 'oil', 'Oil pressure warning light', 'An old-fashioned oil can with a drip.', 'The engine isn&rsquo;t getting enough oil pressure. Without it, an engine can be badly damaged quickly.', 'Pull over safely and turn the engine off. Once it has cooled, check the oil level with the dipstick, and get help before driving on.', 'Oil pressure'],
+    ['red', 'temp', 'Engine temperature warning light', 'A thermometer floating in waves.', 'The engine is overheating. In some cars, a blue version of this light just means the engine is still cold.', 'Pull over safely, turn the engine off and let it cool. Never open the radiator cap on a hot engine: the coolant is under pressure and can burn you.', 'Engine temperature'],
+    ['red', 'battery', 'Battery or charging warning light', 'A car battery with plus and minus signs.', 'The car isn&rsquo;t charging its battery, usually because of a problem in the charging system. The car runs on what&rsquo;s left in the battery, then stops.', 'Turn off things you don&rsquo;t need, like the radio and seat heaters, and drive straight to somewhere safe or a garage. Switching off may mean the car won&rsquo;t restart.', 'Battery'],
+    ['red', 'steering', 'Power steering warning light', 'A steering wheel with an exclamation mark beside it.', 'The power steering has a fault. You can still steer, but the wheel may suddenly feel much heavier, especially at low speed.', 'Hold the wheel firmly, slow down and pull over somewhere safe. Get it checked before you drive on.', 'Power steering'],
+    ['red', 'airbag', 'Airbag warning light', 'A seated person with a big circle in front of them. Some cars show SRS.', 'The airbag system has a fault, so the airbags may not work in a crash.', 'The car still drives normally, but get it checked as soon as you can. Your seatbelt matters even more until it&rsquo;s fixed.', 'Airbag'],
+    ['red', 'seatbelt', 'Seatbelt reminder light', 'A seated person wearing a seatbelt.', 'You or a passenger isn&rsquo;t buckled up. Many cars chime as well.', 'Buckle up. In Ontario, the driver and every passenger must wear a seatbelt.', 'Seatbelt'],
+    ['red', 'door', 'Door open warning light', 'A car seen from above, with its doors open.', 'A door, the trunk or the hood isn&rsquo;t fully closed.', 'Stop somewhere safe and close it properly before you drive on.', 'Door open'],
+  ],
+  amber: [
+    ['amber', 'engine', 'Check engine light (engine management light)', 'An outline of an engine. Some cars show the words CHECK ENGINE.', 'The engine computer has found a problem. It can be minor, like a loose fuel cap, or more serious.', 'If it&rsquo;s steady, book a check soon. If it&rsquo;s flashing, many cars are warning of a serious problem: slow down, avoid hard acceleration and get it checked right away.', 'Check engine'],
+    ['amber', 'powertrain', 'Powertrain or transmission warning light', 'A gear, like a cog, with an exclamation mark inside.', 'In many cars, a fault in the powertrain: the parts that send power to the wheels, usually the transmission. The car may limit its power to protect itself.', 'Drive gently to a garage. If the car shifts strangely, slips or loses power, pull over safely and get help.', 'Powertrain'],
+    ['amber', 'throttle', 'Electronic throttle control light', 'A lightning bolt between two brackets.', 'A fault in the electronic throttle, the system that connects your gas pedal to the engine. The car may switch to a reduced-power mode.', 'Drive carefully to a garage, and expect less power when you speed up. Get it checked soon.', 'Throttle control'],
+    ['amber', 'abs', 'ABS warning light', 'The letters ABS in a circle, between brackets.', 'The anti-lock braking system has a fault. Your normal brakes still work, but the wheels can lock up if you brake hard.', 'Leave extra space, brake early and gently, and get it checked soon. If the red brake light comes on too, stop driving and get help.', 'ABS'],
+    ['amber', 'tpms', 'Tire pressure warning light (TPMS)', 'A tire seen from the side, like a horseshoe, with an exclamation mark.', 'One or more tires is under-inflated. Low tires grip, steer and brake worse, and wear out faster.', 'Check all four tires with a gauge and fill them to the pressure on the tire sticker, usually inside the driver&rsquo;s door frame.', 'Tire pressure'],
+    ['amber', 'traction', 'Traction control or stability control light', 'A car with two wavy skid marks under it.', 'Flashing while you drive: the system is working, stopping your wheels from spinning on a slippery road. Staying on: the system is switched off or has a fault.', 'If it&rsquo;s flashing, ease off the gas and slow down. If it stays on, check you haven&rsquo;t switched it off by accident, then get it checked.', 'Traction control'],
+    ['amber', 'master', 'Master warning light', 'An exclamation mark in a triangle.', 'A general warning: the car has a message for you, usually shown on the screen between your gauges.', 'Read the message on the dashboard screen, or look it up in the owner&rsquo;s manual. Some cars show this light in red for urgent problems.', 'Master warning'],
+    ['amber', 'bulb', 'Bulb failure warning light', 'A light bulb with rays around it.', 'A bulb on the outside of the car is out: a headlight, brake light, turn signal or another light.', 'Walk around the car with the lights on, and ask someone to watch while you press the brake. Replace the bulb soon; an examiner checks your lights before a road test.', 'Bulb failure'],
+    ['amber', 'fuel', 'Low fuel warning light', 'A gas pump.', 'You&rsquo;re running low on fuel. Most cars keep a small reserve, but how far it lasts varies.', 'Fill up soon. Running out on a busy road or highway is a hazard for you and everyone around you. On many gauges, a small arrow beside the pump shows which side your fuel door is on.', 'Low fuel'],
+    ['amber', 'glow', 'Glow plug light (diesel engines)', 'A coil, like a spring.', 'Only in diesel cars. When you turn the key, the glow plugs are warming the engine so it can start, especially in cold weather. The light should go out after a few seconds.', 'Wait for it to go out before you start the engine. If it flashes or comes on while you&rsquo;re driving, many diesels are warning of an engine fault, so get it checked.', 'Glow plug (diesel)'],
+  ],
+  info: [
+    ['green', 'signals', 'Turn signal indicators', 'Two green arrows, pointing left and right.', 'Your turn signal or your hazard lights are on.', 'Switch it off once your turn is done; a leftover signal confuses other drivers. If it blinks much faster than usual, a bulb is probably out.', 'Turn signals'],
+    ['green', 'lowBeam', 'Headlight indicator (low beams)', 'A headlight with lines sloping down.', 'Your low-beam headlights are on.', 'Ontario requires your lights from half an hour before sunset to half an hour after sunrise, and whenever you can&rsquo;t see clearly 150 metres ahead.', 'Low beams'],
+    ['blue', 'highBeam', 'High beam indicator', 'A blue headlight with straight lines.', 'Your high beams are on.', 'Switch to low beams within 150 metres of an oncoming vehicle, and when you&rsquo;re within 60 metres behind another one.', 'High beams'],
+    ['green', 'frontFog', 'Front fog light indicator', 'A headlight with sloping lines crossed by a wavy line.', 'Your front fog lights are on.', 'Use them in fog together with your low beams, and turn them off once you can see clearly again.', 'Front fog lights'],
+    ['amber', 'rearFog', 'Rear fog light indicator', 'A lamp facing the other way, with straight lines crossed by a wavy line. Usually yellow or orange.', 'Your rear fog light is on: a very bright red light at the back of the car.', 'Use it only in thick fog, and switch it off as soon as you can see properly, because it can dazzle the driver behind you.', 'Rear fog light'],
+    ['red', 'hazard', 'Hazard lights indicator', 'A red triangle inside a triangle.', 'Your hazard lights, the four-way flashers, are on: all your turn signals flash together.', 'Use them when you&rsquo;re stopped or broken down where you could be a hazard, like on a highway shoulder. Switch them off once you&rsquo;re moving normally again.', 'Hazard lights'],
+    ['green', 'cruise', 'Cruise control indicator', 'A speedometer with an arrow.', 'Cruise control is on or set, and the car is holding your speed.', 'Ontario&rsquo;s Handbook says not to use cruise control in snow or other bad weather. Your foot on the brake switches it off.', 'Cruise control'],
+    ['green', 'eco', 'ECO mode indicator', 'The letters ECO, often in green.', 'The car&rsquo;s fuel-saving mode is on, or you&rsquo;re driving in a fuel-efficient way.', 'Nothing to do. It&rsquo;s good news, and smooth, gentle driving keeps it lit.', 'ECO mode'],
+    ['amber', 'defrost', 'Rear window defroster indicator', 'A rectangle, the back window, with wavy arrows pointing up.', 'The rear window defroster is heating the glass to clear fog, frost or ice.', 'Many cars switch it off by themselves after a few minutes. Clear every window properly before you drive, not just a little peephole.', 'Rear defroster'],
+    ['amber', 'childLock', 'Child lock indicator', 'A padlock, sometimes with a child symbol inside.', 'In cars with electric child locks, the rear doors can&rsquo;t be opened from inside, and often the rear windows are locked too.', 'Keep it on with young children in the back, and remember to switch it off when adults ride there.', 'Child lock'],
+  ],
+};
+
+// The colour code: a glowing dot, a title and a line
+const keys = (items) => `<ul class="dash-keys" data-reveal>${items.map(([tone, name, what]) =>
+  `<li class="dash-key dash-key--${tone}"><span class="dash-key__lamp" aria-hidden="true"></span><span class="dash-key__name">${name}</span><span class="dash-key__what">${what}</span></li>`).join('')}</ul>`;
+
+// One card per light: its symbol in its colour, then what it looks like, means and what to do
+const cards = (items) => `<ul class="dash-lights">${items.map(([tone, icon, name, looks, means, todo]) =>
+  `<li class="dash-light dash-light--${tone}" data-reveal><span class="dash-light__icon">${dashIcon(icon, `${name} symbol`)}</span><div class="dash-light__body"><h3 class="dash-light__name">${name}</h3><p class="dash-light__looks">Looks like: ${looks}</p><p><strong>What it means:</strong> ${means}</p><p><strong>What to do:</strong> ${todo}</p></div></li>`).join('')}</ul>`;
+
+// The printable chart of every symbol (written to public/img by build.mjs)
+export const dashChartSvg = () => dashChart([...DASH.red, ...DASH.amber, ...DASH.info].map(([tone, icon, , , , , label]) => [tone, icon, label]));
 
 export function explainerGuides() {
   return [
@@ -28,68 +74,67 @@ export function explainerGuides() {
     guidePage({
       slug: 'dashboard-warning-lights',
       published: DATE, updated: DATE,
-      title: 'Dashboard Warning Lights: What Each Colour and Symbol Means',
-      description: 'Dashboard warning lights in plain words: what red, yellow, green and blue mean, the lights that mean stop now, the ones that can wait, and what to do for each.',
+      title: 'Dashboard Warning Lights: Every Symbol and Meaning (Chart)',
+      description: 'What every dashboard warning light means, with pictures of 28 car symbols: check engine, oil, brake, battery, ABS, tire pressure and more, and what to do.',
       script: 'know your car',
-      dek: 'Your car talks to you in colours. Here&rsquo;s how to tell &ldquo;pull over now&rdquo; from &ldquo;book a check-up&rdquo; from &ldquo;all good.&rdquo;',
-      intro: 'A light pops up on the dashboard and your stomach drops. Is the car about to die? Can you finish the drive? Most of the time the answer is in one detail: its colour. Dashboards work a lot like traffic lights, and once you know the code, a surprise light stops being scary and starts being useful.',
+      dek: 'Pictures of 28 dashboard symbols, what each one means, and whether you can keep driving. Red means stop, yellow means check, green and blue mean all good.',
+      intro: 'A light pops up on your dashboard and your stomach drops. Is the car about to die? Can you finish the drive? This guide shows every common dashboard warning light with a picture, says what it means in plain words, and tells you exactly what to do. Start with the colour, because it tells you most of what you need to know.',
       sections: [
-        { id: 'colours', h: 'The colour code', html: p('Car makers use the same basic idea:') +
-          lights([
-            ['red', 'Red: stop soon', 'A safety problem or something that can damage the car. Find a safe place to pull over and check it.'],
+        { id: 'colours', h: 'Dashboard warning light colours: the quick answer', toc: 'The colour code', html: p('Car dashboard symbols work like traffic lights:') +
+          keys([
+            ['red', 'Red: stop soon', 'A serious problem or a safety issue. Pull over as soon as it&rsquo;s safe and check what it means.'],
             ['amber', 'Yellow or orange: check soon', 'Something needs attention, but it usually isn&rsquo;t an emergency. Drive carefully and get it looked at.'],
-            ['green', 'Green or blue: information', 'A system is on and working, like your headlights, signals or cruise control.'],
+            ['green', 'Green or blue: a system is on', 'Nothing is wrong. A feature is switched on, like your headlights, turn signals or cruise control.'],
           ]) +
-          p('Your owner&rsquo;s manual has the exact meaning of every light in your car. Keep it in the glovebox, or find the digital version on the maker&rsquo;s website.') },
-        { id: 'start', h: 'Why they all light up when you start the car', toc: 'At start-up', html: p('Turn the key or press the start button and the dashboard lights up like a birthday cake. That&rsquo;s normal: the car is checking its bulbs and systems. They should go out within a few seconds.',
-          'Ontario&rsquo;s Driver&rsquo;s Handbook says to check that your warning lights and gauges work before you drive, and to watch for one that stays on after you pull away, because it could mean a serious problem.') +
+          p('A few lights that only mean &ldquo;this is switched on&rdquo; are yellow or red too, like the rear fog light and the hazard lights. They&rsquo;re in the indicator section below. Your owner&rsquo;s manual has the exact meaning of every light in your own car.') },
+        { id: 'chart', h: 'Dashboard symbols chart', toc: 'Symbols chart', html: `<figure class="dash-chart" data-reveal><a href="/img/dashboard-warning-lights-chart.svg"><img src="/img/dashboard-warning-lights-chart.svg" width="1436" height="938" loading="lazy" decoding="async" alt="Chart of 28 car dashboard warning lights and indicator symbols, grouped by colour: red warning lights, yellow warning lights, and green and blue indicators"></a><figcaption>All 28 dashboard symbols in one chart. Tap it to open it full size, or save it to your phone.</figcaption></figure>` +
+          p('Each symbol is explained below with a bigger picture, grouped by colour.') },
+        { id: 'start', h: 'Why every light comes on when you start the car', toc: 'At start-up', html: p('Turn the key or press the start button and the dashboard lights up like a birthday cake. That&rsquo;s normal: the car is testing its bulbs and systems. They should go out within a few seconds.',
+          'Ontario&rsquo;s Driver&rsquo;s Handbook says to check that your warning lights and gauges work before you drive, and to watch for a light that stays on after you pull away, because it could mean a serious problem.') +
           callout('tip', 'A two-second habit', p('Before you put the car in gear, glance at the dashboard. Anything still lit after start-up is something to deal with before the drive, not halfway down the highway.')) },
-        { id: 'red', h: 'Red lights: pull over safely', toc: 'Red lights', html: lights([
-            ['red', 'Oil pressure (an old-fashioned oil can)', 'The engine may not be getting enough oil. Pull over and turn the engine off. Driving on can wreck an engine fast.'],
-            ['red', 'Engine temperature (a thermometer in waves)', 'The engine is overheating. Pull over, switch off, and let it cool. Never open the radiator cap on a hot engine.'],
-            ['red', 'Brake system (a circle with an exclamation mark)', 'Check that the parking brake is fully off. If it stays on, the brakes may have a problem. Don&rsquo;t keep driving on it.'],
-            ['red', 'Battery or charging (a battery shape)', 'The car isn&rsquo;t charging its battery. It can run for a while on what&rsquo;s left, then stop. Head somewhere safe and get help.'],
-            ['red', 'Airbag (a seated person with a circle)', 'The airbag system has a fault and may not work in a crash. Get it checked as soon as you can.'],
-            ['red', 'Seatbelt (a person wearing a belt)', 'Someone isn&rsquo;t buckled up. Easy fix.'],
-          ]) },
-        { id: 'amber', h: 'Yellow lights: get it checked', toc: 'Yellow lights', html: lights([
-            ['amber', 'Check engine (an engine outline)', 'The engine computer has found a fault. Steady: book a check soon. Flashing, in many cars: a more serious problem, so ease off and get it looked at right away.'],
-            ['amber', 'ABS (the letters ABS in a circle)', 'The anti-lock part of your brakes has a fault. Normal braking still works, but leave extra space and get it fixed.'],
-            ['amber', 'Tire pressure (a horseshoe shape with an exclamation mark)', 'One or more tires is low. Check the pressures when you can and top them up. Low tires grip and brake worse.'],
-            ['amber', 'Traction or stability control (a car with wavy lines)', 'Flashing while you drive: the system is helping on a slippery road, so slow down. Staying on: the system is off or has a fault.'],
-            ['amber', 'Low fuel (a fuel pump)', 'You&rsquo;re running low. Don&rsquo;t push it; running out on a busy road is a hazard.'],
-          ]) },
-        { id: 'green', h: 'Green and blue lights: all good', toc: 'Green and blue', html: lights([
-            ['green', 'Turn signals (flashing arrows)', 'Your signal is on. If it&rsquo;s still blinking after a turn, switch it off; leftover signals confuse other drivers. Blinking much faster than usual often means a bulb is out.'],
-            ['green', 'Headlights', 'Your lights are on. The <a href="/guides/driving-at-night-and-in-the-rain/">night and rain guide</a> covers when Ontario requires them.'],
-            ['blue', 'High beams (a blue headlight)', 'High beams are on. Dim them within 150 metres of an oncoming car, or when you&rsquo;re within 60 metres behind one.'],
-            ['green', 'Cruise control', 'Cruise is set. The Handbook says not to use it in snow or other bad weather.'],
-          ]) },
+        { id: 'red', h: 'Red warning lights: stop as soon as it&rsquo;s safe', toc: 'Red warning lights', html: p('A red light means a problem that can hurt you or the car. Don&rsquo;t ignore it, and don&rsquo;t keep driving to &ldquo;see what happens.&rdquo;') + cards(DASH.red) },
+        { id: 'yellow', h: 'Yellow and orange warning lights: get it checked soon', toc: 'Yellow warning lights', html: p('A yellow or orange light means something isn&rsquo;t right, but you can usually drive carefully to a garage. If a yellow light starts flashing, or the car feels different, treat it like a red one.') + cards(DASH.amber) },
         inlineCta('New to driving, and the dashboard still looks like a cockpit? Call or text Mrs. Akbar.'),
+        { id: 'indicators', h: 'Green, blue and other indicator lights: a system is on', toc: 'Indicator lights', html: p('These lights don&rsquo;t mean anything is wrong. They tell you a feature is switched on, so you can check it&rsquo;s the one you wanted.') + cards(DASH.info) },
+        { id: 'flashing', h: 'Steady or flashing: what the difference means', toc: 'Steady or flashing', html: p('The same light can mean different things depending on whether it&rsquo;s steady or flashing:') + ul([
+            '<strong>Check engine light flashing:</strong> in many cars, a more serious engine problem than a steady light. Slow down and get it checked right away.',
+            '<strong>Traction control light flashing:</strong> the system is working on a slippery road. Ease off the gas.',
+            '<strong>Tire pressure light flashing at start-up, then staying on:</strong> in many cars, the tire monitoring system itself has a fault.',
+            '<strong>Turn signal flashing fast:</strong> a bulb is probably out on that side.',
+            '<strong>Glow plug light flashing while you drive:</strong> in many diesels, an engine fault. Get it checked.',
+          ]) },
         { id: 'what-to-do', h: 'A red light just came on: what to do', toc: 'What to do', html: ol([
-            '<strong>Don&rsquo;t panic, and don&rsquo;t slam the brakes.</strong> Check your mirrors first.',
+            '<strong>Don&rsquo;t panic, and don&rsquo;t slam on the brakes.</strong> Check your mirrors first.',
             '<strong>Signal and pull over somewhere safe,</strong> off the road if you can: a side street, a parking lot or, on a highway, the shoulder.',
             '<strong>Turn on your hazard lights</strong> if you&rsquo;re stopped near traffic.',
-            '<strong>Look the light up</strong> in the owner&rsquo;s manual.',
+            '<strong>Look the light up</strong> here or in the owner&rsquo;s manual.',
             '<strong>Call for help</strong> if the light means the car shouldn&rsquo;t be driven, like oil pressure, overheating or brakes.',
           ]) + p('On a highway, the Handbook&rsquo;s advice is to start pulling over at the first sign of trouble rather than waiting for the car to stall, and never to stop in a driving lane. The <a href="/guides/how-to-drive-on-the-highway/">highway guide</a> has the details.') },
-        { id: 'test', h: 'Warning lights and your road test', toc: 'On test day', html: p('Before a road test, the examiner checks that the car is in proper working order: signals, brake lights, horn and more. A car with a problem can get the test declared out of order, and you lose half the fee. So if a warning light is on, get it fixed before test day, and do the start-up glance in the parking lot.',
+        { id: 'test', h: 'Warning lights and your road test', toc: 'On test day', html: p('Before a road test, the examiner checks that the car is in proper working order: signals, brake lights, horn and more. A car with a problem can get the test declared out of order, and you lose half the fee. So if a warning light is on, or a bulb is out, get it fixed before test day, and do the start-up glance in the parking lot.',
           'The <a href="/guides/hamilton-drivetest-centre/">Hamilton DriveTest centre guide</a> lists what the car check looks for.') +
           quote(review('Francis Daniels', 'Very knowledgeable instructor, she knows what the ministry require you to do and she will teach you that.')) },
       ],
       sources: [S.hbReady, S.hbMaintain, S.hbEmergencies, S.hbNight, S.vehicle],
       faqs: [
-        ['What do the colours of dashboard warning lights mean?', 'Red usually means a safety problem or possible damage, so pull over safely. Yellow or orange means get it checked soon. Green or blue means a system is on and working.'],
-        ['Is it normal for all the warning lights to come on when I start the car?', 'Yes. The car checks its lights and systems at start-up, and they should go out within a few seconds. One that stays on needs attention.'],
-        ['Can I keep driving with the check engine light on?', 'If it&rsquo;s steady, usually for a short time, but book a check soon. If it&rsquo;s flashing, many cars are signalling a more serious problem, so ease off and get it looked at right away.'],
-        ['What should I do if the oil light comes on?', 'Pull over somewhere safe and turn off the engine. Low oil pressure can damage an engine quickly, so check the oil level and get help before driving on.'],
-        ['What does the tire pressure light mean?', 'At least one tire is low. Check all four pressures and top them up to the number on the tire sticker, usually inside the driver&rsquo;s door frame.'],
-        ['Why is my traction control light flashing?', 'The system is working to stop your wheels from spinning on a slippery road. Ease off and slow down.'],
-        ['Why is my turn signal blinking fast?', 'Often a bulb is out somewhere in the signal. Check the front and back lights on that side.'],
+        ['What do the colours of dashboard warning lights mean?', 'Red means a serious problem or a safety issue, so stop as soon as it&rsquo;s safe. Yellow or orange means something needs checking soon. Green and blue mean a system is on and working.'],
+        ['What does the exclamation mark in a circle mean on my dashboard?', 'It&rsquo;s the brake system warning light. The parking brake may be on, the brake fluid may be low, or the brakes may have a fault. If it stays on with the parking brake off, pull over and get help.'],
+        ['What does the triangle with an exclamation mark mean?', 'It&rsquo;s the master warning light. The car has a message for you, usually shown on the screen between the gauges.'],
+        ['What does the check engine light mean?', 'The engine computer has found a problem, from something small like a loose fuel cap to something more serious. Steady means book a check soon; flashing, in many cars, means get it checked right away.'],
+        ['Can I drive with the check engine light on?', 'If it&rsquo;s steady and the car drives normally, usually for a short time, but book a check soon. If it&rsquo;s flashing, slow down and get it looked at right away.'],
+        ['What does the oil light mean?', 'Low oil pressure. Pull over safely and turn off the engine, because driving without oil pressure can quickly damage it.'],
+        ['What does the battery light mean while driving?', 'The car isn&rsquo;t charging its battery. It runs on what&rsquo;s left in the battery and then stops, so head straight somewhere safe or to a garage.'],
+        ['What does the tire pressure light mean?', 'At least one tire is low. Check all four and fill them to the pressure on the tire sticker, usually inside the driver&rsquo;s door frame.'],
+        ['What does the car with squiggly lines mean?', 'It&rsquo;s traction or stability control. Flashing means it&rsquo;s helping on a slippery road; staying on means it&rsquo;s switched off or has a fault.'],
+        ['What does the gear with an exclamation mark mean?', 'In many cars, a powertrain or transmission fault. Drive gently to a garage, and pull over if the car shifts strangely or loses power.'],
+        ['What does the coil light on my dashboard mean?', 'It&rsquo;s the glow plug light in a diesel car. Wait for it to go out before starting the engine. If it flashes while you drive, get the engine checked.'],
+        ['What does the steering wheel warning light mean?', 'The power steering has a fault. You can still steer, but it may feel much heavier, so slow down and pull over somewhere safe.'],
+        ['What does the blue light on my dashboard mean?', 'Usually that your high beams are on. In some cars, a blue thermometer means the engine is still cold, which is normal for the first few minutes.'],
+        ['Is it normal for all the warning lights to come on when I start the car?', 'Yes. The car tests its lights at start-up, and they should go out within a few seconds. One that stays on needs attention.'],
+        ['Why is my turn signal blinking fast?', 'A bulb is probably out on that side. Check the front and rear signal lights.'],
       ],
       related: ['how-to-drive-a-car', 'hamilton-drivetest-centre', 'stopping-distance'],
       lessons: lessonsChips(['/beginner-driving-lessons/', 'Beginner lessons'], ['/driving-lessons-for-nervous-drivers/', 'Nervous drivers']),
-      cta: ['Get comfortable in the driver&rsquo;s seat', 'Lessons start with the car itself: controls, mirrors and what the dashboard is telling you.'],
+      cta: ['Get comfortable in the driver&rsquo;s seat', 'Lessons start with the car itself: the controls, the mirrors and what the dashboard is telling you.'],
     }),
 
     /* ---------- Stopping distance ---------- */

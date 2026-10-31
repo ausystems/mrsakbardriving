@@ -2349,15 +2349,37 @@ a, button, summary { -webkit-tap-highlight-color: transparent; }
   .call-number:active .call-number__digits { background-size: 100% 6px; }
 }
 
-/* Dashboard warning lights: each card glows in its lamp colour */
-.dash-lights { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 14px; margin: 22px 0; padding: 0; list-style: none; }
-.dash-light { --lamp: var(--amber); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 14px; align-items: start; padding: 18px 18px 18px 16px; border-radius: 16px; background: var(--asphalt); color: var(--on-dark); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
-.article-body .dash-light, .article-body li.dash-light + li.dash-light { margin: 0; padding: 18px 18px 18px 16px; color: var(--on-dark); }
-.article-body .dash-light::before { content: none; }
-.dash-light--red { --lamp: #ff5a47; }
-.dash-light--green { --lamp: #46d17a; }
+/* Dashboard warning lights: the colour key, one card per symbol, and the full chart */
+.dash-keys, .dash-lights { display: grid; gap: 14px; margin: 22px 0; padding: 0; list-style: none; }
+.dash-keys { grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
+.dash-lights { grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr)); }
+.dash-key, .dash-light { --lamp: #ffb627; border-radius: 18px; background: var(--asphalt); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
+.dash-key--red, .dash-light--red { --lamp: #ff5a47; }
+.dash-key--green, .dash-light--green { --lamp: #46d17a; }
 .dash-light--blue { --lamp: #5ea8ff; }
-.dash-light__lamp { grid-row: span 2; width: 14px; height: 14px; margin-top: 5px; border-radius: 50%; background: var(--lamp); box-shadow: 0 0 0 4px color-mix(in srgb, var(--lamp) 22%, transparent), 0 0 18px var(--lamp); }
-.dash-light__name { font-weight: 800; line-height: 1.3; color: var(--on-dark); }
-.dash-light__what { font-size: 0.97rem; line-height: 1.55; color: var(--on-dark-muted); }
-.dash-light__what a { color: var(--on-dark); }
+.article-body .dash-key, .article-body .dash-light, .article-body .dash-light + .dash-light, .article-body .dash-key + .dash-key { margin: 0; }
+.article-body .dash-key::before, .article-body .dash-light::before { content: none; }
+.dash-key { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 14px; align-items: start; }
+.article-body .dash-key { padding: 18px 18px 18px 16px; }
+.dash-key__lamp { grid-row: span 2; width: 14px; height: 14px; margin-top: 5px; border-radius: 50%; background: var(--lamp); box-shadow: 0 0 0 4px color-mix(in srgb, var(--lamp) 22%, transparent), 0 0 18px var(--lamp); }
+.dash-key__name { font-weight: 800; line-height: 1.3; color: var(--on-dark); }
+.dash-key__what { font-size: 0.97rem; line-height: 1.55; color: var(--on-dark-muted); }
+.dash-light { display: grid; grid-template-columns: 68px minmax(0, 1fr); gap: 16px; align-items: start; }
+.article-body .dash-light { padding: 20px 20px 22px 18px; }
+.dash-light__icon { display: grid; place-items: center; width: 68px; height: 68px; border-radius: 16px; background: #12110f; color: var(--lamp); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07), 0 0 24px color-mix(in srgb, var(--lamp) 14%, transparent); }
+.dash-ico { width: 48px; height: 48px; overflow: visible; filter: drop-shadow(0 0 5px color-mix(in srgb, var(--lamp) 60%, transparent)); }
+.dash-ico text { font-family: var(--font-body); }
+.article-body .dash-light__name { margin: 2px 0 6px; font: 800 1.08rem/1.3 var(--font-body); letter-spacing: 0; text-transform: none; color: var(--on-dark); }
+.article-body .dash-light p { margin: 0; font-size: 0.97rem; line-height: 1.6; color: var(--on-dark-muted); }
+.article-body .dash-light p + p { margin-top: 8px; }
+.article-body .dash-light strong { color: var(--on-dark); }
+.article-body .dash-light .dash-light__looks { font-size: 0.92rem; font-weight: 650; color: var(--lamp); }
+.dash-chart { margin: 22px 0 18px; }
+.dash-chart a { display: block; border-radius: 18px; overflow: hidden; box-shadow: 0 18px 40px -28px rgba(30, 28, 25, 0.55); }
+.dash-chart img { display: block; width: 100%; height: auto; }
+.dash-chart figcaption { margin-top: 10px; font-size: 0.92rem; color: var(--muted); }
+@media (max-width: 480px) {
+  .dash-light { grid-template-columns: 56px minmax(0, 1fr); gap: 14px; }
+  .dash-light__icon { width: 56px; height: 56px; border-radius: 14px; }
+  .dash-ico { width: 40px; height: 40px; }
+}
