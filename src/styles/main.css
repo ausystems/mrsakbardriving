@@ -2348,3 +2348,16 @@ a, button, summary { -webkit-tap-highlight-color: transparent; }
   .slide:active .review { transform: scale(0.985); }
   .call-number:active .call-number__digits { background-size: 100% 6px; }
 }
+
+/* Dashboard warning lights: each card glows in its lamp colour */
+.dash-lights { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 14px; margin: 22px 0; padding: 0; list-style: none; }
+.dash-light { --lamp: var(--amber); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 14px; align-items: start; padding: 18px 18px 18px 16px; border-radius: 16px; background: var(--asphalt); color: var(--on-dark); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
+.article-body .dash-light, .article-body li.dash-light + li.dash-light { margin: 0; padding: 18px 18px 18px 16px; color: var(--on-dark); }
+.article-body .dash-light::before { content: none; }
+.dash-light--red { --lamp: #ff5a47; }
+.dash-light--green { --lamp: #46d17a; }
+.dash-light--blue { --lamp: #5ea8ff; }
+.dash-light__lamp { grid-row: span 2; width: 14px; height: 14px; margin-top: 5px; border-radius: 50%; background: var(--lamp); box-shadow: 0 0 0 4px color-mix(in srgb, var(--lamp) 22%, transparent), 0 0 18px var(--lamp); }
+.dash-light__name { font-weight: 800; line-height: 1.3; color: var(--on-dark); }
+.dash-light__what { font-size: 0.97rem; line-height: 1.55; color: var(--on-dark-muted); }
+.dash-light__what a { color: var(--on-dark); }

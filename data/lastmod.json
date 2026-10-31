@@ -80,12 +80,16 @@
   "date": "2026-10-28"
  },
  "/guides/": {
-  "hash": "8dd27a3a28ee88b7",
-  "date": "2026-10-30"
+  "hash": "1645faab77e8ff72",
+  "date": "2026-10-31"
+ },
+ "/guides/dashboard-warning-lights/": {
+  "hash": "ccdaf5206b879910",
+  "date": "2026-10-31"
  },
  "/guides/defensive-driving-tips/": {
-  "hash": "237d069d829000be",
-  "date": "2026-10-30"
+  "hash": "6bc370e9b97f597b",
+  "date": "2026-10-31"
  },
  "/guides/demerit-points-ontario/": {
   "hash": "6fcbb54c186b2cdb",
@@ -100,8 +104,8 @@
   "date": "2026-10-30"
  },
  "/guides/driving-at-night-and-in-the-rain/": {
-  "hash": "7f76ffbf88206c6d",
-  "date": "2026-10-30"
+  "hash": "8212c5a9633a2cfc",
+  "date": "2026-10-31"
  },
  "/guides/driving-the-hamilton-mountain-accesses/": {
   "hash": "c67acdfb2872804d",
@@ -148,28 +152,28 @@
   "date": "2026-10-28"
  },
  "/guides/how-to-check-your-blind-spot/": {
-  "hash": "5a3ecf8b399da04b",
-  "date": "2026-10-30"
+  "hash": "3e1efb545cefe03b",
+  "date": "2026-10-31"
  },
  "/guides/how-to-do-a-three-point-turn/": {
-  "hash": "6190022f9dc2f199",
-  "date": "2026-10-30"
+  "hash": "cf91e5a5b4d59845",
+  "date": "2026-10-31"
  },
  "/guides/how-to-drive-a-car/": {
-  "hash": "34e150255f1ebfc4",
-  "date": "2026-10-30"
+  "hash": "c3ed544b9ba3e412",
+  "date": "2026-10-31"
  },
  "/guides/how-to-drive-a-roundabout/": {
-  "hash": "2e944bab685bf5c4",
-  "date": "2026-10-30"
+  "hash": "0004047bfc699c0e",
+  "date": "2026-10-31"
  },
  "/guides/how-to-drive-on-the-highway/": {
-  "hash": "f364698f89af715f",
-  "date": "2026-10-30"
+  "hash": "dd99ccdc535073a8",
+  "date": "2026-10-31"
  },
  "/guides/how-to-parallel-park/": {
-  "hash": "b18af42b7fdadb65",
-  "date": "2026-10-30"
+  "hash": "536509691334792d",
+  "date": "2026-10-31"
  },
  "/guides/how-to-pass-the-g1-test/": {
   "hash": "13a8fd6727656365",
@@ -180,12 +184,12 @@
   "date": "2026-10-30"
  },
  "/guides/how-to-reverse-park/": {
-  "hash": "7598de4ddad8266c",
-  "date": "2026-10-30"
+  "hash": "64478d6db44ec577",
+  "date": "2026-10-31"
  },
  "/guides/how-to-turn-left-and-right/": {
-  "hash": "f196405ed8157ae6",
-  "date": "2026-10-30"
+  "hash": "688d5d8b95a4b81f",
+  "date": "2026-10-31"
  },
  "/guides/impaired-driving-rules-ontario/": {
   "hash": "5fc4d0edf846ae18",
@@ -214,6 +218,10 @@
  "/guides/right-of-way-rules-ontario/": {
   "hash": "47a9ee36f6779263",
   "date": "2026-10-30"
+ },
+ "/guides/stopping-distance/": {
+  "hash": "f3df2b88cbf7ece6",
+  "date": "2026-10-31"
  },
  "/guides/what-to-do-after-a-car-accident-ontario/": {
   "hash": "0fcbc713075ee88c",

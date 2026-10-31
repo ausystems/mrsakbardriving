@@ -29,6 +29,8 @@ export const GUIDE_LIST = [
   { slug: 'how-to-reverse-park', short: 'Reverse parking', title: 'How to reverse park, step by step', cat: 'Skills', sign: 'reverse', footer: false },
   { slug: 'how-to-do-a-three-point-turn', short: 'Three-point turns', title: 'How to do a three-point turn (and the roadside stop)', cat: 'Skills', sign: 'uturn', footer: false },
   { slug: 'how-to-drive-a-roundabout', short: 'Driving a roundabout', title: 'How to drive a roundabout in Ontario', cat: 'Skills', sign: 'roundabout', footer: false },
+  { slug: 'dashboard-warning-lights', short: 'Dashboard warning lights', title: 'Dashboard warning lights: what each colour and symbol means', cat: 'Skills', sign: 'alert', footer: false },
+  { slug: 'stopping-distance', short: 'Stopping distance', title: 'Stopping distance: how far a car travels before it stops', cat: 'Skills', sign: 'speed', footer: false },
   { slug: 'how-to-drive-on-the-highway', short: 'Highway driving', title: 'How to drive on the highway for the first time', cat: 'Skills', sign: 'road', footer: false },
   { slug: 'driving-at-night-and-in-the-rain', short: 'Night and rain driving', title: 'Driving at night and in the rain: a new driver’s guide', cat: 'Skills', sign: 'moon', footer: false },
   { slug: 'how-to-pass-the-g2-road-test', short: 'Passing the G2', title: 'How to pass the G2 road test in Ontario', cat: 'Road tests', sign: 'check', footer: true, featured: true },

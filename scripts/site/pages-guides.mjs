@@ -12,6 +12,7 @@ import { skillGuides } from './guides-skills.mjs';
 import { testGuides } from './guides-tests.mjs';
 import { licenceGuides } from './guides-licence.mjs';
 import { drivingGuides } from './guides-driving.mjs';
+import { explainerGuides } from './guides-explainers.mjs';
 
 export const SRC = {
   getG: ['Get a G driver&rsquo;s licence: new drivers (ontario.ca)', 'https://www.ontario.ca/page/get-g-drivers-licence-new-drivers'],
@@ -495,6 +496,7 @@ export function guidePages() {
     ...testGuides(),
     ...licenceGuides(),
     ...drivingGuides(),
+    ...explainerGuides(),
   ];
 }
 
@@ -513,6 +515,8 @@ export function guidesHub() {
     'how-to-turn-left-and-right': 'The right lane, signals, advance greens and arrows, and turning on a red light.',
     'how-to-drive-on-the-highway': 'Merging, speed and space, lane changes, exits, and where to start around Hamilton.',
     'driving-at-night-and-in-the-rain': 'Headlights, glare, hydroplaning, fog and drowsy driving.',
+    'dashboard-warning-lights': 'Red, yellow, green and blue: which lights mean pull over now, and which can wait.',
+    'stopping-distance': 'How far you really travel before the car stops, and why speed matters so much.',
     'how-many-driving-lessons-do-you-need': 'What changes the number, with real examples from her reviews.',
     'nervous-driver-tips': 'Practical things that help before and during a drive.',
     'new-to-ontario-drivers-licence': 'The 60-day rule, licence exchanges and experience credit.',

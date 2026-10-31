@@ -117,7 +117,7 @@ export function skillGuides() {
           '<strong>Scan intersections.</strong> Before a right turn: ahead, left, right, left again, then your right-rear blind spot. Before a left turn: ahead, behind, left, right, left again, plus your blind spots. Check sidewalks and paths too.',
           '<strong>Expect mistakes.</strong> Watch for people in parked cars who might pull out or open a door, and assume other drivers might not stop.',
         ]) },
-        { id: 'space', h: 'Space: keep a cushion all around you', html: p('The biggest collision risk is in front of you, so following distance matters most.') +
+        { id: 'space', h: 'Space: keep a cushion all around you', html: p('The biggest collision risk is in front of you, so following distance matters most. The <a href="/guides/stopping-distance/">stopping distance guide</a> shows why, metre by metre.') +
           ol([
             'Pick a marker ahead, like a sign or a pole.',
             'When the car in front passes it, count &ldquo;one thousand and one, one thousand and two.&rdquo;',
